@@ -401,6 +401,9 @@
     <EmbeddedResource Include="Forms Modules\frmsTickets\frmHomeTicket.resx">
       <DependentUpon>frmHomeTicket.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsVentas\frmDetalleVentas.resx">
+      <DependentUpon>frmDetalleVentas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBienvenidaLogin.resx">
       <DependentUpon>frmBienvenidaLogin.vb</DependentUpon>
     </EmbeddedResource>
