@@ -15,4 +15,9 @@
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    Private Sub dgvReclamos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvReclamos.CellContentClick
+        SetPanel(New frmDetalleTicket, frmHomeTicket.panelHomeTicket)
+    End Sub
+
 End Class

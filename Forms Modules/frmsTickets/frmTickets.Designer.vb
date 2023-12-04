@@ -24,14 +24,14 @@ Partial Class frmTickets
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvReclamos = New System.Windows.Forms.DataGridView()
-        Me.Accion = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Estatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Prioridad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Asesor = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Asunto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Usuario = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ID_ticket = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Usuario = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Asunto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Asesor = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Prioridad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Estatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Accion = New System.Windows.Forms.DataGridViewButtonColumn()
         CType(Me.dgvReclamos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -55,44 +55,12 @@ Partial Class frmTickets
         Me.dgvReclamos.Size = New System.Drawing.Size(860, 304)
         Me.dgvReclamos.TabIndex = 1
         '
-        'Accion
+        'ID_ticket
         '
-        Me.Accion.HeaderText = "Acción"
-        Me.Accion.Name = "Accion"
-        Me.Accion.Text = "----->"
-        Me.Accion.UseColumnTextForButtonValue = True
-        '
-        'Fecha
-        '
-        Me.Fecha.DataPropertyName = "fecha"
-        Me.Fecha.HeaderText = "Fecha"
-        Me.Fecha.Name = "Fecha"
-        '
-        'Estatus
-        '
-        Me.Estatus.DataPropertyName = "estado"
-        Me.Estatus.HeaderText = "Estatus"
-        Me.Estatus.Name = "Estatus"
-        '
-        'Prioridad
-        '
-        Me.Prioridad.DataPropertyName = "prioridad"
-        Me.Prioridad.HeaderText = "Prioridad"
-        Me.Prioridad.Name = "Prioridad"
-        '
-        'Asesor
-        '
-        Me.Asesor.DataPropertyName = "asesor"
-        Me.Asesor.HeaderText = "Asesor"
-        Me.Asesor.Name = "Asesor"
-        Me.Asesor.ReadOnly = True
-        '
-        'Asunto
-        '
-        Me.Asunto.DataPropertyName = "asunto"
-        Me.Asunto.HeaderText = "Asunto"
-        Me.Asunto.Name = "Asunto"
-        Me.Asunto.ReadOnly = True
+        Me.ID_ticket.DataPropertyName = "id_reclamo"
+        Me.ID_ticket.HeaderText = "ID"
+        Me.ID_ticket.Name = "ID_ticket"
+        Me.ID_ticket.ReadOnly = True
         '
         'Usuario
         '
@@ -101,12 +69,44 @@ Partial Class frmTickets
         Me.Usuario.Name = "Usuario"
         Me.Usuario.ReadOnly = True
         '
-        'ID_ticket
+        'Asunto
         '
-        Me.ID_ticket.DataPropertyName = "id_reclamo"
-        Me.ID_ticket.HeaderText = "ID"
-        Me.ID_ticket.Name = "ID_ticket"
-        Me.ID_ticket.ReadOnly = True
+        Me.Asunto.DataPropertyName = "asunto"
+        Me.Asunto.HeaderText = "Asunto"
+        Me.Asunto.Name = "Asunto"
+        Me.Asunto.ReadOnly = True
+        '
+        'Asesor
+        '
+        Me.Asesor.DataPropertyName = "asesor"
+        Me.Asesor.HeaderText = "Asesor"
+        Me.Asesor.Name = "Asesor"
+        Me.Asesor.ReadOnly = True
+        '
+        'Prioridad
+        '
+        Me.Prioridad.DataPropertyName = "prioridad"
+        Me.Prioridad.HeaderText = "Prioridad"
+        Me.Prioridad.Name = "Prioridad"
+        '
+        'Estatus
+        '
+        Me.Estatus.DataPropertyName = "estado"
+        Me.Estatus.HeaderText = "Estatus"
+        Me.Estatus.Name = "Estatus"
+        '
+        'Fecha
+        '
+        Me.Fecha.DataPropertyName = "fecha"
+        Me.Fecha.HeaderText = "Fecha"
+        Me.Fecha.Name = "Fecha"
+        '
+        'Accion
+        '
+        Me.Accion.HeaderText = "Acción"
+        Me.Accion.Name = "Accion"
+        Me.Accion.Text = "----->"
+        Me.Accion.UseColumnTextForButtonValue = True
         '
         'frmTickets
         '

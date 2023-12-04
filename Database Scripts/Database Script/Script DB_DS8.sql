@@ -60,28 +60,25 @@ CREATE TABLE Permisos (
     gestiona_permisos VARCHAR(255)
 );
 
--- Creación de tabla Usuario
 CREATE TABLE Usuario (
     id_usuario INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(255),
+    apellido VARCHAR(255),
+    cedula VARCHAR(255) UNIQUE,
     correo VARCHAR(255) UNIQUE,
     pass VARCHAR(255),
-    rol enum("Admin", "Cliente", "Proveedor"),
+    rol ENUM("SAdmin", "Admin", "Colaborador"),
     foto VARCHAR(255),
     telefono VARCHAR(255),
-    detalles VARCHAR(255)
+    detalles VARCHAR(255),
+    genero VARCHAR(255)
 );
-
-
 
 -- Creación de tabla Admin
 CREATE TABLE Admin (
     id_admin INT AUTO_INCREMENT PRIMARY KEY,
     usuario_id INT,
     FOREIGN KEY (usuario_id) REFERENCES Usuario(id_usuario),
-    apellido VARCHAR(255),
-    genero VARCHAR(255),
-    cedula VARCHAR(255) UNIQUE,
     permisos_id INT,
     FOREIGN KEY (permisos_id) REFERENCES Permisos(id_permisos)
 );
@@ -92,7 +89,12 @@ CREATE TABLE Empresa (
     ruc VARCHAR(255) UNIQUE,
     razon_social VARCHAR(255) UNIQUE,
     documento VARCHAR(255),
-    estado VARCHAR(255)
+    nombre INT(255),
+    correo INT(255),
+    UNIQUE (`correo`),
+    foto VARCHAR(255),
+    telefono VARCHAR(255),
+    detalles VARCHAR(255)
 );
 
 -- Creación de tabla Compra
@@ -109,23 +111,16 @@ CREATE TABLE Compra (
 -- Creación de tabla Cliente
 CREATE TABLE Cliente (
     id_cliente INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
     apellido VARCHAR(255),
     cedula VARCHAR(255) UNIQUE,
     empresa_id INT,
     FOREIGN KEY (empresa_id) REFERENCES Empresa(id_empresa),
     genero VARCHAR(255),
-    estado VARCHAR(255),
-    tipo enum("minorisra", "distribuidor")
-);
-
--- Creación de tabla Sugerencia
-CREATE TABLE Sugerencia (
-    id_sugerencia INT AUTO_INCREMENT PRIMARY KEY,
-    contenido VARCHAR(255),
-    fecha DATETIME,
-    valoracion INT,
-    cliente_id INT,
-    FOREIGN KEY (cliente_id) REFERENCES Cliente(id_cliente)
+    tipo ENUM("minorisra", "distribuidor"),
+    foto VARCHAR(255),
+    telefono VARCHAR(255),
+    detalles VARCHAR(255)
 );
 
 -- Creación de tabla Notificacion
@@ -202,4 +197,53 @@ CREATE TABLE Cliente_direcciones (
     direccion_id INT,
     FOREIGN KEY (direccion_id) REFERENCES Direccion(id_direccion),
     PRIMARY KEY (cliente_id, direccion_id)
+);
+
+-- Creación de tabla Tickets_categoria
+CREATE TABLE Tickets_categoria (
+    id_tickets_categoria INT AUTO_INCREMENT PRIMARY KEY,
+    categoria ENUM("PA", "PF", "PR", "PRA", "O")
+);
+
+-- Creación de tabla Tickets_prioridad
+CREATE TABLE Tickets_prioridad (
+    id_tickets_prioridad INT AUTO_INCREMENT PRIMARY KEY,
+    prioridad ENUM("1", "2", "3")
+);
+
+-- Creación de tabla Tickets_estado
+CREATE TABLE Tickets_estado (
+    id_tickets_estado INT AUTO_INCREMENT PRIMARY KEY,
+    estado ENUM("Espera", "Revisado", "Resuelto")
+);
+
+-- Creación de tabla Tickets
+CREATE TABLE Tickets (
+    id_tickets INT AUTO_INCREMENT PRIMARY KEY,
+    admin_id INT,
+    FOREIGN KEY (admin_id) REFERENCES Admin(id_admin),
+    categoria_id INT,
+    FOREIGN KEY (categoria_id) REFERENCES Tickets_categoria(id_tickets_categoria),
+    prioridad_id INT,
+    FOREIGN KEY (prioridad_id) REFERENCES Tickets_prioridad(id_tickets_prioridad),
+    estado_id INT,
+    FOREIGN KEY (estado_id) REFERENCES Tickets_estado(id_tickets_estado),
+    descripcion VARCHAR(255),
+    evidencia VARCHAR(255),
+    fecha DATETIME,
+    fecha_cambio_estado DATETIME
+);
+
+-- Creación de tabla Mensaje
+CREATE TABLE Mensaje (
+    id_estado INT AUTO_INCREMENT PRIMARY KEY,
+    tickets_id INT,
+    FOREIGN KEY (tickets_id) REFERENCES Tickets(id_tickets),
+    mensaje VARCHAR(255),
+    fecha_envio DATETIME,
+    admin_id INT,
+    FOREIGN KEY (admin_id) REFERENCES Admin(id_admin),
+    cliente_id INT,
+    FOREIGN KEY (cliente_id) REFERENCES Cliente(id_cliente),
+    remitente VARCHAR(255)
 );

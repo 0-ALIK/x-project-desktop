@@ -16,6 +16,7 @@
     End Sub
 
     Private Sub CrearTicketsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CrearTicketsToolStripMenuItem.Click
-        SetPanel(New frmCrearTickets(), panelHomeTicket)
+        SetPanel(New frmCrearTickets(New ticketsDAO(myConnectionDB)), panelHomeTicket)
     End Sub
+
 End Class

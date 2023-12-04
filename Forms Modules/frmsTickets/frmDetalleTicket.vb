@@ -1,3 +1,4 @@
-﻿Public Class frmDetalleTicket
+﻿
+Public Class frmDetalleTicket
 
 End Class

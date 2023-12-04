@@ -23,13 +23,13 @@ Partial Class frmCrearTickets
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.lblEvidencia = New System.Windows.Forms.Label()
         Me.btnSeleccionar = New FontAwesome.Sharp.IconButton()
         Me.cboCategoria = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtDescripcion = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnGuardar = New System.Windows.Forms.Button()
@@ -42,26 +42,37 @@ Partial Class frmCrearTickets
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.White
+        Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.lblEvidencia)
         Me.GroupBox1.Controls.Add(Me.btnSeleccionar)
         Me.GroupBox1.Controls.Add(Me.cboCategoria)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.txtDescripcion)
         Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(107, 2)
+        Me.GroupBox1.Location = New System.Drawing.Point(201, 31)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(575, 354)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(193, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(95, 112)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(108, 19)
+        Me.Label5.TabIndex = 26
+        Me.Label5.Text = "Descripcion:"
+        '
         'lblEvidencia
         '
         Me.lblEvidencia.AutoSize = True
         Me.lblEvidencia.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEvidencia.Location = New System.Drawing.Point(175, 316)
+        Me.lblEvidencia.Location = New System.Drawing.Point(39, 289)
         Me.lblEvidencia.Name = "lblEvidencia"
         Me.lblEvidencia.Size = New System.Drawing.Size(21, 17)
         Me.lblEvidencia.TabIndex = 25
@@ -74,9 +85,9 @@ Partial Class frmCrearTickets
         Me.btnSeleccionar.IconColor = System.Drawing.Color.Black
         Me.btnSeleccionar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnSeleccionar.IconSize = 30
-        Me.btnSeleccionar.Location = New System.Drawing.Point(224, 261)
+        Me.btnSeleccionar.Location = New System.Drawing.Point(224, 224)
         Me.btnSeleccionar.Name = "btnSeleccionar"
-        Me.btnSeleccionar.Size = New System.Drawing.Size(173, 43)
+        Me.btnSeleccionar.Size = New System.Drawing.Size(195, 43)
         Me.btnSeleccionar.TabIndex = 24
         Me.btnSeleccionar.Text = "Seleccionar Archivo"
         Me.btnSeleccionar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -84,11 +95,12 @@ Partial Class frmCrearTickets
         '
         'cboCategoria
         '
+        Me.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboCategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboCategoria.FormattingEnabled = True
         Me.cboCategoria.Location = New System.Drawing.Point(224, 70)
         Me.cboCategoria.Name = "cboCategoria"
-        Me.cboCategoria.Size = New System.Drawing.Size(207, 26)
+        Me.cboCategoria.Size = New System.Drawing.Size(288, 26)
         Me.cboCategoria.TabIndex = 23
         '
         'Label7
@@ -96,7 +108,7 @@ Partial Class frmCrearTickets
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(193, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(85, 272)
+        Me.Label7.Location = New System.Drawing.Point(111, 235)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(92, 19)
         Me.Label7.TabIndex = 16
@@ -105,10 +117,10 @@ Partial Class frmCrearTickets
         'txtDescripcion
         '
         Me.txtDescripcion.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDescripcion.Location = New System.Drawing.Point(224, 115)
+        Me.txtDescripcion.Location = New System.Drawing.Point(224, 109)
         Me.txtDescripcion.Multiline = True
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(207, 124)
+        Me.txtDescripcion.Size = New System.Drawing.Size(288, 80)
         Me.txtDescripcion.TabIndex = 11
         '
         'Label4
@@ -121,23 +133,12 @@ Partial Class frmCrearTickets
         Me.Label4.Size = New System.Drawing.Size(0, 19)
         Me.Label4.TabIndex = 3
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(193, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(72, 118)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(108, 19)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Descripcion:"
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(193, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(85, 70)
+        Me.Label2.Location = New System.Drawing.Point(108, 72)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(95, 19)
         Me.Label2.TabIndex = 1
@@ -159,7 +160,7 @@ Partial Class frmCrearTickets
         Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGuardar.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.ForeColor = System.Drawing.Color.White
-        Me.btnGuardar.Location = New System.Drawing.Point(295, 362)
+        Me.btnGuardar.Location = New System.Drawing.Point(389, 391)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(231, 38)
         Me.btnGuardar.TabIndex = 1
@@ -194,7 +195,6 @@ Partial Class frmCrearTickets
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents btnGuardar As Button
     Friend WithEvents txtDescripcion As TextBox
@@ -205,4 +205,5 @@ Partial Class frmCrearTickets
     Friend WithEvents OpenFileDialog2 As OpenFileDialog
     Friend WithEvents btnSeleccionar As FontAwesome.Sharp.IconButton
     Friend WithEvents lblEvidencia As Label
+    Friend WithEvents Label5 As Label
 End Class

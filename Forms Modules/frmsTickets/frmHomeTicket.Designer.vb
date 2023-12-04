@@ -24,8 +24,8 @@ Partial Class frmHomeTicket
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.TicketsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.panelHomeTicket = New System.Windows.Forms.Panel()
         Me.CrearTicketsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.panelHomeTicket = New System.Windows.Forms.Panel()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -44,6 +44,12 @@ Partial Class frmHomeTicket
         Me.TicketsToolStripMenuItem.Size = New System.Drawing.Size(74, 20)
         Me.TicketsToolStripMenuItem.Text = "Ver Tickets"
         '
+        'CrearTicketsToolStripMenuItem
+        '
+        Me.CrearTicketsToolStripMenuItem.Name = "CrearTicketsToolStripMenuItem"
+        Me.CrearTicketsToolStripMenuItem.Size = New System.Drawing.Size(86, 20)
+        Me.CrearTicketsToolStripMenuItem.Text = "Crear Tickets"
+        '
         'panelHomeTicket
         '
         Me.panelHomeTicket.Dock = System.Windows.Forms.DockStyle.Fill
@@ -51,12 +57,6 @@ Partial Class frmHomeTicket
         Me.panelHomeTicket.Name = "panelHomeTicket"
         Me.panelHomeTicket.Size = New System.Drawing.Size(800, 426)
         Me.panelHomeTicket.TabIndex = 3
-        '
-        'CrearTicketsToolStripMenuItem
-        '
-        Me.CrearTicketsToolStripMenuItem.Name = "CrearTicketsToolStripMenuItem"
-        Me.CrearTicketsToolStripMenuItem.Size = New System.Drawing.Size(86, 20)
-        Me.CrearTicketsToolStripMenuItem.Text = "Crear Tickets"
         '
         'frmHomeTicket
         '

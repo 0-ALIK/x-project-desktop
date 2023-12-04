@@ -1,5 +1,8 @@
 ﻿Public Class frmAnalitica
     Private Sub frmAnalitica_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Dock = DockStyle.Fill
+        panelModulo5.Dock = DockStyle.Fill
+        SetPanel(frmMenuReportes, panelModulo5)
         Try
             conexionDB()
             myConnectionDB.Open()
@@ -11,8 +14,7 @@
         End Try
     End Sub
 
-    Private Sub ReportesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportesToolStripMenuItem.Click
-        SetPanel(frmReportes, panelModulo5)
+    Private Sub ReportesToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ReportesToolStripMenuItem1.Click
+        SetPanel(frmMenuReportes, panelModulo5)
     End Sub
-
 End Class

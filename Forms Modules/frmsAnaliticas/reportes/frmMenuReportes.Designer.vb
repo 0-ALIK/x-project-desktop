@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmReportes
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class frmMenuReportes
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,23 +20,25 @@ Partial Class frmReportes
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.InventarioGlobalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportesDeCatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteDeClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteDeVentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.panelTablaReportes = New System.Windows.Forms.Panel()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InventarioGlobalToolStripMenuItem, Me.ReportesDeCatToolStripMenuItem, Me.ReporteDeClientesToolStripMenuItem, Me.ReporteDeVentasToolStripMenuItem})
+        Me.MenuStrip1.AutoSize = False
+        Me.MenuStrip1.BackColor = System.Drawing.Color.Transparent
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InventarioGlobalToolStripMenuItem, Me.ReporteDeClientesToolStripMenuItem, Me.ReporteDeVentasToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
+        Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
+        Me.MenuStrip1.Size = New System.Drawing.Size(1299, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -45,12 +47,6 @@ Partial Class frmReportes
         Me.InventarioGlobalToolStripMenuItem.Name = "InventarioGlobalToolStripMenuItem"
         Me.InventarioGlobalToolStripMenuItem.Size = New System.Drawing.Size(169, 20)
         Me.InventarioGlobalToolStripMenuItem.Text = "Reporte de Inventario Global"
-        '
-        'ReportesDeCatToolStripMenuItem
-        '
-        Me.ReportesDeCatToolStripMenuItem.Name = "ReportesDeCatToolStripMenuItem"
-        Me.ReportesDeCatToolStripMenuItem.Size = New System.Drawing.Size(130, 20)
-        Me.ReportesDeCatToolStripMenuItem.Text = "Reporte de Categoría"
         '
         'ReporteDeClientesToolStripMenuItem
         '
@@ -64,34 +60,33 @@ Partial Class frmReportes
         Me.ReporteDeVentasToolStripMenuItem.Size = New System.Drawing.Size(113, 20)
         Me.ReporteDeVentasToolStripMenuItem.Text = "Reporte de Ventas"
         '
-        'Panel1
+        'panelTablaReportes
         '
-        Me.Panel1.Location = New System.Drawing.Point(0, 27)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(800, 422)
-        Me.Panel1.TabIndex = 2
+        Me.panelTablaReportes.Location = New System.Drawing.Point(0, 27)
+        Me.panelTablaReportes.Name = "panelTablaReportes"
+        Me.panelTablaReportes.Size = New System.Drawing.Size(1299, 595)
+        Me.panelTablaReportes.TabIndex = 2
         '
-        'frmReportes
+        'frmMenuReportes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Panel1)
+        Me.ClientSize = New System.Drawing.Size(1299, 621)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.panelTablaReportes)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "frmReportes"
+        Me.Name = "frmMenuReportes"
         Me.Text = "frmReportes"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents InventarioGlobalToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ReportesDeCatToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReporteDeClientesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReporteDeVentasToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents panelTablaReportes As Panel
 End Class
