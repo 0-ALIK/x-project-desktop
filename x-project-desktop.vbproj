@@ -284,6 +284,12 @@
     <Compile Include="Forms Modules\frmsTickets\frmHomeTicket.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms Modules\frmsVentas\frmDetalleVentas.Designer.vb">
+      <DependentUpon>frmDetalleVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsVentas\frmDetalleVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmBienvenidaLogin.Designer.vb">
       <DependentUpon>frmBienvenidaLogin.vb</DependentUpon>
     </Compile>
