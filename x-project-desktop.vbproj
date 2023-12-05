@@ -465,7 +465,6 @@
     <Content Include="Store Procedures\inventario\SP_Marcas.sql" />
     <Content Include="Store Procedures\inventario\SP_Categorias.sql" />
     <Content Include="Store Procedures\inventario\SP_Productos.sql" />
-    <Content Include="Store Procedures\inventario\SP_LlenarDGVInventario.sql" />
     <Content Include="Store Procedures\Analitica-Reportes\StoredProceduresReportes.sql" />
     <Content Include="Store Procedures\tickets\SP_InsertarTicket.sql" />
     <Content Include="Store Procedures\tickets\SP_ObtenerCategoria.sql" />
@@ -474,7 +473,6 @@
   <ItemGroup>
     <Folder Include="Store Procedures\ayuda\" />
     <Folder Include="Store Procedures\clientes\" />
-    <Folder Include="Store Procedures\tickets\" />
     <Folder Include="Store Procedures\ventas\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
