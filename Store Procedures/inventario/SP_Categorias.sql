@@ -20,7 +20,7 @@ DELIMITER ;
 DELIMITER $$
 CREATE PROCEDURE SP_EliminarCategorias()
 BEGIN
-
+DELETE FROM Categoria WHERE id_categoria = id;
 END $$
 DELIMITER ;
 
@@ -29,6 +29,6 @@ DELIMITER ;
 DELIMITER $$
 CREATE PROCEDURE SP_ActualizarCategoria()
 BEGIN
-
+	
 END $$
 DELIMITER ;
