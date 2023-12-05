@@ -29,6 +29,6 @@ DELIMITER ;
 DELIMITER $$
 CREATE PROCEDURE SP_ActualizarCategoria()
 BEGIN
-
+	DELETE FROM Categoria WHERE id_categoria = id;
 END $$
 DELIMITER ;
