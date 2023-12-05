@@ -462,20 +462,13 @@
     <Content Include="Database Scripts\dataset\ScriptDataSet.sql" />
     <Content Include="Resources\dataConfig.xml" />
     <Content Include="Store Procedures\Analitica-Reportes\StoredProceduresReportes.sql" />
-    <Content Include="Store Procedures\inventario\SP_ActualizarCategorias.sql" />
-    <Content Include="Store Procedures\inventario\SP_ActualizarMarcas.sql" />
-    <Content Include="Store Procedures\inventario\SP_ActualizarProducto.sql" />
-    <Content Include="Store Procedures\inventario\SP_EliminarCategorias.sql" />
-    <Content Include="Store Procedures\inventario\SP_EliminarMarcas.sql" />
-    <Content Include="Store Procedures\inventario\SP_EliminarProducto.sql" />
-    <Content Include="Store Procedures\inventario\SP_InsertarCategorias.sql" />
-    <Content Include="Store Procedures\inventario\SP_InsertarMarcas.sql" />
-    <Content Include="Store Procedures\inventario\SP_InsertarProducto.sql" />
-    <Content Include="Store Procedures\inventario\SP_VerCategorias.sql" />
-    <Content Include="Store Procedures\inventario\SP_VerInventario.sql" />
-    <Content Include="Store Procedures\inventario\SP_VerMarcas.sql" />
-    <Content Include="Store Procedures\inventario\SP_VerProductos.sql" />
-    <Content Include="Store Procedures\inventario\SP_ObtenerCategoria.sql" />
+    <Content Include="Store Procedures\inventario\SP_Marcas.sql" />
+    <Content Include="Store Procedures\inventario\SP_Categorias.sql" />
+    <Content Include="Store Procedures\inventario\SP_Productos.sql" />
+    <Content Include="Store Procedures\inventario\SP_LlenarDGVInventario.sql" />
+    <Content Include="Store Procedures\Analitica-Reportes\StoredProceduresReportes.sql" />
+    <Content Include="Store Procedures\tickets\SP_InsertarTicket.sql" />
+    <Content Include="Store Procedures\tickets\SP_ObtenerCategoria.sql" />
     <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
