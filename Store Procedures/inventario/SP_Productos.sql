@@ -4,6 +4,7 @@ CREATE PROCEDURE SP_VerProductos()
 BEGIN
 
 	SELECT
+            pr.id_producto AS 'id',
     		pr.nombre AS 'Producto', ca.nombre AS 'Categoria', ma.nombre AS 'Marca',
     		pr.precio_unit AS 'Precio Unit', pr.cantidad_por_cajas AS 'Stock', pr.foto AS 'foto',
     	CASE pr.punto_reorden

@@ -9,7 +9,7 @@ Public Class frmInventario
         Try
             conexionDB()
             myConnectionDB.Open()
-            Dim InventarioDataTable As DataTable = invenatyDao.VerInventario
+            Dim InventarioDataTable As DataTable = invenatyDao.VerProductos
             dgvInv.DataSource = InventarioDataTable
 
             dgvInv.Columns("id").Visible = False 'Esta línea es para evitar que se vea la columna id del inventario
