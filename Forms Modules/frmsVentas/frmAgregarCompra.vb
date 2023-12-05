@@ -1,14 +1,16 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports x_project_desktop.StandardModules.DB_Conecction
 
 Public Class frmAgregarCompra
     Private comprasDAO As comprasDAO
 
     Private Sub frmAgregarCompra_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Inicializar la conexión a la base de datos utilizando la clase DB_Connection
-        StandardModules.DB_Conecction.conexionDB()
+        DB_Conecction.conexionDB()
+
 
         ' Crear una instancia de ComprasDAO con la conexión existente
-        comprasDAO = New comprasDAO(StandardModules.DB_Conecction.myConnectionDB)
+        comprasDAO = New comprasDAO(DB_Conecction.myConnectionDB)
 
         ' Cargar datos en los ComboBox
         cboProductos.DataSource = comprasDAO.ObtenerProductos()
