@@ -5,6 +5,7 @@
     End Sub
 
     Private Sub ReporteDeClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeClientesToolStripMenuItem.Click
+        Dim frmReporteClientes As New frmReporteClientes(New analiticaReporteInventarioDAO(myConnectionDB))
         SetPanel(frmReporteClientes, panelTablaReportes)
     End Sub
 

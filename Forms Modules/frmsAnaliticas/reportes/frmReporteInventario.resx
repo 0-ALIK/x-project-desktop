@@ -151,7 +151,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="cboxMarcas.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
@@ -178,7 +178,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cboxMarcas.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="cboxCategorias.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
@@ -205,7 +205,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cboxCategorias.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -238,37 +238,37 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
-  <data name="Button1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btnAplicarFiltros.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="Button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnAplicarFiltros.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>436, 94</value>
+  <data name="btnAplicarFiltros.Location" type="System.Drawing.Point, System.Drawing">
+    <value>437, 70</value>
   </data>
-  <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnAplicarFiltros.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 27</value>
   </data>
-  <data name="Button1.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnAplicarFiltros.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="Button1.Text" xml:space="preserve">
+  <data name="btnAplicarFiltros.Text" xml:space="preserve">
     <value>Aplicar Filtros</value>
   </data>
-  <data name="&gt;&gt;Button1.Name" xml:space="preserve">
-    <value>Button1</value>
+  <data name="&gt;&gt;btnAplicarFiltros.Name" xml:space="preserve">
+    <value>btnAplicarFiltros</value>
   </data>
-  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnAplicarFiltros.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Button1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnAplicarFiltros.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;btnAplicarFiltros.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="btnExportarExcel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -277,7 +277,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnExportarExcel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>575, 94</value>
+    <value>574, 94</value>
   </data>
   <data name="btnExportarExcel.Size" type="System.Drawing.Size, System.Drawing">
     <value>157, 28</value>
@@ -298,7 +298,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnExportarExcel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="dgvInventarioReporte.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 140</value>
@@ -319,11 +319,8 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dgvInventarioReporte.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
-  <metadata name="AnaliticaReporteInventarioDAOBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="Label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -355,7 +352,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label8.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -388,7 +385,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="lblCantCategorias.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -421,7 +418,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblCantCategorias.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="lblCantMarcas.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -454,7 +451,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblCantMarcas.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -484,7 +481,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="lblCantProductos.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -517,7 +514,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblCantProductos.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="Label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -550,19 +547,52 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
+  <data name="btnEliminarFiltros.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="btnEliminarFiltros.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnEliminarFiltros.Location" type="System.Drawing.Point, System.Drawing">
+    <value>437, 107</value>
+  </data>
+  <data name="btnEliminarFiltros.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 27</value>
+  </data>
+  <data name="btnEliminarFiltros.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="btnEliminarFiltros.Text" xml:space="preserve">
+    <value>Eliminar Filtros</value>
+  </data>
+  <data name="&gt;&gt;btnEliminarFiltros.Name" xml:space="preserve">
+    <value>btnEliminarFiltros</value>
+  </data>
+  <data name="&gt;&gt;btnEliminarFiltros.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnEliminarFiltros.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnEliminarFiltros.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="AnaliticaReporteInventarioDAOBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>39</value>
   </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1209, 651</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>frmReporteInventario</value>

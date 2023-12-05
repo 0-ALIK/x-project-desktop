@@ -152,6 +152,8 @@
     <Compile Include="Class Modules\analitica\analiticaReporteInventarioDAO.vb" />
     <Compile Include="Class Modules\clientes\Class3.vb" />
     <Compile Include="Class Modules\inventario\inventaryDAO.vb" />
+    <Compile Include="Class Modules\clientes\ClientesModule.vb" />
+    <Compile Include="Class Modules\inventario\Class4.vb" />
     <Compile Include="Class Modules\tickets\ticketsDAO.vb" />
     <Compile Include="Class Modules\ventas\Class6.vb" />
     <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboard.Designer.vb">
@@ -256,6 +258,18 @@
     <Compile Include="Forms Modules\frmsAyuda\frmAyudaUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms Modules\frmsClientes\frmEditarCliente.Designer.vb">
+      <DependentUpon>frmEditarCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsClientes\frmEditarCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsClientes\frmEditarEmpresa.Designer.vb">
+      <DependentUpon>frmEditarEmpresa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsClientes\frmEditarEmpresa.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms Modules\frmsClientes\frmClientes.Designer.vb">
       <DependentUpon>frmClientes.vb</DependentUpon>
     </Compile>
@@ -278,6 +292,12 @@
       <DependentUpon>frmAgregarProducto.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms Modules\frmsInventario\frmAgregarProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsClientes\frmEditarUsuario.Designer.vb">
+      <DependentUpon>frmEditarUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsClientes\frmEditarUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms Modules\frmsTickets\frmCrearTickets.Designer.vb">
@@ -399,6 +419,12 @@
     <EmbeddedResource Include="Forms Modules\frmsAyuda\frmAyudaUsuario.resx">
       <DependentUpon>frmAyudaUsuario.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsClientes\frmEditarCliente.resx">
+      <DependentUpon>frmEditarCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsClientes\frmEditarEmpresa.resx">
+      <DependentUpon>frmEditarEmpresa.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsClientes\frmClientes.resx">
       <DependentUpon>frmClientes.vb</DependentUpon>
     </EmbeddedResource>
@@ -407,6 +433,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsInventario\frmAgregarProducto.resx">
       <DependentUpon>frmAgregarProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsClientes\frmEditarUsuario.resx">
+      <DependentUpon>frmEditarUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsTickets\frmCrearTickets.resx">
       <DependentUpon>frmCrearTickets.vb</DependentUpon>
@@ -468,12 +497,13 @@
     <Content Include="Store Procedures\Analitica-Reportes\StoredProceduresReportes.sql" />
     <Content Include="Store Procedures\tickets\SP_InsertarTicket.sql" />
     <Content Include="Store Procedures\tickets\SP_ObtenerCategoria.sql" />
+    <Content Include="Store Procedures\tickets\StoredProceduresTickets.sql" />
     <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Store Procedures\ayuda\" />
     <Folder Include="Store Procedures\clientes\" />
     <Folder Include="Store Procedures\ventas\" />
-  </ItemGroup>
+  </ItemGroup>  
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

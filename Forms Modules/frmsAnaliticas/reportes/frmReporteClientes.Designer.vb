@@ -22,45 +22,51 @@ Partial Class frmReporteClientes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.btnDescargarReporte = New System.Windows.Forms.Button()
+        Me.btnAplicarFiltros = New System.Windows.Forms.Button()
+        Me.cboxProductos = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cboxProvincias = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvReporteClientes = New System.Windows.Forms.DataGridView()
+        Me.lblCantCategorias = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.lblCantProductos = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnEliminarFiltros = New System.Windows.Forms.Button()
         CType(Me.dgvReporteClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button2
+        'btnDescargarReporte
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(530, 108)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(157, 28)
-        Me.Button2.TabIndex = 13
-        Me.Button2.Text = "Descargar Reporte"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnDescargarReporte.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDescargarReporte.Location = New System.Drawing.Point(563, 108)
+        Me.btnDescargarReporte.Name = "btnDescargarReporte"
+        Me.btnDescargarReporte.Size = New System.Drawing.Size(157, 28)
+        Me.btnDescargarReporte.TabIndex = 13
+        Me.btnDescargarReporte.Text = "Descargar Reporte"
+        Me.btnDescargarReporte.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnAplicarFiltros
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(421, 109)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(93, 27)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "Actualizar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnAplicarFiltros.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAplicarFiltros.Location = New System.Drawing.Point(419, 86)
+        Me.btnAplicarFiltros.Name = "btnAplicarFiltros"
+        Me.btnAplicarFiltros.Size = New System.Drawing.Size(127, 27)
+        Me.btnAplicarFiltros.TabIndex = 12
+        Me.btnAplicarFiltros.Text = "Aplicar Filtros"
+        Me.btnAplicarFiltros.UseVisualStyleBackColor = True
         '
-        'ComboBox2
+        'cboxProductos
         '
-        Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(215, 109)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(185, 28)
-        Me.ComboBox2.TabIndex = 11
+        Me.cboxProductos.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cboxProductos.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboxProductos.FormattingEnabled = True
+        Me.cboxProductos.Location = New System.Drawing.Point(215, 109)
+        Me.cboxProductos.Name = "cboxProductos"
+        Me.cboxProductos.Size = New System.Drawing.Size(185, 28)
+        Me.cboxProductos.TabIndex = 11
         '
         'Label2
         '
@@ -72,15 +78,15 @@ Partial Class frmReporteClientes
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "Producto"
         '
-        'ComboBox1
+        'cboxProvincias
         '
-        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(11, 109)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(185, 28)
-        Me.ComboBox1.TabIndex = 9
+        Me.cboxProvincias.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cboxProvincias.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboxProvincias.FormattingEnabled = True
+        Me.cboxProvincias.Location = New System.Drawing.Point(11, 109)
+        Me.cboxProvincias.Name = "cboxProvincias"
+        Me.cboxProvincias.Size = New System.Drawing.Size(185, 28)
+        Me.cboxProvincias.TabIndex = 9
         '
         'Label1
         '
@@ -104,16 +110,86 @@ Partial Class frmReporteClientes
         Me.dgvReporteClientes.Size = New System.Drawing.Size(1299, 543)
         Me.dgvReporteClientes.TabIndex = 7
         '
+        'lblCantCategorias
+        '
+        Me.lblCantCategorias.AutoSize = True
+        Me.lblCantCategorias.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold)
+        Me.lblCantCategorias.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.lblCantCategorias.Location = New System.Drawing.Point(107, 44)
+        Me.lblCantCategorias.Name = "lblCantCategorias"
+        Me.lblCantCategorias.Size = New System.Drawing.Size(83, 25)
+        Me.lblCantCategorias.TabIndex = 22
+        Me.lblCantCategorias.Text = "Label5"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label8.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label8.Location = New System.Drawing.Point(107, 21)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(90, 20)
+        Me.Label8.TabIndex = 21
+        Me.Label8.Text = "Provincias"
+        '
+        'lblCantProductos
+        '
+        Me.lblCantProductos.AutoSize = True
+        Me.lblCantProductos.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold)
+        Me.lblCantProductos.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.lblCantProductos.Location = New System.Drawing.Point(12, 44)
+        Me.lblCantProductos.Name = "lblCantProductos"
+        Me.lblCantProductos.Size = New System.Drawing.Size(83, 25)
+        Me.lblCantProductos.TabIndex = 18
+        Me.lblCantProductos.Text = "Label5"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
+        Me.Label4.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label4.Location = New System.Drawing.Point(20, 44)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(0, 25)
+        Me.Label4.TabIndex = 17
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label3.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label3.Location = New System.Drawing.Point(12, 21)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(89, 20)
+        Me.Label3.TabIndex = 16
+        Me.Label3.Text = "Empresas"
+        '
+        'btnEliminarFiltros
+        '
+        Me.btnEliminarFiltros.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminarFiltros.Location = New System.Drawing.Point(419, 123)
+        Me.btnEliminarFiltros.Name = "btnEliminarFiltros"
+        Me.btnEliminarFiltros.Size = New System.Drawing.Size(127, 27)
+        Me.btnEliminarFiltros.TabIndex = 23
+        Me.btnEliminarFiltros.Text = "Eliminar Filtros"
+        Me.btnEliminarFiltros.UseVisualStyleBackColor = True
+        '
         'frmReporteClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1323, 711)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.btnEliminarFiltros)
+        Me.Controls.Add(Me.lblCantCategorias)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.lblCantProductos)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.btnDescargarReporte)
+        Me.Controls.Add(Me.btnAplicarFiltros)
+        Me.Controls.Add(Me.cboxProductos)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cboxProvincias)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgvReporteClientes)
         Me.Name = "frmReporteClientes"
@@ -125,11 +201,17 @@ Partial Class frmReporteClientes
 
     End Sub
 
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents btnDescargarReporte As Button
+    Friend WithEvents btnAplicarFiltros As Button
+    Friend WithEvents cboxProductos As ComboBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cboxProvincias As ComboBox
     Friend WithEvents Label1 As Label
     Friend WithEvents dgvReporteClientes As DataGridView
+    Friend WithEvents lblCantCategorias As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents lblCantProductos As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents btnEliminarFiltros As Button
 End Class

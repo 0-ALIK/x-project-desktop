@@ -16,7 +16,6 @@ Public Class frmReporteInventario
         cargarInventario(id_marca, id_categoria)
         cboxMarcas.SelectedIndex = -1
         cboxCategorias.SelectedIndex = -1
-
     End Sub
 
     Private Sub cargarInventario(id_marca, id_categoria)
@@ -74,14 +73,17 @@ Public Class frmReporteInventario
         Return cantidad
     End Function
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAplicarFiltros.Click
         cargarInventario(cboxMarcas.SelectedValue, cboxCategorias.SelectedValue)
-        cboxMarcas.SelectedIndex = -1
-        cboxCategorias.SelectedIndex = -1
     End Sub
 
     Private Sub btnExportarExcel_Click(sender As Object, e As EventArgs) Handles btnExportarExcel.Click
         analiticaReporteInventarioDao.ExportarExcel(dgvInventarioReporte)
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnEliminarFiltros.Click
+        cargarInventario(0, 0)
+        cboxMarcas.SelectedIndex = -1
+        cboxCategorias.SelectedIndex = -1
+    End Sub
 End Class

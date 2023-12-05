@@ -54,3 +54,80 @@ BEGIN
 END;
 $$
 DELIMITER ;
+
+
+DELIMITER //
+
+DELIMITER //
+
+CREATE PROCEDURE SP_ObtenerClientesYCompras(
+    IN provincia_id INT,
+    IN producto_id INT
+)
+BEGIN
+    -- Temporal para almacenar resultados
+    CREATE TEMPORARY TABLE TempResultados (
+        pedido_id INT,
+        fecha_pedido DATETIME,
+        cliente_id INT,
+        cliente_nombre VARCHAR(255),
+        empresa_nombre VARCHAR(255),
+        provincia_nombre VARCHAR(255),
+        producto_nombre VARCHAR(255),
+        estado_pedido VARCHAR(255),
+        total_compras INT
+    );
+
+    -- Consulta principal para obtener clientes, empresas, provincias, productos y estados más comprados
+    INSERT INTO TempResultados
+    SELECT
+        PE.id_pedido,
+        PE.fecha,
+        C.id_cliente,
+        C.nombre AS cliente_nombre,
+        E.nombre AS empresa_nombre,
+        P.nombre AS provincia_nombre,
+        PR.nombre AS producto_nombre,
+        PEstado.estado AS estado_pedido,
+        SUM(COMP.cantidad) AS total_compras
+    FROM Cliente C
+    JOIN Empresa E ON C.empresa_id = E.id_empresa
+    JOIN Cliente_direcciones CD ON C.id_cliente = CD.cliente_id
+    JOIN Direccion D ON CD.direccion_id = D.id_direccion
+    JOIN Provincia P ON D.provincia_id = P.id_provincia
+    JOIN Pedido PE ON C.id_cliente = PE.cliente_id
+    JOIN Pedido_producto COMP ON PE.id_pedido = COMP.pedido_id
+    JOIN Producto PR ON COMP.producto_id = PR.id_producto
+    JOIN Pedido_estado PEstado ON PE.estado_id = PEstado.id_pedido_estado
+    WHERE (provincia_id IS NULL OR P.id_provincia = provincia_id)
+        AND (producto_id IS NULL OR PR.id_producto = producto_id)
+    GROUP BY PE.id_pedido, PE.fecha, C.id_cliente, E.nombre, P.id_provincia, PR.id_producto, PEstado.estado
+    ORDER BY total_compras DESC;
+
+    -- Selección final
+    SELECT *
+    FROM TempResultados;
+
+    -- Eliminar la tabla temporal
+    DROP TEMPORARY TABLE IF EXISTS TempResultados;
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE SP_ObtenerProvincias()
+BEGIN
+	SELECT id_provincia, nombre from provincia;
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE SP_ObtenerProductos()
+BEGIN
+	SELECT id_producto, nombre from producto;
+END //
+
+DELIMITER ;

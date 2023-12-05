@@ -31,10 +31,9 @@ Partial Class frmReporteInventario
         Me.cboxMarcas = New System.Windows.Forms.ComboBox()
         Me.cboxCategorias = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnAplicarFiltros = New System.Windows.Forms.Button()
         Me.btnExportarExcel = New System.Windows.Forms.Button()
         Me.dgvInventarioReporte = New System.Windows.Forms.DataGridView()
-        Me.AnaliticaReporteInventarioDAOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lblCantCategorias = New System.Windows.Forms.Label()
@@ -42,6 +41,8 @@ Partial Class frmReporteInventario
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblCantProductos = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.btnEliminarFiltros = New System.Windows.Forms.Button()
+        Me.AnaliticaReporteInventarioDAOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.dgvInventarioReporte, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AnaliticaReporteInventarioDAOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -68,11 +69,11 @@ Partial Class frmReporteInventario
         resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.Name = "Label2"
         '
-        'Button1
+        'btnAplicarFiltros
         '
-        resources.ApplyResources(Me.Button1, "Button1")
-        Me.Button1.Name = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        resources.ApplyResources(Me.btnAplicarFiltros, "btnAplicarFiltros")
+        Me.btnAplicarFiltros.Name = "btnAplicarFiltros"
+        Me.btnAplicarFiltros.UseVisualStyleBackColor = True
         '
         'btnExportarExcel
         '
@@ -96,10 +97,6 @@ Partial Class frmReporteInventario
         Me.dgvInventarioReporte.Name = "dgvInventarioReporte"
         Me.dgvInventarioReporte.ReadOnly = True
         Me.dgvInventarioReporte.TabStop = False
-        '
-        'AnaliticaReporteInventarioDAOBindingSource
-        '
-        Me.AnaliticaReporteInventarioDAOBindingSource.DataSource = GetType(x_project_desktop.analiticaReporteInventarioDAO)
         '
         'Label8
         '
@@ -136,11 +133,22 @@ Partial Class frmReporteInventario
         resources.ApplyResources(Me.Label6, "Label6")
         Me.Label6.Name = "Label6"
         '
+        'btnEliminarFiltros
+        '
+        resources.ApplyResources(Me.btnEliminarFiltros, "btnEliminarFiltros")
+        Me.btnEliminarFiltros.Name = "btnEliminarFiltros"
+        Me.btnEliminarFiltros.UseVisualStyleBackColor = True
+        '
+        'AnaliticaReporteInventarioDAOBindingSource
+        '
+        Me.AnaliticaReporteInventarioDAOBindingSource.DataSource = GetType(x_project_desktop.analiticaReporteInventarioDAO)
+        '
         'frmReporteInventario
         '
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit
         resources.ApplyResources(Me, "$this")
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnEliminarFiltros)
+        Me.Controls.Add(Me.btnAplicarFiltros)
         Me.Controls.Add(Me.btnExportarExcel)
         Me.Controls.Add(Me.lblCantCategorias)
         Me.Controls.Add(Me.Label8)
@@ -166,7 +174,7 @@ Partial Class frmReporteInventario
     Friend WithEvents cboxMarcas As ComboBox
     Friend WithEvents cboxCategorias As ComboBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnAplicarFiltros As Button
     Friend WithEvents btnExportarExcel As Button
     Friend WithEvents AnaliticaReporteInventarioDAOBindingSource As BindingSource
     Friend WithEvents dgvInventarioReporte As DataGridView
@@ -177,4 +185,5 @@ Partial Class frmReporteInventario
     Friend WithEvents Label4 As Label
     Friend WithEvents lblCantProductos As Label
     Friend WithEvents Label6 As Label
+    Friend WithEvents btnEliminarFiltros As Button
 End Class

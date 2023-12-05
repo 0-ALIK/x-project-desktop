@@ -23,16 +23,14 @@ Partial Class frmTickets
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.dgvReclamos = New System.Windows.Forms.DataGridView()
+        Me.dgvTickets = New System.Windows.Forms.DataGridView()
         Me.ID_ticket = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Usuario = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Asunto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Asesor = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Prioridad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Estatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Estado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Accion = New System.Windows.Forms.DataGridViewButtonColumn()
-        CType(Me.dgvReclamos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvTickets, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -45,43 +43,30 @@ Partial Class frmTickets
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Tickets pendientes"
         '
-        'dgvReclamos
+        'dgvTickets
         '
-        Me.dgvReclamos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.dgvReclamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvReclamos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID_ticket, Me.Usuario, Me.Asunto, Me.Asesor, Me.Prioridad, Me.Estatus, Me.Fecha, Me.Accion})
-        Me.dgvReclamos.Location = New System.Drawing.Point(25, 93)
-        Me.dgvReclamos.Name = "dgvReclamos"
-        Me.dgvReclamos.Size = New System.Drawing.Size(860, 304)
-        Me.dgvReclamos.TabIndex = 1
+        Me.dgvTickets.AllowUserToAddRows = False
+        Me.dgvTickets.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.dgvTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvTickets.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID_ticket, Me.Asunto, Me.Prioridad, Me.Estado, Me.Fecha, Me.Accion})
+        Me.dgvTickets.Location = New System.Drawing.Point(25, 93)
+        Me.dgvTickets.Name = "dgvTickets"
+        Me.dgvTickets.Size = New System.Drawing.Size(816, 304)
+        Me.dgvTickets.TabIndex = 1
         '
         'ID_ticket
         '
-        Me.ID_ticket.DataPropertyName = "id_reclamo"
+        Me.ID_ticket.DataPropertyName = "id_tickets"
         Me.ID_ticket.HeaderText = "ID"
         Me.ID_ticket.Name = "ID_ticket"
         Me.ID_ticket.ReadOnly = True
         '
-        'Usuario
-        '
-        Me.Usuario.DataPropertyName = "usuario"
-        Me.Usuario.HeaderText = "Usuario"
-        Me.Usuario.Name = "Usuario"
-        Me.Usuario.ReadOnly = True
-        '
         'Asunto
         '
-        Me.Asunto.DataPropertyName = "asunto"
+        Me.Asunto.DataPropertyName = "categoria"
         Me.Asunto.HeaderText = "Asunto"
         Me.Asunto.Name = "Asunto"
         Me.Asunto.ReadOnly = True
-        '
-        'Asesor
-        '
-        Me.Asesor.DataPropertyName = "asesor"
-        Me.Asesor.HeaderText = "Asesor"
-        Me.Asesor.Name = "Asesor"
-        Me.Asesor.ReadOnly = True
         '
         'Prioridad
         '
@@ -89,11 +74,11 @@ Partial Class frmTickets
         Me.Prioridad.HeaderText = "Prioridad"
         Me.Prioridad.Name = "Prioridad"
         '
-        'Estatus
+        'Estado
         '
-        Me.Estatus.DataPropertyName = "estado"
-        Me.Estatus.HeaderText = "Estatus"
-        Me.Estatus.Name = "Estatus"
+        Me.Estado.DataPropertyName = "estado"
+        Me.Estado.HeaderText = "Estado"
+        Me.Estado.Name = "Estado"
         '
         'Fecha
         '
@@ -112,25 +97,23 @@ Partial Class frmTickets
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(924, 450)
-        Me.Controls.Add(Me.dgvReclamos)
+        Me.ClientSize = New System.Drawing.Size(879, 450)
+        Me.Controls.Add(Me.dgvTickets)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmTickets"
         Me.Text = "Tickets"
-        CType(Me.dgvReclamos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvTickets, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents dgvReclamos As DataGridView
+    Friend WithEvents dgvTickets As DataGridView
     Friend WithEvents ID_ticket As DataGridViewTextBoxColumn
-    Friend WithEvents Usuario As DataGridViewTextBoxColumn
     Friend WithEvents Asunto As DataGridViewTextBoxColumn
-    Friend WithEvents Asesor As DataGridViewTextBoxColumn
     Friend WithEvents Prioridad As DataGridViewTextBoxColumn
-    Friend WithEvents Estatus As DataGridViewTextBoxColumn
+    Friend WithEvents Estado As DataGridViewTextBoxColumn
     Friend WithEvents Fecha As DataGridViewTextBoxColumn
     Friend WithEvents Accion As DataGridViewButtonColumn
 End Class

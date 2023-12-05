@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports System.Windows
 Imports FontAwesome.Sharp
 Imports Mysqlx.XDevAPI.Common
 
@@ -15,14 +16,7 @@ Public Class frmCrearTickets
     End Sub
 
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles btnSeleccionar.Click
-        Dim openFileDialog As New OpenFileDialog With {
-            .Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.gif;*.bmp",
-            .Title = "Seleccionar imagen"
-        }
-        If openFileDialog.ShowDialog() = DialogResult.OK Then
-            imagePath = openFileDialog.FileName
-            lblEvidencia.Text = imagePath
-        End If
+        DialogoArchivo(pbPreview)
     End Sub
 
     Private Sub frmCrearTickets_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -52,13 +46,14 @@ Public Class frmCrearTickets
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Dim categoriaId As Integer = Convert.ToInt32(cboCategoria.SelectedValue)
-        If txtDescripcion.Text.Trim() <> "" And Not IsNumeric(txtDescripcion.Text) And Not String.IsNullOrEmpty(imagePath) Then
-            Dim rutaImagen As String = ManejoDeArchivos(imagePath)
+        If txtDescripcion.Text.Trim() <> "" And Not IsNumeric(txtDescripcion.Text) Then
+            Dim imagenEnBase64 As String = If(VerificarImagen(pbPreview), CodificarImagen(pbPreview.Image, pbPreview), "")
             Try
-                Dim result As Integer = ticketsDAO.InsertarTicket(categoriaId, txtDescripcion.Text, DefinicionesCategoriaPrioridad(categoriaId), rutaImagen)
+                Dim result As Integer = ticketsDAO.InsertarTicket(categoriaId, txtDescripcion.Text, DefinicionesCategoriaPrioridad(categoriaId), imagenEnBase64)
                 If result <> 0 Then
                     MsgBox("Ticket Registrado Exitosamente")
                     txtDescripcion.Clear()
+                    pbPreview.Image = Nothing
                 Else
                     MsgBox("Error al registrar su ticket... Verifique los datos")
                 End If
@@ -68,7 +63,6 @@ Public Class frmCrearTickets
         Else
             MsgBox("Favor Verifique sus datos.. ")
         End If
-
     End Sub
 
 End Class

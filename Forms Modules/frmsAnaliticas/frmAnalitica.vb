@@ -8,7 +8,7 @@
             myConnectionDB.Open()
             'MsgBox("Conexion Exitosa")
         Catch ex As Exception
-            MsgBox("Error al realizar la conexion", "Error: ", ex.Message)
+            MsgBox("Error al realizar la conexion")
         Finally
             If myConnectionDB.State <> ConnectionState.Closed Then myConnectionDB.Close()
         End Try

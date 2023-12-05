@@ -23,6 +23,7 @@ Partial Class frmCrearTickets
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.pbPreview = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.lblEvidencia = New System.Windows.Forms.Label()
         Me.btnSeleccionar = New FontAwesome.Sharp.IconButton()
@@ -36,12 +37,16 @@ Partial Class frmCrearTickets
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.pbPreview, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.White
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.pbPreview)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.lblEvidencia)
         Me.GroupBox1.Controls.Add(Me.btnSeleccionar)
@@ -56,6 +61,14 @@ Partial Class frmCrearTickets
         Me.GroupBox1.Size = New System.Drawing.Size(575, 354)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
+        '
+        'pbPreview
+        '
+        Me.pbPreview.Location = New System.Drawing.Point(356, 224)
+        Me.pbPreview.Name = "pbPreview"
+        Me.pbPreview.Size = New System.Drawing.Size(156, 117)
+        Me.pbPreview.TabIndex = 27
+        Me.pbPreview.TabStop = False
         '
         'Label5
         '
@@ -74,9 +87,8 @@ Partial Class frmCrearTickets
         Me.lblEvidencia.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblEvidencia.Location = New System.Drawing.Point(39, 289)
         Me.lblEvidencia.Name = "lblEvidencia"
-        Me.lblEvidencia.Size = New System.Drawing.Size(21, 17)
+        Me.lblEvidencia.Size = New System.Drawing.Size(0, 17)
         Me.lblEvidencia.TabIndex = 25
-        Me.lblEvidencia.Text = "://"
         '
         'btnSeleccionar
         '
@@ -85,7 +97,7 @@ Partial Class frmCrearTickets
         Me.btnSeleccionar.IconColor = System.Drawing.Color.Black
         Me.btnSeleccionar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnSeleccionar.IconSize = 30
-        Me.btnSeleccionar.Location = New System.Drawing.Point(224, 224)
+        Me.btnSeleccionar.Location = New System.Drawing.Point(144, 224)
         Me.btnSeleccionar.Name = "btnSeleccionar"
         Me.btnSeleccionar.Size = New System.Drawing.Size(195, 43)
         Me.btnSeleccionar.TabIndex = 24
@@ -108,7 +120,7 @@ Partial Class frmCrearTickets
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(193, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(111, 235)
+        Me.Label7.Location = New System.Drawing.Point(38, 235)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(92, 19)
         Me.Label7.TabIndex = 16
@@ -120,7 +132,7 @@ Partial Class frmCrearTickets
         Me.txtDescripcion.Location = New System.Drawing.Point(224, 109)
         Me.txtDescripcion.Multiline = True
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(288, 80)
+        Me.txtDescripcion.Size = New System.Drawing.Size(288, 68)
         Me.txtDescripcion.TabIndex = 11
         '
         'Label4
@@ -175,6 +187,17 @@ Partial Class frmCrearTickets
         '
         Me.OpenFileDialog2.FileName = "OpenFileDialog2"
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(183, Byte), Integer), CType(CType(186, Byte), Integer), CType(CType(193, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(362, 202)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(141, 19)
+        Me.Label3.TabIndex = 28
+        Me.Label3.Text = "Previsualización"
+        '
         'frmCrearTickets
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -188,6 +211,7 @@ Partial Class frmCrearTickets
         Me.Text = "frmCrearTickets"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.pbPreview, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -206,4 +230,6 @@ Partial Class frmCrearTickets
     Friend WithEvents btnSeleccionar As FontAwesome.Sharp.IconButton
     Friend WithEvents lblEvidencia As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents pbPreview As PictureBox
+    Friend WithEvents Label3 As Label
 End Class

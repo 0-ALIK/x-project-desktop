@@ -216,18 +216,18 @@ CREATE TABLE Tickets_estado (
 -- Creación de tabla Tickets
 CREATE TABLE Tickets (
     id_tickets INT AUTO_INCREMENT PRIMARY KEY,
-    admin_id INT,
-    FOREIGN KEY (admin_id) REFERENCES Admin(id_admin),
+    usuario_id INT,
+    FOREIGN KEY (usuario_id) REFERENCES Usuario(id_usuario),
     categoria_id INT,
     FOREIGN KEY (categoria_id) REFERENCES Tickets_categoria(id_tickets_categoria),
     prioridad_id INT,
     FOREIGN KEY (prioridad_id) REFERENCES Tickets_prioridad(id_tickets_prioridad),
     estado_id INT,
     FOREIGN KEY (estado_id) REFERENCES Tickets_estado(id_tickets_estado),
-    descripcion VARCHAR(255),
-    evidencia VARCHAR(255),
-    fecha DATETIME,
-    fecha_cambio_estado DATETIME
+    descripcion LONGTEXT,
+    evidencia LONGTEXT,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    fecha_cambio_estado TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 -- Creación de tabla Mensaje
