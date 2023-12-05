@@ -158,6 +158,7 @@
     <Compile Include="Class Modules\inventario\Class4.vb" />
     <Compile Include="Class Modules\tickets\ticketsDAO.vb" />
     <Compile Include="Class Modules\ventas\Class6.vb" />
+    <Compile Include="Class Modules\ventas\comprasDAO.vb" />
     <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboard.Designer.vb">
       <DependentUpon>frmDashboard.vb</DependentUpon>
     </Compile>
@@ -316,6 +317,7 @@
     </Compile>
     <Compile Include="Interfaces Modules\analitica\analitycInterfaces.vb" />
     <Compile Include="Interfaces Modules\tickets\ticketsInterfaces.vb" />
+    <Compile Include="Interfaces Modules\ventas\ComprasInterfaces.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -351,12 +353,12 @@
     <Compile Include="Forms Modules\frmsVentas\frmVentas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Standard Modules\ButtonModule.vb" />
-    <Compile Include="Standard Modules\DB_Conecction.vb" />
-    <Compile Include="Standard Modules\Definiciones.vb" />
-    <Compile Include="Standard Modules\FileModule.vb" />
-    <Compile Include="Standard Modules\ExportarArchivos.vb" />
-    <Compile Include="Standard Modules\PanelModule.vb" />
+    <Compile Include="StandardModules\ButtonModule.vb" />
+    <Compile Include="StandardModules\DB_Conecction.vb" />
+    <Compile Include="StandardModules\Definiciones.vb" />
+    <Compile Include="StandardModules\FileModule.vb" />
+    <Compile Include="StandardModules\ExportarArchivos.vb" />
+    <Compile Include="StandardModules\PanelModule.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboard.resx">
