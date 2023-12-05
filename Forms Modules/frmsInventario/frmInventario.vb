@@ -36,19 +36,31 @@ Public Class frmInventario
     Private Sub dgvInv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvInv.CellContentClick
         Try
             If e.RowIndex >= 0 AndAlso dgvInv.Columns(e.ColumnIndex).Name = "Eliminar" Then
-                Dim idProducto As Integer = Convert.ToInt32(dgvInv.SelectedRows(0).Cells("id").Value)
+                ' Pregunta al usuario si realmente quiere eliminar el producto
+                Dim confirmacion As DialogResult = MessageBox.Show("¿Estás seguro de que quieres eliminar este producto?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
-                ' Abrir la conexión a la base de datos
-                conexionDB()
-                myConnectionDB.Open()
+                If confirmacion = DialogResult.Yes Then
+                    ' Obtiene el ID del producto seleccionado
+                    Dim idProducto As Integer = Convert.ToInt32(dgvInv.SelectedRows(0).Cells("id").Value)
 
-                Dim command As New MySqlCommand("SP_EliminarProductos", myConnectionDB)
-                command.CommandType = CommandType.StoredProcedure
+                    ' Abrir la conexión a la base de datos
+                    conexionDB()
+                    myConnectionDB.Open()
 
-                ' Agregar el parámetro @id al comando
-                command.Parameters.AddWithValue("@id", idProducto)
-                command.ExecuteNonQuery()
+                    ' Crea el comando SQL para ejecutar el procedimiento almacenado
+                    Dim command As New MySqlCommand("SP_EliminarProductos", myConnectionDB)
+                    command.CommandType = CommandType.StoredProcedure
 
+                    ' Agrega el parámetro @id al comando
+                    command.Parameters.AddWithValue("@id", idProducto)
+
+                    ' Ejecuta el procedimiento almacenado
+                    command.ExecuteNonQuery()
+
+                    ' Refresca la pantalla (actualiza el DataGridView)
+                    Dim InventarioDataTable As DataTable = invenatyDao.VerInventario
+                    dgvInv.DataSource = InventarioDataTable
+                End If
             End If
         Catch ex As Exception
             MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -56,4 +68,5 @@ Public Class frmInventario
             If myConnectionDB.State <> ConnectionState.Closed Then myConnectionDB.Close()
         End Try
     End Sub
+
 End Class
