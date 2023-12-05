@@ -27,7 +27,10 @@ Public Class frmInventario
     End Sub
 
     Private Sub tsCategoriaInv_Click(sender As Object, e As EventArgs) Handles tsCategoriaInv.Click
-        SetPanel(frmAgregarMarca, panelFrmInventario)
+        frmAgregarCategoria.Show()
     End Sub
 
+    Private Sub tsAgregarInv_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class

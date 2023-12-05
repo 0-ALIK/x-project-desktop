@@ -17,7 +17,7 @@
 
     'Select - Insert - Update - Delete -> Categorias
     Function VerCategorias() As DataTable
-    Function InsertaCategorias() As Integer
+    Function InsertaCategorias(ByVal nombre As String) As Integer
     Function ActualizarCategorias() As Integer
     Function EliminarCategorias() As Integer
 

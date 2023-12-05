@@ -98,7 +98,7 @@ Partial Class frmInventario
         tsAgregarInv.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal
         tsAgregarInv.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
         tsAgregarInv.ToolTipText = "Agregar"
-        'AddHandler tsAgregarInv.Click, AddressOf Me.tsAgregarInv_Click
+        AddHandler tsAgregarInv.Click, AddressOf Me.tsAgregarInv_Click
         '
         'tsProductoInv
         '
@@ -194,10 +194,13 @@ Partial Class frmInventario
         'dgvInv
         '
         Me.dgvInv.AllowDrop = True
+        Me.dgvInv.AllowUserToAddRows = False
+        Me.dgvInv.AllowUserToDeleteRows = False
+        Me.dgvInv.AllowUserToOrderColumns = True
         Me.dgvInv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvInv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgvInv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvInv.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
         Me.dgvInv.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvInv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -222,7 +225,7 @@ Partial Class frmInventario
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
         Me.dgvInv.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvInv.RowTemplate.Height = 50
