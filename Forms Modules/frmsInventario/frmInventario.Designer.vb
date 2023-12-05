@@ -398,7 +398,9 @@ Partial Class frmInventario
         Me.Eliminar.ReadOnly = True
         Me.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.Eliminar.Text = "Eliminar"
         Me.Eliminar.ToolTipText = "Eliminar"
+        Me.Eliminar.UseColumnTextForButtonValue = True
         Me.Eliminar.Width = 89
         '
         'frmInventario
