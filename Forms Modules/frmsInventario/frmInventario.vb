@@ -1,5 +1,4 @@
-﻿Imports System.Data.SqlClient
-Imports MySql.Data.MySqlClient
+﻿Imports MySql.Data.MySqlClient
 
 Public Class frmInventario
 
@@ -58,7 +57,7 @@ Public Class frmInventario
                     command.ExecuteNonQuery()
 
                     ' Refresca la pantalla (actualiza el DataGridView)
-                    Dim InventarioDataTable As DataTable = invenatyDao.VerInventario
+                    Dim InventarioDataTable As DataTable = invenatyDao.VerProductos
                     dgvInv.DataSource = InventarioDataTable
                 End If
             End If
