@@ -1,4 +1,5 @@
-﻿Imports System.IO
+﻿Imports System.Data.SqlClient
+Imports System.IO
 Imports MySql.Data.MySqlClient
 Public Class inventaryDAO
     Implements inventaryInterfaces
@@ -6,7 +7,7 @@ Public Class inventaryDAO
     Private myConecctionDB As MySqlConnection
 
     Public Sub New(myConnection As MySqlConnection)
-        Me.myConecctionDB = myConecctionDB
+        Me.myConecctionDB = myConnection
     End Sub
 
     'Select que despliega todos los productos del inventario
@@ -45,16 +46,44 @@ Public Class inventaryDAO
 
     'Insert -> Productos
 
-    Public Function InsertarProducto() As Integer Implements inventaryInterfaces.InsertarProducto
+    Public Function InsertarProducto(nombre As String, precioUnitario As Decimal, cantidadPorCajas As Integer?, puntoReorden As Integer?, cantidadCajas As Integer?, marcaId As Integer, categoriaId As Integer, imagen As Image) As Boolean Implements inventaryInterfaces.InsertarProducto
         Try
-            Using glCommand As New MySqlCommand("SP_InsertarProducto", myConnectionDB)
-                glCommand.CommandTimeout = 0
+            myConnectionDB.Open()
+
+            Using glCommand As New MySqlCommand("SP_InsertarProductos", myConnectionDB)
                 glCommand.CommandType = CommandType.StoredProcedure
 
+                glCommand.Parameters.AddWithValue("@p_nombre", nombre)
+                glCommand.Parameters.AddWithValue("@p_precio_unit", precioUnitario)
+                glCommand.Parameters.AddWithValue("@p_cantidad_por_cajas", If(cantidadPorCajas.HasValue, cantidadPorCajas.Value, DBNull.Value))
+                glCommand.Parameters.AddWithValue("@p_punto_reorden", If(puntoReorden.HasValue, puntoReorden.Value, DBNull.Value))
+                glCommand.Parameters.AddWithValue("@p_cantidad_cajas", If(cantidadCajas.HasValue, cantidadCajas.Value, DBNull.Value))
+                glCommand.Parameters.AddWithValue("@p_marca_id", marcaId)
+                glCommand.Parameters.AddWithValue("@p_categoria_id", categoriaId)
 
+                ' Convertir la imagen a un arreglo de bytes
+                Dim photoBytes As Byte() = Nothing
+                If imagen IsNot Nothing Then
+                    Using ms As New MemoryStream()
+                        imagen.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg)
+                        photoBytes = ms.ToArray()
+                    End Using
+                End If
+
+                ' Agregar el parámetro para la imagen
+                glCommand.Parameters.AddWithValue("@p_imagen", If(photoBytes IsNot Nothing, photoBytes, DBNull.Value))
+
+                ' Ejecutar el procedimiento almacenado
+                glCommand.ExecuteNonQuery()
+
+                Return True
             End Using
         Catch ex As Exception
-            Throw New Exception("Error al procesar la operacion:", ex)
+            MessageBox.Show("Error al agregar el producto: " & ex.Message)
+            Return False
+        Finally
+            ' Cerrar la conexión a la base de datos
+            myConnectionDB.Close()
         End Try
     End Function
 
@@ -96,7 +125,11 @@ Public Class inventaryDAO
                 glCommand.CommandTimeout = 0
                 glCommand.CommandType = CommandType.StoredProcedure
 
-
+                Using adapter As New MySqlDataAdapter(glCommand)
+                    Dim datatable As New DataTable()
+                    adapter.Fill(datatable)
+                    Return datatable
+                End Using
             End Using
         Catch ex As Exception
             Throw New Exception("Error al procesar la operacion:", ex)
@@ -105,16 +138,26 @@ Public Class inventaryDAO
 
     'Insert -> Marcas
 
-    Public Function InsertarMarca() As Integer Implements inventaryInterfaces.InsertarMarca
+    Public Function InsertarMarca(ByVal nombre As String, ByVal descripcion As String, ByVal logo As String) As Integer Implements inventaryInterfaces.InsertarMarca
+        Dim resultado As Integer = 0
+
         Try
-            Using glCommand As New MySqlCommand("SP_InsertarMarca", myConnectionDB)
+            Using glCommand As New MySqlCommand("SP_InsertarMarcas", myConecctionDB)
                 glCommand.CommandTimeout = 0
                 glCommand.CommandType = CommandType.StoredProcedure
+                glCommand.Parameters.AddWithValue("nombre", nombre)
+                glCommand.Parameters.AddWithValue("descripcion", descripcion)
+                glCommand.Parameters.AddWithValue("logo", logo)
+                'glCommand.Parameters.AddWithValue("resultado", MySqlDbType.Int32)
 
+                myConecctionDB.Open()
 
+                resultado = glCommand.ExecuteNonQuery()
             End Using
         Catch ex As Exception
-            Throw New Exception("Error al procesar la operacion:", ex)
+            Throw New Exception("Error al insertar la marca: " & ex.Message)
+        Finally
+            If myConecctionDB.State <> ConnectionState.Closed Then myConecctionDB.Close()
         End Try
     End Function
 

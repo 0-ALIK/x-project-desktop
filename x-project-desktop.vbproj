@@ -475,13 +475,13 @@
     <Content Include="Store Procedures\inventario\SP_VerInventario.sql" />
     <Content Include="Store Procedures\inventario\SP_VerMarcas.sql" />
     <Content Include="Store Procedures\inventario\SP_VerProductos.sql" />
-    <Content Include="Store Procedures\tickets\SP_InsertarTicket.sql" />
-    <Content Include="Store Procedures\tickets\SP_ObtenerCategoria.sql" />
+    <Content Include="Store Procedures\inventario\SP_ObtenerCategoria.sql" />
     <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Store Procedures\ayuda\" />
     <Folder Include="Store Procedures\clientes\" />
+    <Folder Include="Store Procedures\tickets\" />
     <Folder Include="Store Procedures\ventas\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
