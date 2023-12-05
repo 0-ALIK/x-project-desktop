@@ -187,21 +187,6 @@ Public Class inventaryDAO
         End Try
     End Function
 
-    'Update -> Categorias
-
-    Public Function ActualizarCategorias() As Integer Implements inventaryInterfaces.ActualizarCategorias
-        Try
-            Using glCommand As New MySqlCommand("SP_ActualizarCategorias", myConnectionDB)
-                glCommand.CommandTimeout = 0
-                glCommand.CommandType = CommandType.StoredProcedure
-
-
-            End Using
-        Catch ex As Exception
-            Throw New Exception("Error al procesar la operacion:", ex)
-        End Try
-    End Function
-
     'Delete -> Categorias
 
     Public Function EliminarCategorias() As Integer Implements inventaryInterfaces.EliminarCategorias
@@ -209,7 +194,6 @@ Public Class inventaryDAO
             Using glCommand As New MySqlCommand("SP_VerCategorias", myConnectionDB)
                 glCommand.CommandTimeout = 0
                 glCommand.CommandType = CommandType.StoredProcedure
-
 
             End Using
         Catch ex As Exception
