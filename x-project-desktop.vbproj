@@ -428,6 +428,9 @@
     <EmbeddedResource Include="Forms Modules\frmsClientes\frmClientes.resx">
       <DependentUpon>frmClientes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsInventario\frmAgregarCategoria.resx">
+      <DependentUpon>frmAgregarCategoria.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsInventario\frmAgregarMarca.resx">
       <DependentUpon>frmAgregarMarca.vb</DependentUpon>
     </EmbeddedResource>

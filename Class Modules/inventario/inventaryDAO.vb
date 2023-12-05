@@ -1,5 +1,6 @@
-﻿Imports System.Data.SqlClient
-Imports System.IO
+Imports System.Data.SqlClient
+﻿Imports System.IO
+Imports Microsoft.VisualBasic.Logging
 Imports MySql.Data.MySqlClient
 Public Class inventaryDAO
     Implements inventaryInterfaces
@@ -37,11 +38,7 @@ Public Class inventaryDAO
                 glCommand.CommandTimeout = 0
                 glCommand.CommandType = CommandType.StoredProcedure
 
-                Using adapter As New MySqlDataAdapter(glCommand)
-                    Dim datatable As New DataTable()
-                    adapter.Fill(datatable)
-                    Return datatable
-                End Using
+
             End Using
         Catch ex As Exception
             Throw New Exception("Error al procesar la operacion:", ex)
@@ -188,7 +185,6 @@ Public Class inventaryDAO
                 glCommand.CommandTimeout = 0
                 glCommand.CommandType = CommandType.StoredProcedure
 
-
             End Using
         Catch ex As Exception
             Throw New Exception("Error al procesar la operacion:", ex)
@@ -202,8 +198,11 @@ Public Class inventaryDAO
             Using glCommand As New MySqlCommand("SP_VerCategorias", myConnectionDB)
                 glCommand.CommandTimeout = 0
                 glCommand.CommandType = CommandType.StoredProcedure
-
-
+                Using adapter As New MySqlDataAdapter(glCommand)
+                    Dim datatable As New DataTable()
+                    adapter.Fill(datatable)
+                    Return datatable
+                End Using
             End Using
         Catch ex As Exception
             Throw New Exception("Error al procesar la operacion:", ex)
@@ -212,31 +211,22 @@ Public Class inventaryDAO
 
     'Insert -> Categorias
 
-    Public Function InsertaCategorias() As Integer Implements inventaryInterfaces.InsertaCategorias
+    Public Function InsertaCategorias(ByVal nombre As String) As Integer Implements inventaryInterfaces.InsertaCategorias
+        Dim resultado As Integer = 0
         Try
-            Using glCommand As New MySqlCommand("SP_InsertaCategorias", myConnectionDB)
+            Using glCommand As New MySqlCommand("SP_InsertarCategorias", myConecctionDB)
                 glCommand.CommandTimeout = 0
                 glCommand.CommandType = CommandType.StoredProcedure
+                glCommand.Parameters.AddWithValue("nombre", nombre)
 
+                myConecctionDB.Open()
 
+                resultado = glCommand.ExecuteNonQuery()
             End Using
         Catch ex As Exception
-            Throw New Exception("Error al procesar la operacion:", ex)
-        End Try
-    End Function
-
-    'Update -> Categorias
-
-    Public Function ActualizarCategorias() As Integer Implements inventaryInterfaces.ActualizarCategorias
-        Try
-            Using glCommand As New MySqlCommand("SP_ActualizarCategorias", myConnectionDB)
-                glCommand.CommandTimeout = 0
-                glCommand.CommandType = CommandType.StoredProcedure
-
-
-            End Using
-        Catch ex As Exception
-            Throw New Exception("Error al procesar la operacion:", ex)
+            Throw New Exception("Error al insertar la marca: " & ex.Message)
+        Finally
+            If myConecctionDB.State <> ConnectionState.Closed Then myConecctionDB.Close()
         End Try
     End Function
 

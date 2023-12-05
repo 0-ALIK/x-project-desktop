@@ -30,7 +30,7 @@ Public Class frmInventario
     End Sub
 
     Private Sub tsCategoriaInv_Click(sender As Object, e As EventArgs) Handles tsCategoriaInv.Click
-        SetPanel(frmAgregarMarca, panelFrmInventario)
+        frmAgregarCategoria.Show()
     End Sub
 
     Private Sub dgvInv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvInv.CellContentClick
@@ -69,4 +69,7 @@ Public Class frmInventario
         End Try
     End Sub
 
+    Private Sub tsAgregarInv_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class
