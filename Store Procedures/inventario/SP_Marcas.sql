@@ -14,7 +14,7 @@ DELIMITER $$
 CREATE PROCEDURE SP_InsertarMarcas(
     IN nombre VARCHAR(255),
     IN descripcion VARCHAR(255),
-    IN logo VARCHAR(255)
+    IN logo LONGTEXT
 )
 BEGIN
 
