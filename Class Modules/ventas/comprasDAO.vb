@@ -167,6 +167,22 @@ Public Class comprasDAO
             Throw New Exception($"Error al obtener el ID del cliente. Detalles: {ex.Message}", ex)
         End Try
     End Function
+    Public Function ObtenerFormasPago() As DataTable
+        Try
+            Using glCommand As New MySqlCommand("SELECT id_forma_pago, nombre AS NombreFormaPago FROM forma_pago", myConnection)
+                glCommand.CommandType = CommandType.Text
+
+                Using adapter As New MySqlDataAdapter(glCommand)
+                    Dim dataTable As New DataTable()
+                    adapter.Fill(dataTable)
+                    Return dataTable
+                End Using
+            End Using
+        Catch ex As Exception
+            Throw New Exception("Error al obtener las formas de pago", ex)
+        End Try
+    End Function
+
     Public Function ObtenerDeudaActual(pedidoId As Integer) As Decimal
         Dim query As String = "SELECT SUM(monto) FROM pago WHERE pedido_id = @pedidoId"
         Using cmd As New MySqlCommand(query, myConnection)

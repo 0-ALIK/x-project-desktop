@@ -284,6 +284,12 @@
     <Compile Include="Forms Modules\frmsTickets\frmHomeTicket.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms Modules\frmsVentas\frmAgregarPago.Designer.vb">
+      <DependentUpon>frmAgregarPago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsVentas\frmAgregarPago.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms Modules\frmsVentas\frmAgregarPedido.Designer.vb">
       <DependentUpon>frmAgregarPedido.vb</DependentUpon>
     </Compile>
@@ -408,6 +414,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsTickets\frmHomeTicket.resx">
       <DependentUpon>frmHomeTicket.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsVentas\frmAgregarPago.resx">
+      <DependentUpon>frmAgregarPago.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsVentas\frmAgregarPedido.resx">
       <DependentUpon>frmAgregarPedido.vb</DependentUpon>

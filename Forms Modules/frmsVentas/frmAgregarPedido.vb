@@ -1,5 +1,4 @@
-﻿Imports MySql.Data.MySqlClient
-Imports x_project_desktop.StandardModules.DB_Conecction
+﻿
 
 Public Class frmAgregarPedido
     Private comprasDAO As comprasDAO

@@ -29,12 +29,20 @@ Partial Class frmAgregarPedido
         Me.cboProductos = New System.Windows.Forms.ComboBox()
         Me.cboClientes = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.panelFrmInventario.SuspendLayout()
         Me.SuspendLayout()
         '
         'panelFrmInventario
         '
         Me.panelFrmInventario.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
+        Me.panelFrmInventario.Controls.Add(Me.Label5)
+        Me.panelFrmInventario.Controls.Add(Me.Label4)
+        Me.panelFrmInventario.Controls.Add(Me.Label3)
+        Me.panelFrmInventario.Controls.Add(Me.Label2)
         Me.panelFrmInventario.Controls.Add(Me.btnAgregar)
         Me.panelFrmInventario.Controls.Add(Me.dtpFechaC)
         Me.panelFrmInventario.Controls.Add(Me.txtCantidad)
@@ -114,6 +122,58 @@ Partial Class frmAgregarPedido
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Inventario"
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Label2.Location = New System.Drawing.Point(268, 20)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(237, 31)
+        Me.Label2.TabIndex = 65
+        Me.Label2.Text = "Fecha del pedido"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Label3.Location = New System.Drawing.Point(303, 104)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(131, 31)
+        Me.Label3.TabIndex = 66
+        Me.Label3.Text = "Cantidad"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Label4.Location = New System.Drawing.Point(248, 189)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(257, 31)
+        Me.Label4.TabIndex = 67
+        Me.Label4.Text = "Nombre del cliente"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Label5.Location = New System.Drawing.Point(303, 283)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(131, 31)
+        Me.Label5.TabIndex = 68
+        Me.Label5.Text = "Producto"
+        '
         'frmAgregarPedido
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -136,4 +196,8 @@ Partial Class frmAgregarPedido
     Friend WithEvents txtCantidad As TextBox
     Friend WithEvents dtpFechaC As DateTimePicker
     Friend WithEvents btnAgregar As FontAwesome.Sharp.IconButton
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
 End Class

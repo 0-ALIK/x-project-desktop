@@ -116,9 +116,30 @@ Public Class frmDetalleVentas
     End Sub
 
     Private Sub btnPagar_Click(sender As Object, e As EventArgs) Handles btnPagar.Click
-        ' Aquí deberías abrir un nuevo formulario para ingresar el pago, similar a lo que hicimos con frmAgregarPago
-        ' Después, actualiza la deuda actual y vuelve a cargar el historial de pagos.
+        Try
+            ' Abrir el formulario de pago y pasarle la conexión y el ID del pedido
+            Using frmPago As New frmAgregarPago(myConnection, pedidoId)
+                ' Suscribirse al evento de pago completado
+                AddHandler frmPago.PagoRealizado, AddressOf PagoRealizadoEventHandler
+
+                ' Mostrar el formulario de pago
+                frmPago.ShowDialog()
+            End Using
+        Catch ex As Exception
+            MessageBox.Show($"Error al abrir el formulario de pago. Detalles: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
+
+    Private Sub PagoRealizadoEventHandler(montoPagado As Decimal)
+        ' Actualizar la deuda actual restando el monto pagado
+        deudaActual -= montoPagado
+        txtDeuda.Text = deudaActual.ToString()
+
+        ' Volver a cargar el historial de pagos
+        CargarHistorialPagos()
+    End Sub
+
+
 
     Private Sub CargarHistorialPagos()
         ' Obtener los pagos desde el DAO y cargarlos en el DataGridView
