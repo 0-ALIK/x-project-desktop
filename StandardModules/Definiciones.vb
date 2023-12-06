@@ -13,7 +13,7 @@
             Case "O"
                 DefinicionesCategorias = "Otros"
             Case Else
-                DefinicionesCategorias = "Ninguno"
+                DefinicionesCategorias = "Otros"
         End Select
     End Function
 
@@ -30,20 +30,20 @@
             Case 5
                 DefinicionesCategoriaPrioridad = 1
             Case Else
-                DefinicionesCategoriaPrioridad = 0
+                DefinicionesCategoriaPrioridad = 1
         End Select
     End Function
 
-    Function DefinicionesPrioridad(ByVal prioridad As Integer) As String
+    Function DefinicionesEstado(ByVal prioridad As Integer) As String
         Select Case prioridad
             Case 1
-                DefinicionesPrioridad = "Espera"
+                DefinicionesEstado = "Espera"
             Case 2
-                DefinicionesPrioridad = "Revisado"
+                DefinicionesEstado = "Revisado"
             Case 3
-                DefinicionesPrioridad = "Resuelto"
+                DefinicionesEstado = "Resuelto"
             Case Else
-                DefinicionesPrioridad = "Ninguna"
+                DefinicionesEstado = "Espera"
         End Select
     End Function
 
