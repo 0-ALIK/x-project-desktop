@@ -168,42 +168,6 @@
     <Compile Include="Class Modules\inventario\inventaryDAO.vb" />
     <Compile Include="Class Modules\clientes\ClientesModule.vb" />
     <Compile Include="Class Modules\tickets\ticketsDAO.vb" />
-    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboard.Designer.vb">
-      <DependentUpon>frmDashboard.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboard.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardClientes.Designer.vb">
-      <DependentUpon>frmDashboardClientes.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardClientes.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardCompras.Designer.vb">
-      <DependentUpon>frmDashboardCompras.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardCompras.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardInventario.Designer.vb">
-      <DependentUpon>frmDashboardInventario.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardInventario.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardPedidos.Designer.vb">
-      <DependentUpon>frmDashboardPedidos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardPedidos.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardVentas.Designer.vb">
-      <DependentUpon>frmDashboardVentas.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboardVentas.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Forms Modules\frmsAnaliticas\frmAnalitica.Designer.vb">
       <DependentUpon>frmAnalitica.vb</DependentUpon>
     </Compile>
@@ -394,9 +358,6 @@
     <Compile Include="Standard Modules\PanelModule.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboard.resx">
-      <DependentUpon>frmDashboard.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsAnaliticas\frmAnalitica.resx">
       <DependentUpon>frmAnalitica.vb</DependentUpon>
     </EmbeddedResource>
