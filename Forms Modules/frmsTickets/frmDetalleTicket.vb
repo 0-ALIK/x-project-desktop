@@ -52,8 +52,12 @@ Public Class frmDetalleTicket
         CargarEvidenciaTicket()
         EstadoCbo()
         pbEvidencia.SizeMode = PictureBoxSizeMode.StretchImage
-        CustomButton(btnVolver, IconChar.ArrowLeft, "#0d1117", 22)
-        CustomButton(btnCambiarEstado, IconChar.FloppyDisk, "#0d1117", 22)
+        CustomButton(btnVolver, IconChar.ArrowLeft, "#9eade6", 22)
+        btnVolver.ForeColor = Color.FromArgb(0, 0, 0)
+        btnVolver.IconColor = Color.FromArgb(0, 0, 0)
+        CustomButton(btnCambiarEstado, IconChar.FloppyDisk, "#9eade6", 22)
+        btnCambiarEstado.ForeColor = Color.FromArgb(0, 0, 0)
+        btnCambiarEstado.IconColor = Color.FromArgb(0, 0, 0)
         MapearDatosUsuario()
     End Sub
 

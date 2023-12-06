@@ -339,10 +339,5 @@ Partial Class frmMenu
         ' Lógica para la Opción 2
     End Sub
 
-    Private Sub IconPictureBox1_Click(sender As Object, e As EventArgs) Handles IconPictureBox1.Click
-        ' Mostrar el menú desplegable cuando se hace clic en el IconPictureBox
-        Me.contextMenuStrip1.Show(Me.IconPictureBox1, New Point(0, Me.IconPictureBox1.Height))
-    End Sub
-
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
 End Class

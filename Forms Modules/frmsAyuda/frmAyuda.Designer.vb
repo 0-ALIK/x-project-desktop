@@ -38,10 +38,9 @@ Partial Class frmAyuda
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Arial Black", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label1.Location = New System.Drawing.Point(1057, 186)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(793, 151)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(287, 32)
+        Me.Label1.Size = New System.Drawing.Size(243, 27)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Preguntas Frecuentes"
         '
@@ -55,11 +54,9 @@ Partial Class frmAyuda
         Me.gbAyuda.Controls.Add(Me.btnAyudaDevo)
         Me.gbAyuda.Controls.Add(Me.btnAyudaPago)
         Me.gbAyuda.ForeColor = System.Drawing.Color.Black
-        Me.gbAyuda.Location = New System.Drawing.Point(632, 293)
-        Me.gbAyuda.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gbAyuda.Location = New System.Drawing.Point(165, 123)
         Me.gbAyuda.Name = "gbAyuda"
-        Me.gbAyuda.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.gbAyuda.Size = New System.Drawing.Size(1161, 539)
+        Me.gbAyuda.Size = New System.Drawing.Size(871, 438)
         Me.gbAyuda.TabIndex = 5
         Me.gbAyuda.TabStop = False
         '
@@ -70,10 +67,9 @@ Partial Class frmAyuda
         Me.btnAyudaPoliticas.IconColor = System.Drawing.Color.Black
         Me.btnAyudaPoliticas.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnAyudaPoliticas.IconSize = 90
-        Me.btnAyudaPoliticas.Location = New System.Drawing.Point(811, 273)
-        Me.btnAyudaPoliticas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAyudaPoliticas.Location = New System.Drawing.Point(608, 222)
         Me.btnAyudaPoliticas.Name = "btnAyudaPoliticas"
-        Me.btnAyudaPoliticas.Size = New System.Drawing.Size(227, 177)
+        Me.btnAyudaPoliticas.Size = New System.Drawing.Size(170, 144)
         Me.btnAyudaPoliticas.TabIndex = 6
         Me.btnAyudaPoliticas.Text = "Politicas"
         Me.btnAyudaPoliticas.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -86,10 +82,9 @@ Partial Class frmAyuda
         Me.btnAyudaUsuario.IconColor = System.Drawing.Color.Black
         Me.btnAyudaUsuario.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnAyudaUsuario.IconSize = 90
-        Me.btnAyudaUsuario.Location = New System.Drawing.Point(454, 273)
-        Me.btnAyudaUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAyudaUsuario.Location = New System.Drawing.Point(340, 222)
         Me.btnAyudaUsuario.Name = "btnAyudaUsuario"
-        Me.btnAyudaUsuario.Size = New System.Drawing.Size(227, 177)
+        Me.btnAyudaUsuario.Size = New System.Drawing.Size(170, 144)
         Me.btnAyudaUsuario.TabIndex = 5
         Me.btnAyudaUsuario.Text = "Usuario"
         Me.btnAyudaUsuario.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -102,10 +97,9 @@ Partial Class frmAyuda
         Me.btnAyudaPedidos.IconColor = System.Drawing.Color.Black
         Me.btnAyudaPedidos.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnAyudaPedidos.IconSize = 90
-        Me.btnAyudaPedidos.Location = New System.Drawing.Point(103, 44)
-        Me.btnAyudaPedidos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAyudaPedidos.Location = New System.Drawing.Point(77, 36)
         Me.btnAyudaPedidos.Name = "btnAyudaPedidos"
-        Me.btnAyudaPedidos.Size = New System.Drawing.Size(227, 177)
+        Me.btnAyudaPedidos.Size = New System.Drawing.Size(170, 144)
         Me.btnAyudaPedidos.TabIndex = 1
         Me.btnAyudaPedidos.Text = "Pedidos"
         Me.btnAyudaPedidos.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -118,10 +112,9 @@ Partial Class frmAyuda
         Me.btnAyudaEntrega.IconColor = System.Drawing.Color.Black
         Me.btnAyudaEntrega.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnAyudaEntrega.IconSize = 90
-        Me.btnAyudaEntrega.Location = New System.Drawing.Point(103, 273)
-        Me.btnAyudaEntrega.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAyudaEntrega.Location = New System.Drawing.Point(77, 222)
         Me.btnAyudaEntrega.Name = "btnAyudaEntrega"
-        Me.btnAyudaEntrega.Size = New System.Drawing.Size(227, 177)
+        Me.btnAyudaEntrega.Size = New System.Drawing.Size(170, 144)
         Me.btnAyudaEntrega.TabIndex = 4
         Me.btnAyudaEntrega.Text = "Entrega"
         Me.btnAyudaEntrega.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -134,10 +127,9 @@ Partial Class frmAyuda
         Me.btnAyudaDevo.IconColor = System.Drawing.Color.Black
         Me.btnAyudaDevo.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnAyudaDevo.IconSize = 90
-        Me.btnAyudaDevo.Location = New System.Drawing.Point(454, 44)
-        Me.btnAyudaDevo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAyudaDevo.Location = New System.Drawing.Point(340, 36)
         Me.btnAyudaDevo.Name = "btnAyudaDevo"
-        Me.btnAyudaDevo.Size = New System.Drawing.Size(227, 177)
+        Me.btnAyudaDevo.Size = New System.Drawing.Size(170, 144)
         Me.btnAyudaDevo.TabIndex = 2
         Me.btnAyudaDevo.Text = "Devolución y Reembolso"
         Me.btnAyudaDevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -150,10 +142,9 @@ Partial Class frmAyuda
         Me.btnAyudaPago.IconColor = System.Drawing.Color.Black
         Me.btnAyudaPago.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnAyudaPago.IconSize = 90
-        Me.btnAyudaPago.Location = New System.Drawing.Point(811, 44)
-        Me.btnAyudaPago.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAyudaPago.Location = New System.Drawing.Point(608, 36)
         Me.btnAyudaPago.Name = "btnAyudaPago"
-        Me.btnAyudaPago.Size = New System.Drawing.Size(227, 177)
+        Me.btnAyudaPago.Size = New System.Drawing.Size(170, 144)
         Me.btnAyudaPago.TabIndex = 3
         Me.btnAyudaPago.Text = "Pago y Promociones"
         Me.btnAyudaPago.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -161,13 +152,12 @@ Partial Class frmAyuda
         '
         'frmAyuda
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1476, 765)
+        Me.ClientSize = New System.Drawing.Size(1028, 609)
         Me.Controls.Add(Me.gbAyuda)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmAyuda"
         Me.Text = "frmAyuda"
         Me.gbAyuda.ResumeLayout(False)

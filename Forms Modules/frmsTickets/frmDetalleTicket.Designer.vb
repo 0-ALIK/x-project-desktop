@@ -52,7 +52,8 @@ Partial Class frmDetalleTicket
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(355, 177)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(272, 165)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(185, 20)
@@ -63,7 +64,8 @@ Partial Class frmDetalleTicket
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(355, 76)
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(272, 64)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(72, 20)
@@ -74,8 +76,8 @@ Partial Class frmDetalleTicket
         '
         Me.lblNumeroTicket.AutoSize = True
         Me.lblNumeroTicket.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNumeroTicket.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblNumeroTicket.Location = New System.Drawing.Point(431, 76)
+        Me.lblNumeroTicket.ForeColor = System.Drawing.Color.Cyan
+        Me.lblNumeroTicket.Location = New System.Drawing.Point(348, 64)
         Me.lblNumeroTicket.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblNumeroTicket.Name = "lblNumeroTicket"
         Me.lblNumeroTicket.Size = New System.Drawing.Size(101, 20)
@@ -84,8 +86,9 @@ Partial Class frmDetalleTicket
         '
         'lblDetalle
         '
-        Me.lblDetalle.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.lblDetalle.BackColor = System.Drawing.SystemColors.ControlDark
         Me.lblDetalle.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDetalle.ForeColor = System.Drawing.Color.Black
         Me.lblDetalle.Location = New System.Drawing.Point(251, 207)
         Me.lblDetalle.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblDetalle.Name = "lblDetalle"
@@ -96,11 +99,12 @@ Partial Class frmDetalleTicket
         'btnVolver
         '
         Me.btnVolver.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnVolver.ForeColor = System.Drawing.Color.Black
         Me.btnVolver.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft
         Me.btnVolver.IconColor = System.Drawing.Color.Black
         Me.btnVolver.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnVolver.IconSize = 22
-        Me.btnVolver.Location = New System.Drawing.Point(245, 72)
+        Me.btnVolver.Location = New System.Drawing.Point(64, 37)
         Me.btnVolver.Name = "btnVolver"
         Me.btnVolver.Size = New System.Drawing.Size(83, 31)
         Me.btnVolver.TabIndex = 7
@@ -148,10 +152,11 @@ Partial Class frmDetalleTicket
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(638, 76)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(638, 111)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(113, 20)
+        Me.Label2.Size = New System.Drawing.Size(127, 20)
         Me.Label2.TabIndex = 11
         Me.Label2.Text = "Estado Actual:"
         '
@@ -159,8 +164,8 @@ Partial Class frmDetalleTicket
         '
         Me.lblEstado.AutoSize = True
         Me.lblEstado.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEstado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblEstado.Location = New System.Drawing.Point(747, 76)
+        Me.lblEstado.ForeColor = System.Drawing.Color.Cyan
+        Me.lblEstado.Location = New System.Drawing.Point(770, 111)
         Me.lblEstado.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblEstado.Name = "lblEstado"
         Me.lblEstado.Size = New System.Drawing.Size(73, 20)
@@ -171,7 +176,8 @@ Partial Class frmDetalleTicket
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(355, 123)
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(272, 111)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(163, 20)
@@ -182,8 +188,8 @@ Partial Class frmDetalleTicket
         '
         Me.lblUsuario.AutoSize = True
         Me.lblUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblUsuario.Location = New System.Drawing.Point(522, 123)
+        Me.lblUsuario.ForeColor = System.Drawing.Color.Cyan
+        Me.lblUsuario.Location = New System.Drawing.Point(439, 111)
         Me.lblUsuario.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblUsuario.Name = "lblUsuario"
         Me.lblUsuario.Size = New System.Drawing.Size(64, 20)
@@ -194,7 +200,7 @@ Partial Class frmDetalleTicket
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.lblUsuario)
         Me.Controls.Add(Me.Label4)
