@@ -465,12 +465,6 @@
     <Content Include="Store Procedures\tickets\StoredProceduresTickets.sql" />
     <None Include="Resources\logo.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Class Modules\inventario\" />
-    <Folder Include="Class Modules\ventas\" />
-    <Folder Include="Store Procedures\ayuda\" />
-    <Folder Include="Store Procedures\clientes\" />
-    <Folder Include="Store Procedures\ventas\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
