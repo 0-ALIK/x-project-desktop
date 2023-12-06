@@ -28,7 +28,7 @@ Partial Class frmAgregarPago
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnRegistrarPago = New FontAwesome.Sharp.IconButton()
         Me.dtpFechaP = New System.Windows.Forms.DateTimePicker()
-        Me.txtCantidadP = New System.Windows.Forms.TextBox()
+        Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.cboMetodoPago = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.panelFrmInventario.SuspendLayout()
@@ -42,7 +42,7 @@ Partial Class frmAgregarPago
         Me.panelFrmInventario.Controls.Add(Me.Label2)
         Me.panelFrmInventario.Controls.Add(Me.btnRegistrarPago)
         Me.panelFrmInventario.Controls.Add(Me.dtpFechaP)
-        Me.panelFrmInventario.Controls.Add(Me.txtCantidadP)
+        Me.panelFrmInventario.Controls.Add(Me.txtCantidad)
         Me.panelFrmInventario.Controls.Add(Me.cboMetodoPago)
         Me.panelFrmInventario.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelFrmInventario.Location = New System.Drawing.Point(0, 0)
@@ -118,15 +118,15 @@ Partial Class frmAgregarPago
         Me.dtpFechaP.Size = New System.Drawing.Size(420, 32)
         Me.dtpFechaP.TabIndex = 63
         '
-        'txtCantidadP
+        'txtCantidad
         '
-        Me.txtCantidadP.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.txtCantidadP.ForeColor = System.Drawing.Color.White
-        Me.txtCantidadP.Location = New System.Drawing.Point(217, 164)
-        Me.txtCantidadP.Multiline = True
-        Me.txtCantidadP.Name = "txtCantidadP"
-        Me.txtCantidadP.Size = New System.Drawing.Size(303, 32)
-        Me.txtCantidadP.TabIndex = 62
+        Me.txtCantidad.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.txtCantidad.ForeColor = System.Drawing.Color.White
+        Me.txtCantidad.Location = New System.Drawing.Point(217, 164)
+        Me.txtCantidad.Multiline = True
+        Me.txtCantidad.Name = "txtCantidad"
+        Me.txtCantidad.Size = New System.Drawing.Size(303, 32)
+        Me.txtCantidad.TabIndex = 62
         '
         'cboMetodoPago
         '
@@ -169,7 +169,7 @@ Partial Class frmAgregarPago
     Friend WithEvents Label2 As Label
     Friend WithEvents btnRegistrarPago As FontAwesome.Sharp.IconButton
     Friend WithEvents dtpFechaP As DateTimePicker
-    Friend WithEvents txtCantidadP As TextBox
+    Friend WithEvents txtCantidad As TextBox
     Friend WithEvents cboMetodoPago As ComboBox
     Friend WithEvents Label1 As Label
 End Class

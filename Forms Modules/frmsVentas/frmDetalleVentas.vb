@@ -15,7 +15,7 @@ Public Class frmDetalleVentas
 
     Private Sub frmDetalleVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            myConnection.Open()
+            'myConnection.Open()
 
             ' Obtener detalles del pedido desde el DAO
             CargarDetallesPedido()
@@ -24,7 +24,7 @@ Public Class frmDetalleVentas
             txtDeuda.Text = deudaActual.ToString()
 
             ' Cargar historial de pagos en el DataGridView
-            CargarHistorialPagos()
+            'CargarHistorialPagos()
         Catch ex As Exception
             MessageBox.Show($"Error al cargar los detalles del pedido. Detalles: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
@@ -117,36 +117,43 @@ Public Class frmDetalleVentas
 
     Private Sub btnPagar_Click(sender As Object, e As EventArgs) Handles btnPagar.Click
         Try
-            ' Abrir el formulario de pago y pasarle la conexión y el ID del pedido
-            Using frmPago As New frmAgregarPago(myConnection, pedidoId)
-                ' Suscribirse al evento de pago completado
-                AddHandler frmPago.PagoRealizado, AddressOf PagoRealizadoEventHandler
+            ' Abrir el formulario frmAgregarPago para ingresar detalles del pago
+            Using frmAgregarPago As New frmAgregarPago(myConnection, pedidoId)
+                ' Suscribirse al evento PagoRealizado
+                AddHandler frmAgregarPago.PagoRealizado, AddressOf ManejarPagoRealizado
 
-                ' Mostrar el formulario de pago
-                frmPago.ShowDialog()
+                ' Mostrar el formulario en modo de diálogo
+                If frmAgregarPago.ShowDialog() = DialogResult.OK Then
+                    ' No es necesario realizar acciones adicionales aquí
+                End If
+
+                ' Desuscribirse del evento PagoRealizado para evitar posibles fugas de memoria
+                RemoveHandler frmAgregarPago.PagoRealizado, AddressOf ManejarPagoRealizado
             End Using
         Catch ex As Exception
-            MessageBox.Show($"Error al abrir el formulario de pago. Detalles: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Error al realizar el pago. Detalles: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
-    Private Sub PagoRealizadoEventHandler(montoPagado As Decimal)
-        ' Actualizar la deuda actual restando el monto pagado
-        deudaActual -= montoPagado
-        txtDeuda.Text = deudaActual.ToString()
-
-        ' Volver a cargar el historial de pagos
+    ' Manejar el evento PagoRealizado
+    Private Sub ManejarPagoRealizado(cantidad As Decimal)
+        ' Actualizar el historial de pagos en el DataGridView
         CargarHistorialPagos()
+
+        ' Mostrar un mensaje de éxito (opcional)
+        MessageBox.Show($"Pago registrado con éxito. Cantidad: {cantidad}", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
-
-
+    ' Función para cargar el historial de pagos en el DataGridView
     Private Sub CargarHistorialPagos()
-        ' Obtener los pagos desde el DAO y cargarlos en el DataGridView
-        Dim pagosTable As DataTable = comprasDAO.ObtenerPagos(pedidoId)
-        dgvPagos.DataSource = pagosTable
+        Try
+            ' Obtener el historial de pagos desde el DAO
+            Dim historialPagos As DataTable = comprasDAO.ObtenerPagos(pedidoId)
+
+            ' Llenar el DataGridView con los datos del historial de pagos
+            dgvHistorialPagos.DataSource = historialPagos
+        Catch ex As Exception
+            MessageBox.Show($"Error al cargar el historial de pagos. Detalles: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
-
-
-
 End Class

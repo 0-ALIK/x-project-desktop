@@ -38,7 +38,7 @@ Partial Class frmDetalleVentas
         Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.panelFrmInventario = New System.Windows.Forms.Panel()
         Me.dgvProductosCliente = New System.Windows.Forms.DataGridView()
-        Me.dgvPagos = New System.Windows.Forms.DataGridView()
+        Me.dgvHistorialPagos = New System.Windows.Forms.DataGridView()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
@@ -90,7 +90,7 @@ Partial Class frmDetalleVentas
         Me.dgvInv = New System.Windows.Forms.DataGridView()
         Me.panelFrmInventario.SuspendLayout()
         CType(Me.dgvProductosCliente, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgvPagos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvHistorialPagos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.FlowLayoutPanel2.SuspendLayout()
@@ -113,7 +113,7 @@ Partial Class frmDetalleVentas
         '
         Me.panelFrmInventario.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
         Me.panelFrmInventario.Controls.Add(Me.dgvProductosCliente)
-        Me.panelFrmInventario.Controls.Add(Me.dgvPagos)
+        Me.panelFrmInventario.Controls.Add(Me.dgvHistorialPagos)
         Me.panelFrmInventario.Controls.Add(Me.DataGridView2)
         Me.panelFrmInventario.Controls.Add(Me.DataGridView1)
         Me.panelFrmInventario.Controls.Add(Me.FlowLayoutPanel2)
@@ -176,16 +176,16 @@ Partial Class frmDetalleVentas
         Me.dgvProductosCliente.Size = New System.Drawing.Size(369, 132)
         Me.dgvProductosCliente.TabIndex = 63
         '
-        'dgvPagos
+        'dgvHistorialPagos
         '
-        Me.dgvPagos.AllowDrop = True
-        Me.dgvPagos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.dgvHistorialPagos.AllowDrop = True
+        Me.dgvHistorialPagos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvPagos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        Me.dgvPagos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.dgvPagos.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dgvPagos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.dgvHistorialPagos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgvHistorialPagos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.dgvHistorialPagos.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvHistorialPagos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -193,29 +193,29 @@ Partial Class frmDetalleVentas
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvPagos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.dgvPagos.ColumnHeadersHeight = 50
-        Me.dgvPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgvPagos.EnableHeadersVisualStyles = False
-        Me.dgvPagos.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
-        Me.dgvPagos.Location = New System.Drawing.Point(378, 521)
-        Me.dgvPagos.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.dgvPagos.Name = "dgvPagos"
-        Me.dgvPagos.ReadOnly = True
-        Me.dgvPagos.RowHeadersVisible = False
-        Me.dgvPagos.RowHeadersWidth = 100
+        Me.dgvHistorialPagos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvHistorialPagos.ColumnHeadersHeight = 50
+        Me.dgvHistorialPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dgvHistorialPagos.EnableHeadersVisualStyles = False
+        Me.dgvHistorialPagos.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.dgvHistorialPagos.Location = New System.Drawing.Point(378, 521)
+        Me.dgvHistorialPagos.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dgvHistorialPagos.Name = "dgvHistorialPagos"
+        Me.dgvHistorialPagos.ReadOnly = True
+        Me.dgvHistorialPagos.RowHeadersVisible = False
+        Me.dgvHistorialPagos.RowHeadersWidth = 100
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
         DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
-        Me.dgvPagos.RowsDefaultCellStyle = DataGridViewCellStyle4
-        Me.dgvPagos.RowTemplate.Height = 50
-        Me.dgvPagos.RowTemplate.ReadOnly = True
-        Me.dgvPagos.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvPagos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvPagos.Size = New System.Drawing.Size(398, 128)
-        Me.dgvPagos.TabIndex = 62
+        Me.dgvHistorialPagos.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.dgvHistorialPagos.RowTemplate.Height = 50
+        Me.dgvHistorialPagos.RowTemplate.ReadOnly = True
+        Me.dgvHistorialPagos.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvHistorialPagos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvHistorialPagos.Size = New System.Drawing.Size(398, 128)
+        Me.dgvHistorialPagos.TabIndex = 62
         '
         'DataGridView2
         '
@@ -907,7 +907,7 @@ Partial Class frmDetalleVentas
         Me.panelFrmInventario.ResumeLayout(False)
         Me.panelFrmInventario.PerformLayout()
         CType(Me.dgvProductosCliente, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgvPagos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvHistorialPagos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.FlowLayoutPanel2.ResumeLayout(False)
@@ -985,6 +985,6 @@ Partial Class frmDetalleVentas
     Friend WithEvents DataGridView2 As DataGridView
     Friend WithEvents DataGridView3 As DataGridView
     Friend WithEvents dgvProductosCliente As DataGridView
-    Friend WithEvents dgvPagos As DataGridView
+    Friend WithEvents dgvHistorialPagos As DataGridView
     Friend WithEvents TextBox2 As TextBox
 End Class

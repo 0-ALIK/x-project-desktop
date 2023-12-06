@@ -169,7 +169,7 @@ Public Class comprasDAO
     End Function
     Public Function ObtenerFormasPago() As DataTable
         Try
-            Using glCommand As New MySqlCommand("SELECT id_forma_pago, nombre AS NombreFormaPago FROM forma_pago", myConnection)
+            Using glCommand As New MySqlCommand("SELECT id_forma_pago, nombre FROM forma_pago", myConnection)
                 glCommand.CommandType = CommandType.Text
 
                 Using adapter As New MySqlDataAdapter(glCommand)
@@ -178,46 +178,89 @@ Public Class comprasDAO
                     Return dataTable
                 End Using
             End Using
+        Catch ex As MySqlException
+            ' Captura específicamente excepciones relacionadas con MySQL
+            Throw New Exception("Error al obtener las formas de pago de la base de datos.", ex)
         Catch ex As Exception
-            Throw New Exception("Error al obtener las formas de pago", ex)
+            ' Captura otras excepciones no relacionadas con MySQL
+            Throw New Exception("Error general al obtener las formas de pago.", ex)
         End Try
     End Function
 
+
+
     Public Function ObtenerDeudaActual(pedidoId As Integer) As Decimal
         Dim query As String = "SELECT SUM(monto) FROM pago WHERE pedido_id = @pedidoId"
-        Using cmd As New MySqlCommand(query, myConnection)
-            cmd.Parameters.AddWithValue("@pedidoId", pedidoId)
-            myConnection.Open()
-            Dim result As Object = cmd.ExecuteScalar()
-            If result IsNot Nothing AndAlso Not DBNull.Value.Equals(result) Then
-                Return Convert.ToDecimal(result)
-            Else
-                Return 0
+        Try
+            Using cmd As New MySqlCommand(query, myConnection)
+                cmd.Parameters.AddWithValue("@pedidoId", pedidoId)
+                myConnection.Open()
+                Dim result As Object = cmd.ExecuteScalar()
+
+                ' Verificar si el resultado no es nulo o DBNull.Value antes de convertirlo
+                If result IsNot Nothing AndAlso Not DBNull.Value.Equals(result) Then
+                    Return Convert.ToDecimal(result)
+                Else
+                    ' Devolver 0 si el resultado es nulo o DBNull.Value
+                    Return 0
+                End If
+            End Using
+        Catch ex As MySqlException
+            ' Captura específicamente excepciones relacionadas con MySQL
+            Throw New Exception("Error al obtener la deuda actual de la base de datos.", ex)
+        Catch ex As Exception
+            ' Captura otras excepciones no relacionadas con MySQL
+            Throw New Exception("Error general al obtener la deuda actual.", ex)
+        Finally
+            If myConnection.State = ConnectionState.Open Then
+                myConnection.Close()
             End If
-        End Using
+        End Try
     End Function
+
 
     Public Function RegistrarPago(pedidoId As Integer, monto As Decimal, fecha As DateTime, formaPagoId As Integer) As Integer
         Dim query As String = "INSERT INTO pago (pedido_id, monto, fecha, forma_pago_id) VALUES (@pedidoId, @monto, @fecha, @formaPagoId); SELECT LAST_INSERT_ID();"
-        Using cmd As New MySqlCommand(query, myConnection)
-            cmd.Parameters.AddWithValue("@pedidoId", pedidoId)
-            cmd.Parameters.AddWithValue("@monto", monto)
-            cmd.Parameters.AddWithValue("@fecha", fecha)
-            cmd.Parameters.AddWithValue("@formaPagoId", formaPagoId)
-            myConnection.Open()
-            Return Convert.ToInt32(cmd.ExecuteScalar())
-        End Using
+        Try
+            Using cmd As New MySqlCommand(query, myConnection)
+                cmd.Parameters.AddWithValue("@pedidoId", pedidoId)
+                cmd.Parameters.AddWithValue("@monto", monto)
+                cmd.Parameters.AddWithValue("@fecha", fecha)
+                cmd.Parameters.AddWithValue("@formaPagoId", formaPagoId)
+                myConnection.Open()
+                Return Convert.ToInt32(cmd.ExecuteScalar())
+            End Using
+        Catch ex As MySqlException
+            ' Captura específicamente excepciones relacionadas con MySQL
+            Throw New Exception("Error al registrar el pago en la base de datos.", ex)
+        Catch ex As Exception
+            ' Captura otras excepciones no relacionadas con MySQL
+            Throw New Exception("Error general al registrar el pago.", ex)
+        Finally
+            If myConnection.State = ConnectionState.Open Then
+                myConnection.Close()
+            End If
+        End Try
     End Function
 
     Public Function ObtenerPagos(pedidoId As Integer) As DataTable
         Dim query As String = "SELECT monto, fecha, nombre AS forma_pago FROM pago INNER JOIN forma_pago ON pago.forma_pago_id = forma_pago.id_forma_pago WHERE pedido_id = @pedidoId"
-        Using cmd As New MySqlCommand(query, myConnection)
-            cmd.Parameters.AddWithValue("@pedidoId", pedidoId)
-            Using adapter As New MySqlDataAdapter(cmd)
-                Dim dataTable As New DataTable()
-                adapter.Fill(dataTable)
-                Return dataTable
+        Try
+            Using cmd As New MySqlCommand(query, myConnection)
+                cmd.Parameters.AddWithValue("@pedidoId", pedidoId)
+                Using adapter As New MySqlDataAdapter(cmd)
+                    Dim dataTable As New DataTable()
+                    adapter.Fill(dataTable)
+                    Return dataTable
+                End Using
             End Using
-        End Using
+        Catch ex As MySqlException
+            ' Captura específicamente excepciones relacionadas con MySQL
+            Throw New Exception("Error al obtener los pagos de la base de datos.", ex)
+        Catch ex As Exception
+            ' Captura otras excepciones no relacionadas con MySQL
+            Throw New Exception("Error general al obtener los pagos.", ex)
+        End Try
     End Function
+
 End Class
