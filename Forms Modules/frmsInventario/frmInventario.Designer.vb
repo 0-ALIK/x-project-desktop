@@ -29,14 +29,21 @@ Partial Class frmInventario
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.tsProductoInv = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsCategoriaInv = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsRealizarCompraInv = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.dgvInv = New System.Windows.Forms.DataGridView()
-        Me.Eliminar = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.id_producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.categoria = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.marca = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precio_unit = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cantidad_por_cajas = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.foto = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.punto_reorden = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.acciones = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.pan = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.btnBuscarInv = New FontAwesome.Sharp.IconButton()
@@ -48,16 +55,8 @@ Partial Class frmInventario
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Eliminar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.panelFrmInventario = New System.Windows.Forms.Panel()
-        Me.id_producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.categoria = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.marca = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.precio_unit = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cantidad_por_cajas = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.foto = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.punto_reorden = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.acciones = New System.Windows.Forms.DataGridViewButtonColumn()
         tsMarcaInv = New System.Windows.Forms.ToolStripMenuItem()
         tsAgregarInv = New System.Windows.Forms.ToolStripDropDownButton()
         Me.TabControl1.SuspendLayout()
@@ -85,7 +84,7 @@ Partial Class frmInventario
         tsMarcaInv.Name = "tsMarcaInv"
         tsMarcaInv.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
         tsMarcaInv.ShowShortcutKeys = False
-        tsMarcaInv.Size = New System.Drawing.Size(224, 30)
+        tsMarcaInv.Size = New System.Drawing.Size(180, 30)
         tsMarcaInv.Text = "Marca"
         AddHandler tsMarcaInv.Click, AddressOf Me.tsMarcaInv_Click
         '
@@ -93,7 +92,7 @@ Partial Class frmInventario
         '
         tsAgregarInv.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
         tsAgregarInv.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        tsAgregarInv.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {tsMarcaInv, Me.tsProductoInv, Me.tsCategoriaInv, Me.tsRealizarCompraInv})
+        tsAgregarInv.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {tsMarcaInv, Me.tsProductoInv, Me.tsCategoriaInv})
         tsAgregarInv.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         tsAgregarInv.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
         tsAgregarInv.Image = CType(resources.GetObject("tsAgregarInv.Image"), System.Drawing.Image)
@@ -108,7 +107,6 @@ Partial Class frmInventario
         tsAgregarInv.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal
         tsAgregarInv.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
         tsAgregarInv.ToolTipText = "Agregar"
-        AddHandler tsAgregarInv.Click, AddressOf Me.tsAgregarInv_Click
         '
         'tsProductoInv
         '
@@ -116,7 +114,7 @@ Partial Class frmInventario
         Me.tsProductoInv.ForeColor = System.Drawing.Color.White
         Me.tsProductoInv.Name = "tsProductoInv"
         Me.tsProductoInv.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.tsProductoInv.Size = New System.Drawing.Size(224, 30)
+        Me.tsProductoInv.Size = New System.Drawing.Size(180, 30)
         Me.tsProductoInv.Text = "Producto"
         '
         'tsCategoriaInv
@@ -125,17 +123,8 @@ Partial Class frmInventario
         Me.tsCategoriaInv.ForeColor = System.Drawing.Color.White
         Me.tsCategoriaInv.Name = "tsCategoriaInv"
         Me.tsCategoriaInv.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.tsCategoriaInv.Size = New System.Drawing.Size(224, 30)
+        Me.tsCategoriaInv.Size = New System.Drawing.Size(180, 30)
         Me.tsCategoriaInv.Text = "Categoria"
-        '
-        'tsRealizarCompraInv
-        '
-        Me.tsRealizarCompraInv.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.tsRealizarCompraInv.ForeColor = System.Drawing.Color.White
-        Me.tsRealizarCompraInv.Name = "tsRealizarCompraInv"
-        Me.tsRealizarCompraInv.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.tsRealizarCompraInv.Size = New System.Drawing.Size(224, 30)
-        Me.tsRealizarCompraInv.Text = "Realizar Compra"
         '
         'Label1
         '
@@ -246,17 +235,79 @@ Partial Class frmInventario
         Me.dgvInv.Size = New System.Drawing.Size(897, 288)
         Me.dgvInv.TabIndex = 2
         '
-        'Eliminar
+        'id_producto
         '
-        Me.Eliminar.HeaderText = "Eliminar"
-        Me.Eliminar.Name = "Eliminar"
-        Me.Eliminar.ReadOnly = True
-        Me.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.Eliminar.Text = "Eliminar"
-        Me.Eliminar.ToolTipText = "Eliminar"
-        Me.Eliminar.UseColumnTextForButtonValue = True
-        Me.Eliminar.Width = 89
+        Me.id_producto.HeaderText = "id_producto"
+        Me.id_producto.Name = "id_producto"
+        Me.id_producto.ReadOnly = True
+        Me.id_producto.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.id_producto.Visible = False
+        '
+        'Producto
+        '
+        Me.Producto.FillWeight = 121.8274!
+        Me.Producto.HeaderText = "Producto"
+        Me.Producto.Name = "Producto"
+        Me.Producto.ReadOnly = True
+        Me.Producto.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'categoria
+        '
+        Me.categoria.FillWeight = 96.88177!
+        Me.categoria.HeaderText = "Categoria"
+        Me.categoria.Name = "categoria"
+        Me.categoria.ReadOnly = True
+        Me.categoria.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'marca
+        '
+        Me.marca.FillWeight = 96.88177!
+        Me.marca.HeaderText = "Marca"
+        Me.marca.Name = "marca"
+        Me.marca.ReadOnly = True
+        Me.marca.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'precio_unit
+        '
+        Me.precio_unit.FillWeight = 96.88177!
+        Me.precio_unit.HeaderText = "Precio Unit"
+        Me.precio_unit.Name = "precio_unit"
+        Me.precio_unit.ReadOnly = True
+        Me.precio_unit.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'cantidad_por_cajas
+        '
+        Me.cantidad_por_cajas.FillWeight = 96.88177!
+        Me.cantidad_por_cajas.HeaderText = "Stock"
+        Me.cantidad_por_cajas.Name = "cantidad_por_cajas"
+        Me.cantidad_por_cajas.ReadOnly = True
+        Me.cantidad_por_cajas.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'foto
+        '
+        Me.foto.FillWeight = 96.88177!
+        Me.foto.HeaderText = "Foto"
+        Me.foto.Name = "foto"
+        Me.foto.ReadOnly = True
+        Me.foto.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'punto_reorden
+        '
+        Me.punto_reorden.FillWeight = 96.88177!
+        Me.punto_reorden.HeaderText = "P.reorden"
+        Me.punto_reorden.Name = "punto_reorden"
+        Me.punto_reorden.ReadOnly = True
+        Me.punto_reorden.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'acciones
+        '
+        Me.acciones.FillWeight = 96.88177!
+        Me.acciones.HeaderText = "Acciones"
+        Me.acciones.Name = "acciones"
+        Me.acciones.ReadOnly = True
+        Me.acciones.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.acciones.Text = "Eliminar"
+        Me.acciones.UseColumnTextForButtonValue = True
         '
         'pan
         '
@@ -388,7 +439,7 @@ Partial Class frmInventario
         Me.ToolStrip1.Location = New System.Drawing.Point(137, 11)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.ToolStrip1.Size = New System.Drawing.Size(142, 33)
+        Me.ToolStrip1.Size = New System.Drawing.Size(111, 33)
         Me.ToolStrip1.Stretch = True
         Me.ToolStrip1.TabIndex = 2
         Me.ToolStrip1.Text = "ToolStrip1"
@@ -404,6 +455,18 @@ Partial Class frmInventario
         Me.Panel3.Size = New System.Drawing.Size(300, 53)
         Me.Panel3.TabIndex = 0
         '
+        'Eliminar
+        '
+        Me.Eliminar.HeaderText = "Eliminar"
+        Me.Eliminar.Name = "Eliminar"
+        Me.Eliminar.ReadOnly = True
+        Me.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.Eliminar.Text = "Eliminar"
+        Me.Eliminar.ToolTipText = "Eliminar"
+        Me.Eliminar.UseColumnTextForButtonValue = True
+        Me.Eliminar.Width = 89
+        '
         'panelFrmInventario
         '
         Me.panelFrmInventario.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
@@ -415,80 +478,6 @@ Partial Class frmInventario
         Me.panelFrmInventario.Padding = New System.Windows.Forms.Padding(20)
         Me.panelFrmInventario.Size = New System.Drawing.Size(984, 569)
         Me.panelFrmInventario.TabIndex = 4
-        '
-        'id_producto
-        '
-        Me.id_producto.HeaderText = "id_producto"
-        Me.id_producto.Name = "id_producto"
-        Me.id_producto.ReadOnly = True
-        Me.id_producto.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.id_producto.Visible = False
-        '
-        'Producto
-        '
-        Me.Producto.FillWeight = 121.8274!
-        Me.Producto.HeaderText = "Producto"
-        Me.Producto.Name = "Producto"
-        Me.Producto.ReadOnly = True
-        Me.Producto.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        '
-        'categoria
-        '
-        Me.categoria.FillWeight = 96.88177!
-        Me.categoria.HeaderText = "Categoria"
-        Me.categoria.Name = "categoria"
-        Me.categoria.ReadOnly = True
-        Me.categoria.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        '
-        'marca
-        '
-        Me.marca.FillWeight = 96.88177!
-        Me.marca.HeaderText = "Marca"
-        Me.marca.Name = "marca"
-        Me.marca.ReadOnly = True
-        Me.marca.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        '
-        'precio_unit
-        '
-        Me.precio_unit.FillWeight = 96.88177!
-        Me.precio_unit.HeaderText = "Precio Unit"
-        Me.precio_unit.Name = "precio_unit"
-        Me.precio_unit.ReadOnly = True
-        Me.precio_unit.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        '
-        'cantidad_por_cajas
-        '
-        Me.cantidad_por_cajas.FillWeight = 96.88177!
-        Me.cantidad_por_cajas.HeaderText = "Stock"
-        Me.cantidad_por_cajas.Name = "cantidad_por_cajas"
-        Me.cantidad_por_cajas.ReadOnly = True
-        Me.cantidad_por_cajas.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        '
-        'foto
-        '
-        Me.foto.FillWeight = 96.88177!
-        Me.foto.HeaderText = "Foto"
-        Me.foto.Name = "foto"
-        Me.foto.ReadOnly = True
-        Me.foto.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        '
-        'punto_reorden
-        '
-        Me.punto_reorden.FillWeight = 96.88177!
-        Me.punto_reorden.HeaderText = "P.reorden"
-        Me.punto_reorden.Name = "punto_reorden"
-        Me.punto_reorden.ReadOnly = True
-        Me.punto_reorden.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        '
-        'acciones
-        '
-        Me.acciones.FillWeight = 96.88177!
-        Me.acciones.HeaderText = "Acciones"
-        Me.acciones.Name = "acciones"
-        Me.acciones.ReadOnly = True
-        Me.acciones.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.acciones.Text = "Eliminar"
-        Me.acciones.UseColumnTextForButtonValue = True
         '
         'frmInventario
         '
@@ -549,7 +538,6 @@ Partial Class frmInventario
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents tsProductoInv As ToolStripMenuItem
     Friend WithEvents tsCategoriaInv As ToolStripMenuItem
-    Friend WithEvents tsRealizarCompraInv As ToolStripMenuItem
     Friend WithEvents btnBuscarInv As FontAwesome.Sharp.IconButton
     Friend WithEvents Eliminar As DataGridViewButtonColumn
     Friend WithEvents id_producto As DataGridViewTextBoxColumn

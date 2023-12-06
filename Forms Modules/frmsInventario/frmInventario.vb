@@ -43,46 +43,6 @@ Public Class frmInventario
 
     Private Sub dgvInv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvInv.CellContentClick
         Try
-            If e.RowIndex >= 0 AndAlso dgvInv.Columns(e.ColumnIndex).Name = "Eliminar" Then
-                ' Pregunta al usuario si realmente quiere eliminar el producto
-                Dim confirmacion As DialogResult = MessageBox.Show("¿Estás seguro de que quieres eliminar este producto?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-
-                If confirmacion = DialogResult.Yes Then
-                    ' Obtiene el ID del producto seleccionado
-                    Dim idProducto As Integer = Convert.ToInt32(dgvInv.SelectedRows(0).Cells("id").Value)
-
-                    ' Abrir la conexión a la base de datos
-                    conexionDB()
-                    myConnectionDB.Open()
-
-                    ' Crea el comando SQL para ejecutar el procedimiento almacenado
-                    Dim command As New MySqlCommand("SP_EliminarProductos", myConnectionDB)
-                    command.CommandType = CommandType.StoredProcedure
-
-                    ' Agrega el parámetro @id al comando
-                    command.Parameters.AddWithValue("@id", idProducto)
-
-                    ' Ejecuta el procedimiento almacenado
-                    command.ExecuteNonQuery()
-
-                    ' Refresca la pantalla (actualiza el DataGridView)
-                    Dim InventarioDataTable As DataTable = invenatyDao.VerProductos
-                    dgvInv.DataSource = InventarioDataTable
-                End If
-            End If
-        Catch ex As Exception
-            MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Finally
-            If myConnectionDB.State <> ConnectionState.Closed Then myConnectionDB.Close()
-        End Try
-    End Sub
-
-    Private Sub tsAgregarInv_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub dgvInv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvInv.CellContentClick
-        Try
             If e.RowIndex >= 0 AndAlso dgvInv.Columns(e.ColumnIndex).Name = "acciones" Then
                 ' Pregunta al usuario si realmente quiere eliminar el producto
                 Dim confirmacion As DialogResult = MessageBox.Show("¿Estás seguro de que quieres eliminar esta categoria?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)

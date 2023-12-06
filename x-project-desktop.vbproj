@@ -165,7 +165,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class Modules\analitica\analiticaReporteInventarioDAO.vb" />
-    <Compile Include="Class Modules\clientes\Class3.vb" />
     <Compile Include="Class Modules\inventario\inventaryDAO.vb" />
     <Compile Include="Class Modules\clientes\ClientesModule.vb" />
     <Compile Include="Class Modules\tickets\ticketsDAO.vb" />
@@ -350,7 +349,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Interfaces Modules\inventario\inventaryInterfaces.vb" />
-    <Compile Include="Interfaces Modules\analitica\analitycClienteInterfaces.vb" />
     <Compile Include="Interfaces Modules\analitica\analitycReporteInterfaces.vb" />
     <Compile Include="Interfaces Modules\tickets\ticketsInterfaces.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -529,7 +527,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Class Modules\inventario\" />
     <Folder Include="Class Modules\ventas\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
