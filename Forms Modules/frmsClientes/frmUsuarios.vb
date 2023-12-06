@@ -1,4 +1,6 @@
-﻿Public Class frmUsuarios
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+
+Public Class frmUsuarios
 
     Private Property CedulaUsuario As String
     Private ClientesDao As ClientesInterfaces
@@ -27,12 +29,24 @@
             lblApellido.Text = datosUsuario("apellido").ToString()
             lblCorreo.Text = datosUsuario("correo").ToString()
             lblGenero.Text = datosUsuario("genero").ToString()
-            lblTelefono.Text = datosUsuario("telefono").ToString()
+            lblTelefono2.Text = datosUsuario("telefono").ToString()
             txtDetalles.Text = datosUsuario("detalles").ToString()
             lblCedula.Text = datosUsuario("cedula").ToString()
+            'Load the image data from the database And set it to pbPreview
+            Dim fotoBase64 As String = datosUsuario("Foto").ToString()
+            If Not String.IsNullOrEmpty(fotoBase64) Then
+                pbPreview.Image = DecodificarImagen(fotoBase64)
+
+                pbPreview.SizeMode = PictureBoxSizeMode.StretchImage
+            Else
+                ' Handle the case where the image data is empty
+                pbPreview.Image = Nothing
+            End If
         Else
-            MsgBox("No se encontraron datos para el usuario.", MsgBoxStyle.Information)
+            MsgBox("No se encontraron datos para el cliente.", MsgBoxStyle.Information)
             Me.Close()
+            Dim frmClientes As New frmClientes(New clientesDAO(myConnectionDB))
+            SetPanel(frmClientes, frmMenu.PanelContent)
         End If
     End Sub
 
