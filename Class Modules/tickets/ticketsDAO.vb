@@ -32,7 +32,7 @@ Public Class ticketsDAO
             Using glCommand As New MySqlCommand("SP_InsertarTicket", myConecctionDB)
                 glCommand.CommandTimeout = 0
                 glCommand.CommandType = CommandType.StoredProcedure
-                glCommand.Parameters.AddWithValue("@p_usuario_id", 1) 'de ejemplo, primero crear un cuenta usuario, luego una de admin.
+                glCommand.Parameters.AddWithValue("@p_usuario_id", 2) 'de ejemplo, primero crear un cuenta usuario, luego una de admin.
                 glCommand.Parameters.AddWithValue("@p_categoria_id", categoriaId)
                 glCommand.Parameters.AddWithValue("@p_prioridad_id", prioridadId)
                 glCommand.Parameters.AddWithValue("@p_estado_id", 1) 'Por defecto el estado de Espera

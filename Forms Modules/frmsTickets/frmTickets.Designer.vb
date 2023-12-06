@@ -22,18 +22,22 @@ Partial Class frmTickets
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvTickets = New System.Windows.Forms.DataGridView()
+        Me.cboFiltrarEstado = New System.Windows.Forms.ComboBox()
+        Me.btnFiltrar = New FontAwesome.Sharp.IconButton()
+        Me.btnLimpiarFiltro = New FontAwesome.Sharp.IconButton()
         Me.ID_ticket = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Asunto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Prioridad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Estado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Accion = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Eliminar = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.cboFiltrarEstado = New System.Windows.Forms.ComboBox()
-        Me.btnFiltrar = New FontAwesome.Sharp.IconButton()
-        Me.btnLimpiarFiltro = New FontAwesome.Sharp.IconButton()
         CType(Me.dgvTickets, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -41,7 +45,7 @@ Partial Class frmTickets
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(64, 58)
+        Me.Label1.Location = New System.Drawing.Point(177, 81)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(76, 24)
         Me.Label1.TabIndex = 0
@@ -50,13 +54,72 @@ Partial Class frmTickets
         'dgvTickets
         '
         Me.dgvTickets.AllowUserToAddRows = False
-        Me.dgvTickets.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.dgvTickets.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.dgvTickets.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvTickets.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dgvTickets.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(71, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvTickets.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvTickets.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID_ticket, Me.Asunto, Me.Prioridad, Me.Estado, Me.Fecha, Me.Accion, Me.Eliminar})
-        Me.dgvTickets.Location = New System.Drawing.Point(68, 102)
+        Me.dgvTickets.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID_ticket, Me.Nombre, Me.Asunto, Me.Prioridad, Me.Estado, Me.Fecha, Me.Accion, Me.Eliminar})
+        Me.dgvTickets.EnableHeadersVisualStyles = False
+        Me.dgvTickets.GridColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.dgvTickets.Location = New System.Drawing.Point(142, 134)
         Me.dgvTickets.Name = "dgvTickets"
-        Me.dgvTickets.Size = New System.Drawing.Size(692, 304)
+        Me.dgvTickets.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(176, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(44, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvTickets.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(176, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(44, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
+        Me.dgvTickets.RowsDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvTickets.Size = New System.Drawing.Size(886, 304)
         Me.dgvTickets.TabIndex = 1
+        '
+        'cboFiltrarEstado
+        '
+        Me.cboFiltrarEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboFiltrarEstado.FormattingEnabled = True
+        Me.cboFiltrarEstado.Location = New System.Drawing.Point(593, 86)
+        Me.cboFiltrarEstado.Name = "cboFiltrarEstado"
+        Me.cboFiltrarEstado.Size = New System.Drawing.Size(121, 21)
+        Me.cboFiltrarEstado.TabIndex = 2
+        '
+        'btnFiltrar
+        '
+        Me.btnFiltrar.IconChar = FontAwesome.Sharp.IconChar.Filter
+        Me.btnFiltrar.IconColor = System.Drawing.Color.Black
+        Me.btnFiltrar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnFiltrar.Location = New System.Drawing.Point(737, 81)
+        Me.btnFiltrar.Name = "btnFiltrar"
+        Me.btnFiltrar.Size = New System.Drawing.Size(46, 31)
+        Me.btnFiltrar.TabIndex = 4
+        Me.btnFiltrar.UseVisualStyleBackColor = True
+        '
+        'btnLimpiarFiltro
+        '
+        Me.btnLimpiarFiltro.IconChar = FontAwesome.Sharp.IconChar.FilterCircleXmark
+        Me.btnLimpiarFiltro.IconColor = System.Drawing.Color.Black
+        Me.btnLimpiarFiltro.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnLimpiarFiltro.Location = New System.Drawing.Point(789, 81)
+        Me.btnLimpiarFiltro.Name = "btnLimpiarFiltro"
+        Me.btnLimpiarFiltro.Size = New System.Drawing.Size(49, 31)
+        Me.btnLimpiarFiltro.TabIndex = 5
+        Me.btnLimpiarFiltro.UseVisualStyleBackColor = True
         '
         'ID_ticket
         '
@@ -65,7 +128,15 @@ Partial Class frmTickets
         Me.ID_ticket.HeaderText = "ID"
         Me.ID_ticket.Name = "ID_ticket"
         Me.ID_ticket.ReadOnly = True
-        Me.ID_ticket.Width = 43
+        Me.ID_ticket.Width = 49
+        '
+        'Nombre
+        '
+        Me.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Nombre.DataPropertyName = "nombre"
+        Me.Nombre.HeaderText = "Nombre"
+        Me.Nombre.Name = "Nombre"
+        Me.Nombre.Width = 89
         '
         'Asunto
         '
@@ -74,7 +145,7 @@ Partial Class frmTickets
         Me.Asunto.HeaderText = "Asunto"
         Me.Asunto.Name = "Asunto"
         Me.Asunto.ReadOnly = True
-        Me.Asunto.Width = 65
+        Me.Asunto.Width = 80
         '
         'Prioridad
         '
@@ -90,7 +161,7 @@ Partial Class frmTickets
         Me.Estado.HeaderText = "Estado"
         Me.Estado.Name = "Estado"
         Me.Estado.ReadOnly = True
-        Me.Estado.Width = 65
+        Me.Estado.Width = 79
         '
         'Fecha
         '
@@ -99,7 +170,7 @@ Partial Class frmTickets
         Me.Fecha.HeaderText = "Ultima Modificación"
         Me.Fecha.Name = "Fecha"
         Me.Fecha.ReadOnly = True
-        Me.Fecha.Width = 114
+        Me.Fecha.Width = 154
         '
         'Accion
         '
@@ -109,7 +180,7 @@ Partial Class frmTickets
         Me.Accion.ReadOnly = True
         Me.Accion.Text = "----->"
         Me.Accion.UseColumnTextForButtonValue = True
-        Me.Accion.Width = 51
+        Me.Accion.Width = 69
         '
         'Eliminar
         '
@@ -119,38 +190,7 @@ Partial Class frmTickets
         Me.Eliminar.ReadOnly = True
         Me.Eliminar.Text = "Eliminar"
         Me.Eliminar.UseColumnTextForButtonValue = True
-        Me.Eliminar.Width = 49
-        '
-        'cboFiltrarEstado
-        '
-        Me.cboFiltrarEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboFiltrarEstado.FormattingEnabled = True
-        Me.cboFiltrarEstado.Location = New System.Drawing.Point(480, 63)
-        Me.cboFiltrarEstado.Name = "cboFiltrarEstado"
-        Me.cboFiltrarEstado.Size = New System.Drawing.Size(121, 21)
-        Me.cboFiltrarEstado.TabIndex = 2
-        '
-        'btnFiltrar
-        '
-        Me.btnFiltrar.IconChar = FontAwesome.Sharp.IconChar.Filter
-        Me.btnFiltrar.IconColor = System.Drawing.Color.Black
-        Me.btnFiltrar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnFiltrar.Location = New System.Drawing.Point(624, 58)
-        Me.btnFiltrar.Name = "btnFiltrar"
-        Me.btnFiltrar.Size = New System.Drawing.Size(46, 31)
-        Me.btnFiltrar.TabIndex = 4
-        Me.btnFiltrar.UseVisualStyleBackColor = True
-        '
-        'btnLimpiarFiltro
-        '
-        Me.btnLimpiarFiltro.IconChar = FontAwesome.Sharp.IconChar.FilterCircleXmark
-        Me.btnLimpiarFiltro.IconColor = System.Drawing.Color.Black
-        Me.btnLimpiarFiltro.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnLimpiarFiltro.Location = New System.Drawing.Point(676, 58)
-        Me.btnLimpiarFiltro.Name = "btnLimpiarFiltro"
-        Me.btnLimpiarFiltro.Size = New System.Drawing.Size(49, 31)
-        Me.btnLimpiarFiltro.TabIndex = 5
-        Me.btnLimpiarFiltro.UseVisualStyleBackColor = True
+        Me.Eliminar.Width = 69
         '
         'frmTickets
         '
@@ -172,14 +212,15 @@ Partial Class frmTickets
 
     Friend WithEvents Label1 As Label
     Friend WithEvents dgvTickets As DataGridView
+    Friend WithEvents cboFiltrarEstado As ComboBox
+    Friend WithEvents btnFiltrar As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnLimpiarFiltro As FontAwesome.Sharp.IconButton
     Friend WithEvents ID_ticket As DataGridViewTextBoxColumn
+    Friend WithEvents Nombre As DataGridViewTextBoxColumn
     Friend WithEvents Asunto As DataGridViewTextBoxColumn
     Friend WithEvents Prioridad As DataGridViewTextBoxColumn
     Friend WithEvents Estado As DataGridViewTextBoxColumn
     Friend WithEvents Fecha As DataGridViewTextBoxColumn
     Friend WithEvents Accion As DataGridViewButtonColumn
     Friend WithEvents Eliminar As DataGridViewButtonColumn
-    Friend WithEvents cboFiltrarEstado As ComboBox
-    Friend WithEvents btnFiltrar As FontAwesome.Sharp.IconButton
-    Friend WithEvents btnLimpiarFiltro As FontAwesome.Sharp.IconButton
 End Class

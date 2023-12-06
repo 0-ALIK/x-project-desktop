@@ -1,14 +1,18 @@
-﻿Imports System.Windows.Documents
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+﻿
+Imports FontAwesome.Sharp
 Imports MySql.Data.MySqlClient
 Public Class frmDetalleTicket
     Private _idTicket As Integer
+    Private _estado As String
+    Private _usuario As String
     Private ticketsDAO As ticketsInterfaces
 
-    Public Sub New(ticketsDAO As ticketsInterfaces, idTicket As Integer)
+    Public Sub New(ticketsDAO As ticketsInterfaces, idTicket As Integer, estado As String, usuario As String)
         ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
         _idTicket = idTicket
+        _estado = estado
+        _usuario = usuario
 
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
         Me.ticketsDAO = ticketsDAO
@@ -48,7 +52,9 @@ Public Class frmDetalleTicket
         CargarEvidenciaTicket()
         EstadoCbo()
         pbEvidencia.SizeMode = PictureBoxSizeMode.StretchImage
-        lblNumeroTicket.Text = _idTicket
+        CustomButton(btnVolver, IconChar.ArrowLeft, "#0d1117", 22)
+        CustomButton(btnCambiarEstado, IconChar.FloppyDisk, "#0d1117", 22)
+        MapearDatosUsuario()
     End Sub
 
     Private Sub btnVolver_Click(sender As Object, e As EventArgs) Handles btnVolver.Click
@@ -86,4 +92,11 @@ Public Class frmDetalleTicket
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    Private Sub MapearDatosUsuario()
+        lblNumeroTicket.Text = _idTicket
+        lblEstado.Text = _estado
+        lblUsuario.Text = _usuario
+    End Sub
+
 End Class

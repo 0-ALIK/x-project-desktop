@@ -32,8 +32,10 @@ Public Class frmTickets
     Private Sub dgvTickets_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTickets.CellContentClick
         Dim id As Integer
         If dgvTickets.Columns IsNot Nothing AndAlso e.RowIndex >= 0 AndAlso e.ColumnIndex = dgvTickets.Columns("Accion").Index Then
+            Dim _estado As String = dgvTickets.Rows(e.RowIndex).Cells("estado").Value
+            Dim _usuario As String = dgvTickets.Rows(e.RowIndex).Cells("nombre").Value
             id = CInt(dgvTickets.Rows(e.RowIndex).Cells("ID_ticket").Value)
-            SetPanel(New frmDetalleTicket(New ticketsDAO(myConnectionDB), id), frmMenu.PanelContent)
+            SetPanel(New frmDetalleTicket(New ticketsDAO(myConnectionDB), id, _estado, _usuario), frmMenu.PanelContent)
         End If
         If dgvTickets.Columns IsNot Nothing AndAlso e.RowIndex >= 0 AndAlso e.ColumnIndex = dgvTickets.Columns("Eliminar").Index Then
             id = CInt(dgvTickets.Rows(e.RowIndex).Cells("ID_ticket").Value)

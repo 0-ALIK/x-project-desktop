@@ -32,6 +32,10 @@ Partial Class frmDetalleTicket
         Me.pbEvidencia = New System.Windows.Forms.PictureBox()
         Me.cboCambiarEstado = New System.Windows.Forms.ComboBox()
         Me.btnCambiarEstado = New FontAwesome.Sharp.IconButton()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblEstado = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lblUsuario = New System.Windows.Forms.Label()
         CType(Me.pbEvidencia, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -39,7 +43,7 @@ Partial Class frmDetalleTicket
         '
         Me.lblTicket.AutoSize = True
         Me.lblTicket.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTicket.Location = New System.Drawing.Point(649, 46)
+        Me.lblTicket.Location = New System.Drawing.Point(875, 165)
         Me.lblTicket.Name = "lblTicket"
         Me.lblTicket.Size = New System.Drawing.Size(0, 20)
         Me.lblTicket.TabIndex = 0
@@ -48,7 +52,7 @@ Partial Class frmDetalleTicket
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(24, 46)
+        Me.Label1.Location = New System.Drawing.Point(355, 177)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(185, 20)
@@ -59,7 +63,7 @@ Partial Class frmDetalleTicket
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(549, 46)
+        Me.Label3.Location = New System.Drawing.Point(355, 76)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(72, 20)
@@ -70,7 +74,8 @@ Partial Class frmDetalleTicket
         '
         Me.lblNumeroTicket.AutoSize = True
         Me.lblNumeroTicket.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNumeroTicket.Location = New System.Drawing.Point(625, 46)
+        Me.lblNumeroTicket.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblNumeroTicket.Location = New System.Drawing.Point(431, 76)
         Me.lblNumeroTicket.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblNumeroTicket.Name = "lblNumeroTicket"
         Me.lblNumeroTicket.Size = New System.Drawing.Size(101, 20)
@@ -80,7 +85,8 @@ Partial Class frmDetalleTicket
         'lblDetalle
         '
         Me.lblDetalle.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.lblDetalle.Location = New System.Drawing.Point(25, 88)
+        Me.lblDetalle.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDetalle.Location = New System.Drawing.Point(251, 207)
         Me.lblDetalle.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblDetalle.Name = "lblDetalle"
         Me.lblDetalle.Size = New System.Drawing.Size(357, 307)
@@ -94,7 +100,7 @@ Partial Class frmDetalleTicket
         Me.btnVolver.IconColor = System.Drawing.Color.Black
         Me.btnVolver.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnVolver.IconSize = 22
-        Me.btnVolver.Location = New System.Drawing.Point(19, 12)
+        Me.btnVolver.Location = New System.Drawing.Point(245, 72)
         Me.btnVolver.Name = "btnVolver"
         Me.btnVolver.Size = New System.Drawing.Size(83, 31)
         Me.btnVolver.TabIndex = 7
@@ -107,7 +113,7 @@ Partial Class frmDetalleTicket
         '
         Me.pbEvidencia.BackColor = System.Drawing.SystemColors.ButtonShadow
         Me.pbEvidencia.Image = CType(resources.GetObject("pbEvidencia.Image"), System.Drawing.Image)
-        Me.pbEvidencia.Location = New System.Drawing.Point(416, 88)
+        Me.pbEvidencia.Location = New System.Drawing.Point(642, 207)
         Me.pbEvidencia.Name = "pbEvidencia"
         Me.pbEvidencia.Size = New System.Drawing.Size(310, 307)
         Me.pbEvidencia.TabIndex = 8
@@ -116,29 +122,83 @@ Partial Class frmDetalleTicket
         'cboCambiarEstado
         '
         Me.cboCambiarEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboCambiarEstado.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboCambiarEstado.FormattingEnabled = True
-        Me.cboCambiarEstado.Location = New System.Drawing.Point(118, 405)
+        Me.cboCambiarEstado.Location = New System.Drawing.Point(344, 524)
         Me.cboCambiarEstado.Name = "cboCambiarEstado"
-        Me.cboCambiarEstado.Size = New System.Drawing.Size(264, 21)
+        Me.cboCambiarEstado.Size = New System.Drawing.Size(264, 28)
         Me.cboCambiarEstado.TabIndex = 9
         '
         'btnCambiarEstado
         '
-        Me.btnCambiarEstado.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.btnCambiarEstado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCambiarEstado.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk
         Me.btnCambiarEstado.IconColor = System.Drawing.Color.Black
         Me.btnCambiarEstado.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnCambiarEstado.Location = New System.Drawing.Point(416, 405)
+        Me.btnCambiarEstado.IconSize = 25
+        Me.btnCambiarEstado.Location = New System.Drawing.Point(642, 524)
         Me.btnCambiarEstado.Name = "btnCambiarEstado"
-        Me.btnCambiarEstado.Size = New System.Drawing.Size(94, 23)
+        Me.btnCambiarEstado.Size = New System.Drawing.Size(126, 33)
         Me.btnCambiarEstado.TabIndex = 10
         Me.btnCambiarEstado.Text = "Cambiar Estado"
+        Me.btnCambiarEstado.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnCambiarEstado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnCambiarEstado.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(638, 76)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(113, 20)
+        Me.Label2.TabIndex = 11
+        Me.Label2.Text = "Estado Actual:"
+        '
+        'lblEstado
+        '
+        Me.lblEstado.AutoSize = True
+        Me.lblEstado.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEstado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblEstado.Location = New System.Drawing.Point(747, 76)
+        Me.lblEstado.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblEstado.Name = "lblEstado"
+        Me.lblEstado.Size = New System.Drawing.Size(73, 20)
+        Me.lblEstado.TabIndex = 12
+        Me.lblEstado.Text = "# Estado"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(355, 123)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(163, 20)
+        Me.Label4.TabIndex = 13
+        Me.Label4.Text = "Usuario solicitante:"
+        '
+        'lblUsuario
+        '
+        Me.lblUsuario.AutoSize = True
+        Me.lblUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblUsuario.Location = New System.Drawing.Point(522, 123)
+        Me.lblUsuario.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblUsuario.Name = "lblUsuario"
+        Me.lblUsuario.Size = New System.Drawing.Size(64, 20)
+        Me.lblUsuario.TabIndex = 14
+        Me.lblUsuario.Text = "Usuario"
         '
         'frmDetalleTicket
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.lblUsuario)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.lblEstado)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnCambiarEstado)
         Me.Controls.Add(Me.cboCambiarEstado)
         Me.Controls.Add(Me.pbEvidencia)
@@ -165,6 +225,9 @@ Partial Class frmDetalleTicket
     Friend WithEvents pbEvidencia As PictureBox
     Friend WithEvents cboCambiarEstado As ComboBox
     Friend WithEvents btnCambiarEstado As FontAwesome.Sharp.IconButton
-
+    Friend WithEvents Label2 As Label
+    Friend WithEvents lblEstado As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents lblUsuario As Label
 End Class
 
