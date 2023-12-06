@@ -462,6 +462,7 @@
     <Content Include="Database Scripts\dataset\ScriptDataSet.sql" />
     <Content Include="Resources\dataConfig.xml" />
     <Content Include="Store Procedures\Analitica-Reportes\StoredProceduresReportes.sql" />
+    <Content Include="Store Procedures\tickets\StoredProceduresTickets.sql" />
     <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
@@ -469,7 +470,6 @@
     <Folder Include="Class Modules\ventas\" />
     <Folder Include="Store Procedures\ayuda\" />
     <Folder Include="Store Procedures\clientes\" />
-    <Folder Include="Store Procedures\tickets\" />
     <Folder Include="Store Procedures\ventas\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
