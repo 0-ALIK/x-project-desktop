@@ -9,9 +9,9 @@ Public Class frmInventario
             conexionDB()
             myConnectionDB.Open()
             Dim InventarioDataTable As DataTable = invenatyDao.VerProductos
-            dgvInv.DataSource = InventarioDataTable
+            'dgvInv.DataSource = InventarioDataTable
 
-            dgvInv.Columns("id").Visible = False 'Esta línea es para evitar que se vea la columna id del inventario
+            'dgvInv.Columns("id").Visible = False 'Esta línea es para evitar que se vea la columna id del inventario
 
             For Each rows As DataRow In InventarioDataTable.Rows
                 dgvInv.Rows.Add(rows("id"), rows("Producto"), rows("Categoria"), rows("Marca"), rows("Precio Unit"), rows("Stock"), rows("foto"), rows("P.reorden"))
@@ -45,7 +45,8 @@ Public Class frmInventario
         Try
             If e.RowIndex >= 0 AndAlso dgvInv.Columns(e.ColumnIndex).Name = "acciones" Then
                 ' Pregunta al usuario si realmente quiere eliminar el producto
-                Dim confirmacion As DialogResult = MessageBox.Show("¿Estás seguro de que quieres eliminar esta categoria?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                Dim nombreProducto As String = dgvInv.SelectedRows(0).Cells("Producto").Value.ToString()
+                Dim confirmacion As DialogResult = MessageBox.Show("¿Desea eliminar el producto '" & nombreProducto & "'?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
                 If confirmacion = DialogResult.Yes Then
                     ' Obtiene el ID del producto seleccionado

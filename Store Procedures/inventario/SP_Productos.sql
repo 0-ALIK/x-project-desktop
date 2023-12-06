@@ -43,9 +43,13 @@ DELIMITER ;
 
 -- Procedimiento para Eliminar Productos
 DELIMITER $$
-CREATE PROCEDURE SP_EliminarProductos()
+CREATE PROCEDURE SP_EliminarProductos(
+    IN id INT
+)
 BEGIN
+
     DELETE FROM producto WHERE id_producto = id;
+
 END $$
 DELIMITER ;
 
