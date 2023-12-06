@@ -117,10 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>Respuesta: Ofrecemos diversos métodos de entrega, como estándar, express y servicio de mensajería. Los costos varían según la ubicación y la opción seleccionada. Puedes revisar los detalles de los costos durante el proceso de compra antes de confirmar tu pedido.</value>
-  </data>
-  <data name="Label7.Text" xml:space="preserve">
-    <value>Respuesta: Lamentablemente, no podemos modificar la dirección de entrega una vez que se ha confirmado el pedido. Asegúrate de revisar y proporcionar la dirección correcta durante el proceso de compra para evitar inconvenientes. </value>
-  </data>
 </root>

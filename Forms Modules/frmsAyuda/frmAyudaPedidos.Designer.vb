@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmAyudaPedidos
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,29 +20,28 @@ Partial Class frmAyudaPedidos
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAyudaPedidos))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnVolver = New FontAwesome.Sharp.IconButton()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(295, 78)
+        Me.Label1.ForeColor = System.Drawing.Color.Gainsboro
+        Me.Label1.Location = New System.Drawing.Point(936, 117)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(485, 32)
-        Me.Label1.TabIndex = 0
+        Me.Label1.TabIndex = 1
         Me.Label1.Text = "Preguntas Frecuentes sobre Pedidos"
         '
         'btnVolver
@@ -52,11 +51,11 @@ Partial Class frmAyudaPedidos
         Me.btnVolver.IconColor = System.Drawing.Color.Black
         Me.btnVolver.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnVolver.IconSize = 30
-        Me.btnVolver.Location = New System.Drawing.Point(16, 15)
-        Me.btnVolver.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnVolver.Location = New System.Drawing.Point(13, 13)
+        Me.btnVolver.Margin = New System.Windows.Forms.Padding(4)
         Me.btnVolver.Name = "btnVolver"
         Me.btnVolver.Size = New System.Drawing.Size(180, 59)
-        Me.btnVolver.TabIndex = 5
+        Me.btnVolver.TabIndex = 2
         Me.btnVolver.Text = "Volver"
         Me.btnVolver.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -64,85 +63,93 @@ Partial Class frmAyudaPedidos
         '
         'Label2
         '
-        Me.Label2.Location = New System.Drawing.Point(35, 180)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Gainsboro
+        Me.Label2.Location = New System.Drawing.Point(364, 319)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(303, 91)
-        Me.Label2.TabIndex = 6
+        Me.Label2.Size = New System.Drawing.Size(474, 200)
+        Me.Label2.TabIndex = 7
         Me.Label2.Text = "¿Cómo puedo realizar un pedido y qué información necesito proporcionar durante el" &
-    " proceso?" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+    " proceso?"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label4
-        '
-        Me.Label4.Location = New System.Drawing.Point(60, 262)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(211, 91)
-        Me.Label4.TabIndex = 8
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label5
-        '
-        Me.Label5.Location = New System.Drawing.Point(35, 253)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(303, 138)
-        Me.Label5.TabIndex = 9
-        Me.Label5.Text = resources.GetString("Label5.Text")
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label3
         '
-        Me.Label3.Location = New System.Drawing.Point(372, 155)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Gainsboro
+        Me.Label3.Location = New System.Drawing.Point(948, 319)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(303, 91)
-        Me.Label3.TabIndex = 10
+        Me.Label3.Size = New System.Drawing.Size(492, 192)
+        Me.Label3.TabIndex = 8
         Me.Label3.Text = "¿Es posible realizar modificaciones en un pedido después de haberlo confirmado?"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label6
+        'Label4
         '
-        Me.Label6.Location = New System.Drawing.Point(372, 253)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(303, 138)
-        Me.Label6.TabIndex = 11
-        Me.Label6.Text = resources.GetString("Label6.Text")
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label7
-        '
-        Me.Label7.Location = New System.Drawing.Point(717, 155)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(303, 91)
-        Me.Label7.TabIndex = 12
-        Me.Label7.Text = "¿Es posible realizar modificaciones en un pedido después de haberlo confirmado?"
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Gainsboro
+        Me.Label4.Location = New System.Drawing.Point(1481, 346)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(511, 165)
+        Me.Label4.TabIndex = 9
+        Me.Label4.Text = "¿Cómo puedo rastrear el estado de mi pedido y recibir notificaciones sobre su pro" &
+    "greso?"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label8
         '
-        Me.Label8.Location = New System.Drawing.Point(717, 253)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.Gainsboro
+        Me.Label8.Location = New System.Drawing.Point(1496, 500)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(303, 138)
-        Me.Label8.TabIndex = 13
-        Me.Label8.Text = resources.GetString("Label8.Text")
+        Me.Label8.Size = New System.Drawing.Size(518, 260)
+        Me.Label8.TabIndex = 14
+        Me.Label8.Text = "Respuesta: Inicia sesión en tu cuenta y ve a la sección de historial de pedidos p" &
+    "ara verificar el estado de tu pedido."
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label5
+        '
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Gainsboro
+        Me.Label5.Location = New System.Drawing.Point(994, 494)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(427, 260)
+        Me.Label5.TabIndex = 15
+        Me.Label5.Tag = ""
+        Me.Label5.Text = "Respuesta: Después de confirmar un pedido, las modificaciones directas en línea n" &
+    "o son posibles. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label6
+        '
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Gainsboro
+        Me.Label6.Location = New System.Drawing.Point(352, 494)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(507, 260)
+        Me.Label6.TabIndex = 16
+        Me.Label6.Text = "Para realizar un pedido, inicia sesión en tu cuenta, selecciona los productos des" &
+    "eados y sigue el proceso de compra."
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmAyudaPedidos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(207, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1067, 554)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label7)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1833, 763)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnVolver)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmAyudaPedidos"
-        Me.Text = "frmAyudaPedidos"
+        Me.Text = "frmAyudaDevolucion"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -151,10 +158,9 @@ Partial Class frmAyudaPedidos
     Friend WithEvents Label1 As Label
     Friend WithEvents btnVolver As FontAwesome.Sharp.IconButton
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
+    Friend WithEvents Label4 As Label
     Friend WithEvents Label8 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
 End Class

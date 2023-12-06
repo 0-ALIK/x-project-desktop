@@ -117,13 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Label6.Text" xml:space="preserve">
-    <value>Respuesta: Las políticas detalladas de la empresa se encuentran en la sección de Políticas. Te recomendamos revisar esta sección para obtener información completa sobre términos de servicio, privacidad y otras políticas importantes.</value>
-  </data>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>Respuesta: Nos comprometemos a garantizar la seguridad de la información. Consulta nuestras políticas de seguridad en la sección correspondiente para obtener detalles sobre cómo manejamos y protegemos los datos de los usuarios y las transacciones.</value>
-  </data>
-  <data name="Label7.Text" xml:space="preserve">
-    <value>Respuesta: Utiliza la sección de Soporte y Retroalimentación para presentar sugerencias o quejas. Nuestro equipo revisará cada caso y te proporcionará una respuesta o solución en el menor tiempo posible.</value>
-  </data>
 </root>

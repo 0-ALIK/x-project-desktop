@@ -117,13 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>Respuesta: Para crear una cuenta, haz clic en "Registrarse" en la esquina superior derecha de la página principal. Completa la información requerida, como tu nombre, dirección de correo electrónico y una contraseña segura.</value>
-  </data>
-  <data name="Label6.Text" xml:space="preserve">
-    <value>Respuesta: Si olvidaste tu contraseña, ve a la página de inicio de sesión y haz clic en "¿Olvidaste tu contraseña?" Ingresa tu dirección de correo electrónico registrado y recibirás instrucciones sobre cómo restablecer tu contraseña.</value>
-  </data>
-  <data name="Label7.Text" xml:space="preserve">
-    <value>Respuesta: Sí, puedes cambiar la dirección de correo electrónico en la sección de configuración de tu cuenta. Inicia sesión, ve a la configuración de la cuenta y selecciona "Cambiar dirección de correo electrónico".</value>
-  </data>
 </root>

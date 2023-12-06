@@ -8,4 +8,8 @@ Public Class frmAyudaDevolucion
     Private Sub btnAyudaPedidos_Click(sender As Object, e As EventArgs) Handles btnVolver.Click
         SetPanel(New frmAyuda(), frmMenu.PanelContent)
     End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+
+    End Sub
 End Class

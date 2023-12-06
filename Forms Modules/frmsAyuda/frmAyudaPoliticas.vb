@@ -8,5 +8,4 @@ Public Class frmAyudaPoliticas
     Private Sub btnVolver_Click(sender As Object, e As EventArgs) Handles btnVolver.Click
         SetPanel(New frmAyuda(), frmMenu.PanelContent)
     End Sub
-
 End Class
