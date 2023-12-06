@@ -68,10 +68,10 @@ Public Class frmAgregarMarca
 
                 Dim marca As DataTable = invenatyDao.ObtenerMarca(idMarca)
 
-                Dim imagen = DecodificarImagen(marca.Rows(0).Item("logo"))
-
                 txtNombre.Text = marca.Rows(0).Item("nombre")
                 txtDescripcion.Text = marca.Rows(0).Item("descripcion")
+
+                Dim imagen As Image = If(marca.Rows(0).Item("logo") IsNot DBNull.Value, DecodificarImagen(marca.Rows(0).Item("logo")), Nothing)
 
                 ' Asignar la imagen al PictureBox
                 pbMarca.Image = imagen

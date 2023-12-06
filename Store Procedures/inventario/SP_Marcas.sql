@@ -56,36 +56,21 @@ DELIMITER ;
 DELIMITER $$
 
 CREATE PROCEDURE SP_ActualizarMarcas(
-    IN id_marca INT,
-    IN nombre VARCHAR(255),
-    IN descripcion VARCHAR(255),
-    IN logo VARCHAR(255)
+    IN p_id_marca INT,
+    IN p_nombre VARCHAR(255),
+    IN p_descripcion VARCHAR(255),
+    IN p_logo LONGTEXT
 )
 BEGIN
-    DECLARE marca_existente INT;
 
-    -- Verificar si la marca ya existe
-    SELECT COUNT(*) INTO marca_existente
-    FROM marca
-    WHERE nombre = nombre;
+    UPDATE marca
+    SET nombre = p_nombre, descripcion = p_descripcion, logo = p_logo
+    WHERE id_marca = p_id_marca;
 
-    IF marca_existente > 0 THEN
-        -- La marca ya existe, actualizar solo descripcion y logo
-        UPDATE marca
-        SET descripcion = descripcion,
-            logo = logo
-        WHERE id_marca = id_marca;
-    ELSE
-        -- La marca no existe, actualizar todo
-        UPDATE marca
-        SET nombre = nombre,
-            descripcion = descripcion,
-            logo = logo
-        WHERE id_marca = id_marca;
-    END IF;
 END $$
 
 DELIMITER ;
+
 
 -- Creación del procedimiento para obtener una marca en especifico
 DELIMITER $$
