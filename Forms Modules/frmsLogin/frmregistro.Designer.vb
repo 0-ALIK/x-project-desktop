@@ -35,9 +35,11 @@ Partial Class frmregistro
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.btnLogin = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.titleBar.SuspendLayout()
         CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'titleBar
@@ -79,7 +81,7 @@ Partial Class frmregistro
         Me.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPass.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.txtPass.Location = New System.Drawing.Point(42, 288)
+        Me.txtPass.Location = New System.Drawing.Point(42, 359)
         Me.txtPass.Name = "txtPass"
         Me.txtPass.Size = New System.Drawing.Size(350, 19)
         Me.txtPass.TabIndex = 29
@@ -91,7 +93,7 @@ Partial Class frmregistro
         Me.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCorreo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCorreo.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.txtCorreo.Location = New System.Drawing.Point(42, 235)
+        Me.txtCorreo.Location = New System.Drawing.Point(42, 306)
         Me.txtCorreo.Name = "txtCorreo"
         Me.txtCorreo.Size = New System.Drawing.Size(350, 19)
         Me.txtCorreo.TabIndex = 28
@@ -101,7 +103,7 @@ Partial Class frmregistro
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Silver
-        Me.Label4.Location = New System.Drawing.Point(38, 264)
+        Me.Label4.Location = New System.Drawing.Point(38, 335)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(89, 21)
         Me.Label4.TabIndex = 27
@@ -112,7 +114,7 @@ Partial Class frmregistro
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Silver
-        Me.Label2.Location = New System.Drawing.Point(38, 211)
+        Me.Label2.Location = New System.Drawing.Point(38, 282)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(58, 21)
         Me.Label2.TabIndex = 26
@@ -124,7 +126,7 @@ Partial Class frmregistro
         Me.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUser.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.txtUser.Location = New System.Drawing.Point(42, 175)
+        Me.txtUser.Location = New System.Drawing.Point(42, 246)
         Me.txtUser.Name = "txtUser"
         Me.txtUser.Size = New System.Drawing.Size(350, 19)
         Me.txtUser.TabIndex = 25
@@ -134,7 +136,7 @@ Partial Class frmregistro
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Silver
-        Me.Label1.Location = New System.Drawing.Point(38, 151)
+        Me.Label1.Location = New System.Drawing.Point(38, 222)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(68, 21)
         Me.Label1.TabIndex = 24
@@ -143,7 +145,7 @@ Partial Class frmregistro
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.Panel1.Location = New System.Drawing.Point(40, 411)
+        Me.Panel1.Location = New System.Drawing.Point(40, 482)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(350, 4)
         Me.Panel1.TabIndex = 32
@@ -153,7 +155,7 @@ Partial Class frmregistro
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.DarkGray
-        Me.Label7.Location = New System.Drawing.Point(175, 428)
+        Me.Label7.Location = New System.Drawing.Point(175, 499)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(88, 19)
         Me.Label7.TabIndex = 31
@@ -166,19 +168,30 @@ Partial Class frmregistro
         Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogin.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogin.ForeColor = System.Drawing.Color.White
-        Me.btnLogin.Location = New System.Drawing.Point(39, 357)
+        Me.btnLogin.Location = New System.Drawing.Point(39, 428)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(350, 45)
         Me.btnLogin.TabIndex = 30
         Me.btnLogin.Text = "Crear Cuenta"
         Me.btnLogin.UseVisualStyleBackColor = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.x_project_desktop.My.Resources.Resources.logo
+        Me.PictureBox1.Location = New System.Drawing.Point(142, 65)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(146, 146)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 33
+        Me.PictureBox1.TabStop = False
+        '
         'frmregistro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(430, 459)
+        Me.ClientSize = New System.Drawing.Size(430, 580)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.btnLogin)
@@ -197,6 +210,7 @@ Partial Class frmregistro
         Me.titleBar.PerformLayout()
         CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -214,4 +228,5 @@ Partial Class frmregistro
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label7 As Label
     Friend WithEvents btnLogin As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

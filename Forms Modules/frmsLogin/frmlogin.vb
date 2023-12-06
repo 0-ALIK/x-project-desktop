@@ -26,6 +26,8 @@ Public Class frmlogin
 
         If loginDAO.ValidarUsuario(user, pass) Then
             MessageBox.Show("Inicio de sesión exitoso")
+            frmMenu.Show()
+            Me.Hide()
 
         Else
             MessageBox.Show("Contraseña o usuario incorrectos.")
@@ -73,11 +75,11 @@ Public Class frmlogin
 
 
 
-    'Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
 
-    '    frmregistro.Show()
-    '    Me.Hide()
-    'End Sub
+        frmregistro.Show()
+        Me.Hide()
+    End Sub
 #End Region
 
 End Class

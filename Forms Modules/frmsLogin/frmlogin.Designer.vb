@@ -33,9 +33,11 @@ Partial Class frmlogin
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.titleBar.SuspendLayout()
         CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'titleBar
@@ -149,12 +151,23 @@ Partial Class frmlogin
         Me.Panel1.Size = New System.Drawing.Size(350, 6)
         Me.Panel1.TabIndex = 18
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.x_project_desktop.My.Resources.Resources.logo
+        Me.PictureBox1.Location = New System.Drawing.Point(141, 61)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(146, 146)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 19
+        Me.PictureBox1.TabStop = False
+        '
         'frmlogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(105, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(437, 515)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnLogin)
@@ -171,6 +184,7 @@ Partial Class frmlogin
         Me.titleBar.PerformLayout()
         CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnClose, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -186,4 +200,5 @@ Partial Class frmlogin
     Friend WithEvents Label3 As Label
     Friend WithEvents btnLogin As Button
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

@@ -498,6 +498,7 @@
     <Content Include="Database Scripts\dataset\ScriptDataSet.sql" />
     <Content Include="Resources\dataConfig.xml" />
     <Content Include="Store Procedures\Analitica-Reportes\StoredProceduresReportes.sql" />
+    <Content Include="Store Procedures\login\StoredProceduresLogin.sql" />
     <Content Include="Store Procedures\tickets\StoredProceduresTickets.sql" />
     <None Include="Resources\logo.png" />
   </ItemGroup>

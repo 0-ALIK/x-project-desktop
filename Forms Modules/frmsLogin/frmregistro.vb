@@ -25,9 +25,8 @@ Public Class frmregistro
             Dim nombre As String = txtUser.Text
             Dim correo As String = txtCorreo.Text
             Dim pass As String = txtPass.Text
-            Dim rol As String = "Colaborador"
 
-            Dim retorno As Integer = loginDAO.InsertarUsuario(nombre, correo, pass, rol)
+            Dim retorno As Integer = loginDAO.InsertarUsuario(nombre, correo, pass)
 
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -62,16 +61,10 @@ Public Class frmregistro
     End Sub
 
 
-    'Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
-    '    frmlogin.Show()
-    '    Me.Hide()
-    'End Sub
-
-
-
-
-
-
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+        frmlogin.Show()
+        Me.Hide()
+    End Sub
 
 #End Region
 
