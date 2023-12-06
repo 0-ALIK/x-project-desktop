@@ -166,10 +166,10 @@ Public Class inventaryDAO
             Using glCommand As New MySqlCommand("SP_ActualizarMarcas", myConecctionDB)
                 glCommand.CommandTimeout = 0
                 glCommand.CommandType = CommandType.StoredProcedure
-                glCommand.Parameters.AddWithValue("id_marca", id)
-                glCommand.Parameters.AddWithValue("nombre", nombre)
-                glCommand.Parameters.AddWithValue("descripcion", descripcion)
-                glCommand.Parameters.AddWithValue("logo", logo)
+                glCommand.Parameters.AddWithValue("p_id_marca", id)
+                glCommand.Parameters.AddWithValue("p_nombre", nombre)
+                glCommand.Parameters.AddWithValue("p_descripcion", descripcion)
+                glCommand.Parameters.AddWithValue("p_logo", logo)
 
                 myConecctionDB.Open()
 
