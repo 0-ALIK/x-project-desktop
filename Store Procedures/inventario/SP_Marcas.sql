@@ -87,3 +87,16 @@ END $$
 
 DELIMITER ;
 
+-- Creación del procedimiento para obtener una marca en especifico
+DELIMITER $$
+CREATE PROCEDURE SP_ObtenerMarca(
+	IN marca_id INT
+)
+
+BEGIN
+
+    SELECT * FROM marca
+    	WHERE id_marca = marca_id;
+
+END $$
+DELIMITER ;

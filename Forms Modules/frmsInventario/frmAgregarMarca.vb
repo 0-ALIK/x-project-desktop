@@ -68,8 +68,14 @@ Public Class frmAgregarMarca
 
                 Dim marca As DataTable = invenatyDao.ObtenerMarca(idMarca)
 
+                Dim imagen = DecodificarImagen(marca.Rows(0).Item("logo"))
+
                 txtNombre.Text = marca.Rows(0).Item("nombre")
                 txtDescripcion.Text = marca.Rows(0).Item("descripcion")
+
+                ' Asignar la imagen al PictureBox
+                pbMarca.Image = imagen
+
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
@@ -133,8 +139,9 @@ Public Class frmAgregarMarca
 
     Private Sub btnActualizarMarca_Click(sender As Object, e As EventArgs) Handles btnActualizarMarca.Click
         Dim result As Integer
+
         Try
-            result = invenatyDao.ActualizarMarca(idMarca, txtNombre.Text, txtDescripcion.Text, "hola")
+            result = invenatyDao.ActualizarMarca(idMarca, txtNombre.Text, txtDescripcion.Text, CodificarImagen(pbMarca.Image, pbMarca))
 
             If result <> 0 Then
                 MsgBox("No se puso actualizar la marca")

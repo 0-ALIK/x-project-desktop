@@ -66,8 +66,8 @@ Public Class frmAgregarProducto
                 txtCantPCajas.Clear()
                 txtCantidad.Clear()
                 txtReorden.Clear()
-                BoxCategoria.Items.Clear()
-                BoxMarca.Items.Clear()
+
+
                 BoxPicture.Image = Nothing
             End If
         Catch ex As Exception
