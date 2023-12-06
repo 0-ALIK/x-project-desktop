@@ -1,6 +1,4 @@
 ﻿Imports Excel = Microsoft.Office.Interop.Excel
-Imports iTextSharp.text
-Imports iTextSharp.text.pdf
 Imports System.IO
 Imports System.Windows.Documents
 Module ExportarArchivos
