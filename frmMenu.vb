@@ -42,7 +42,8 @@ Public Class frmMenu
     Private Sub btnCustomers_Click(sender As Object, e As EventArgs) Handles btnCustomers.Click
 
         ActivateButton(sender, RGBColors.ShadeBlue, "Clientes", leftBorderBtn, IconCurrentForm, lblFormTitle)
-        SetPanel(New frmClientes(), PanelContent)
+        Dim frmClientes As New frmClientes(New clientesDAO(myConnectionDB))
+        SetPanel(frmClientes, PanelContent)
 
     End Sub
 
@@ -56,7 +57,9 @@ Public Class frmMenu
     Private Sub btnUsers_Click(sender As Object, e As EventArgs) Handles btnUsers.Click
 
         ActivateButton(sender, RGBColors.Ambar, "Usuarios", leftBorderBtn, IconCurrentForm, lblFormTitle)
-        SetPanel(New frmUsuarios(), PanelContent)
+        Dim cedula As String = "123456789"
+        Dim frmUsuarios As New frmUsuarios(cedula, New clientesDAO(myConnectionDB))
+        SetPanel(frmUsuarios, PanelContent)
 
     End Sub
 

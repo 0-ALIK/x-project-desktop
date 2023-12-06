@@ -24,44 +24,34 @@ Partial Class frmUsuarios
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmUsuarios))
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.txtDetalles = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.lblGenero = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.lblTelefono2 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.lblCorreo = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.lblApellido = New System.Windows.Forms.Label()
-        Me.lblNombre = New System.Windows.Forms.Label()
-        Me.lblCedula2 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.ptblogo2 = New System.Windows.Forms.PictureBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.lblTelefono = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.lblCedula = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.ptblogo = New System.Windows.Forms.PictureBox()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.TabControl1.SuspendLayout()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lblCedula = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.lblTelefono = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.ptblogo2 = New System.Windows.Forms.PictureBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.lblCedula2 = New System.Windows.Forms.Label()
+        Me.lblNombre = New System.Windows.Forms.Label()
+        Me.lblApellido = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.lblCorreo = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.lblTelefono2 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.lblGenero = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtDetalles = New System.Windows.Forms.TextBox()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1.SuspendLayout()
-        CType(Me.ptblogo2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ptblogo, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage2.SuspendLayout()
-        Me.TabPage3.SuspendLayout()
-        Me.TabPage4.SuspendLayout()
+        CType(Me.ptblogo2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControl1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -73,18 +63,6 @@ Partial Class frmUsuarios
         Me.Label1.Size = New System.Drawing.Size(266, 39)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Perfil del Cliente"
-        '
-        'TabControl1
-        '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Controls.Add(Me.TabPage4)
-        Me.TabControl1.Location = New System.Drawing.Point(19, 73)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(756, 365)
-        Me.TabControl1.TabIndex = 3
         '
         'TabPage1
         '
@@ -118,204 +96,15 @@ Partial Class frmUsuarios
         Me.TabPage1.Text = "Información"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'txtDetalles
+        'ptblogo
         '
-        Me.txtDetalles.Location = New System.Drawing.Point(6, 247)
-        Me.txtDetalles.Multiline = True
-        Me.txtDetalles.Name = "txtDetalles"
-        Me.txtDetalles.ReadOnly = True
-        Me.txtDetalles.Size = New System.Drawing.Size(727, 86)
-        Me.txtDetalles.TabIndex = 22
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(76, 219)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(82, 25)
-        Me.Label10.TabIndex = 21
-        Me.Label10.Text = "Detalles"
-        '
-        'lblGenero
-        '
-        Me.lblGenero.AutoSize = True
-        Me.lblGenero.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblGenero.Location = New System.Drawing.Point(600, 198)
-        Me.lblGenero.Name = "lblGenero"
-        Me.lblGenero.Size = New System.Drawing.Size(73, 17)
-        Me.lblGenero.TabIndex = 20
-        Me.lblGenero.Text = "Conductor"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(511, 198)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(60, 17)
-        Me.Label15.TabIndex = 19
-        Me.Label15.Text = "Género:"
-        '
-        'lblTelefono2
-        '
-        Me.lblTelefono2.AutoSize = True
-        Me.lblTelefono2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTelefono2.Location = New System.Drawing.Point(600, 154)
-        Me.lblTelefono2.Name = "lblTelefono2"
-        Me.lblTelefono2.Size = New System.Drawing.Size(97, 17)
-        Me.lblTelefono2.TabIndex = 18
-        Me.lblTelefono2.Text = "507 651-5482"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(511, 154)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(68, 17)
-        Me.Label13.TabIndex = 17
-        Me.Label13.Text = "Teléfono:"
-        '
-        'lblCorreo
-        '
-        Me.lblCorreo.AutoSize = True
-        Me.lblCorreo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCorreo.Location = New System.Drawing.Point(586, 112)
-        Me.lblCorreo.Name = "lblCorreo"
-        Me.lblCorreo.Size = New System.Drawing.Size(119, 17)
-        Me.lblCorreo.TabIndex = 16
-        Me.lblCorreo.Text = "idrive@gmail.com"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(511, 112)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(55, 17)
-        Me.Label11.TabIndex = 15
-        Me.Label11.Text = "Correo:"
-        '
-        'lblApellido
-        '
-        Me.lblApellido.AutoSize = True
-        Me.lblApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblApellido.Location = New System.Drawing.Point(355, 198)
-        Me.lblApellido.Name = "lblApellido"
-        Me.lblApellido.Size = New System.Drawing.Size(56, 17)
-        Me.lblApellido.TabIndex = 14
-        Me.lblApellido.Text = "Gosling"
-        '
-        'lblNombre
-        '
-        Me.lblNombre.AutoSize = True
-        Me.lblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombre.Location = New System.Drawing.Point(349, 154)
-        Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(41, 17)
-        Me.lblNombre.TabIndex = 13
-        Me.lblNombre.Text = "Ryan"
-        '
-        'lblCedula2
-        '
-        Me.lblCedula2.AutoSize = True
-        Me.lblCedula2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCedula2.Location = New System.Drawing.Point(309, 112)
-        Me.lblCedula2.Name = "lblCedula2"
-        Me.lblCedula2.Size = New System.Drawing.Size(74, 17)
-        Me.lblCedula2.TabIndex = 12
-        Me.lblCedula2.Text = "8-888-888"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(266, 198)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(62, 17)
-        Me.Label9.TabIndex = 11
-        Me.Label9.Text = "Apellido:"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(266, 154)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(62, 17)
-        Me.Label8.TabIndex = 10
-        Me.Label8.Text = "Nombre:"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(266, 112)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(25, 17)
-        Me.Label7.TabIndex = 9
-        Me.Label7.Text = "ID:"
-        '
-        'ptblogo2
-        '
-        Me.ptblogo2.Image = CType(resources.GetObject("ptblogo2.Image"), System.Drawing.Image)
-        Me.ptblogo2.Location = New System.Drawing.Point(81, 88)
-        Me.ptblogo2.Name = "ptblogo2"
-        Me.ptblogo2.Size = New System.Drawing.Size(155, 91)
-        Me.ptblogo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.ptblogo2.TabIndex = 8
-        Me.ptblogo2.TabStop = False
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(74, 60)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(178, 17)
-        Me.Label5.TabIndex = 7
-        Me.Label5.Text = "Información general cliente"
-        '
-        'lblTelefono
-        '
-        Me.lblTelefono.AutoSize = True
-        Me.lblTelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTelefono.Location = New System.Drawing.Point(529, 17)
-        Me.lblTelefono.Name = "lblTelefono"
-        Me.lblTelefono.Size = New System.Drawing.Size(97, 17)
-        Me.lblTelefono.TabIndex = 6
-        Me.lblTelefono.Text = "507 651-5482"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(428, 17)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(68, 17)
-        Me.Label6.TabIndex = 5
-        Me.Label6.Text = "Teléfono:"
-        '
-        'lblCedula
-        '
-        Me.lblCedula.AutoSize = True
-        Me.lblCedula.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCedula.Location = New System.Drawing.Point(263, 17)
-        Me.lblCedula.Name = "lblCedula"
-        Me.lblCedula.Size = New System.Drawing.Size(74, 17)
-        Me.lblCedula.TabIndex = 4
-        Me.lblCedula.Text = "8-888-888"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(187, 17)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(41, 17)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "RUC:"
+        Me.ptblogo.Image = CType(resources.GetObject("ptblogo.Image"), System.Drawing.Image)
+        Me.ptblogo.Location = New System.Drawing.Point(6, 6)
+        Me.ptblogo.Name = "ptblogo"
+        Me.ptblogo.Size = New System.Drawing.Size(58, 46)
+        Me.ptblogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ptblogo.TabIndex = 0
+        Me.ptblogo.TabStop = False
         '
         'Label3
         '
@@ -327,84 +116,213 @@ Partial Class frmUsuarios
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Empresa"
         '
-        'ptblogo
+        'Label4
         '
-        Me.ptblogo.Image = CType(resources.GetObject("ptblogo.Image"), System.Drawing.Image)
-        Me.ptblogo.Location = New System.Drawing.Point(6, 6)
-        Me.ptblogo.Name = "ptblogo"
-        Me.ptblogo.Size = New System.Drawing.Size(58, 46)
-        Me.ptblogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.ptblogo.TabIndex = 0
-        Me.ptblogo.TabStop = False
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(187, 17)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(41, 17)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "RUC:"
         '
-        'TabPage2
+        'lblCedula
         '
-        Me.TabPage2.Controls.Add(Me.Label12)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(748, 339)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Direcciones"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.lblCedula.AutoSize = True
+        Me.lblCedula.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCedula.Location = New System.Drawing.Point(263, 17)
+        Me.lblCedula.Name = "lblCedula"
+        Me.lblCedula.Size = New System.Drawing.Size(74, 17)
+        Me.lblCedula.TabIndex = 4
+        Me.lblCedula.Text = "8-888-888"
         '
-        'Label12
+        'Label6
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(181, 139)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(384, 31)
-        Me.Label12.TabIndex = 9
-        Me.Label12.Text = "No sé cómo hacer las cards xd"
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(428, 17)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(68, 17)
+        Me.Label6.TabIndex = 5
+        Me.Label6.Text = "Teléfono:"
         '
-        'TabPage3
+        'lblTelefono
         '
-        Me.TabPage3.Controls.Add(Me.Label2)
-        Me.TabPage3.Controls.Add(Me.TextBox2)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(748, 339)
-        Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Reclamos"
-        Me.TabPage3.UseVisualStyleBackColor = True
+        Me.lblTelefono.AutoSize = True
+        Me.lblTelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTelefono.Location = New System.Drawing.Point(529, 17)
+        Me.lblTelefono.Name = "lblTelefono"
+        Me.lblTelefono.Size = New System.Drawing.Size(97, 17)
+        Me.lblTelefono.TabIndex = 6
+        Me.lblTelefono.Text = "507 651-5482"
         '
-        'Label2
+        'Label5
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(238, 175)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(384, 31)
-        Me.Label2.TabIndex = 8
-        Me.Label2.Text = "No sé cómo hacer las cards xd"
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(74, 60)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(178, 17)
+        Me.Label5.TabIndex = 7
+        Me.Label5.Text = "Información general cliente"
         '
-        'TextBox2
+        'ptblogo2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(589, 13)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(134, 20)
-        Me.TextBox2.TabIndex = 7
+        Me.ptblogo2.Image = CType(resources.GetObject("ptblogo2.Image"), System.Drawing.Image)
+        Me.ptblogo2.Location = New System.Drawing.Point(81, 88)
+        Me.ptblogo2.Name = "ptblogo2"
+        Me.ptblogo2.Size = New System.Drawing.Size(155, 91)
+        Me.ptblogo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ptblogo2.TabIndex = 8
+        Me.ptblogo2.TabStop = False
         '
-        'TabPage4
+        'Label7
         '
-        Me.TabPage4.Controls.Add(Me.Label14)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Size = New System.Drawing.Size(748, 339)
-        Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "Pedidos"
-        Me.TabPage4.UseVisualStyleBackColor = True
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(266, 112)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(25, 17)
+        Me.Label7.TabIndex = 9
+        Me.Label7.Text = "ID:"
         '
-        'Label14
+        'Label8
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(169, 123)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(384, 31)
-        Me.Label14.TabIndex = 9
-        Me.Label14.Text = "No sé cómo hacer las cards xd"
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(266, 154)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(62, 17)
+        Me.Label8.TabIndex = 10
+        Me.Label8.Text = "Nombre:"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(266, 198)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(62, 17)
+        Me.Label9.TabIndex = 11
+        Me.Label9.Text = "Apellido:"
+        '
+        'lblCedula2
+        '
+        Me.lblCedula2.AutoSize = True
+        Me.lblCedula2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCedula2.Location = New System.Drawing.Point(309, 112)
+        Me.lblCedula2.Name = "lblCedula2"
+        Me.lblCedula2.Size = New System.Drawing.Size(74, 17)
+        Me.lblCedula2.TabIndex = 12
+        Me.lblCedula2.Text = "8-888-888"
+        '
+        'lblNombre
+        '
+        Me.lblNombre.AutoSize = True
+        Me.lblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNombre.Location = New System.Drawing.Point(349, 154)
+        Me.lblNombre.Name = "lblNombre"
+        Me.lblNombre.Size = New System.Drawing.Size(41, 17)
+        Me.lblNombre.TabIndex = 13
+        Me.lblNombre.Text = "Ryan"
+        '
+        'lblApellido
+        '
+        Me.lblApellido.AutoSize = True
+        Me.lblApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblApellido.Location = New System.Drawing.Point(355, 198)
+        Me.lblApellido.Name = "lblApellido"
+        Me.lblApellido.Size = New System.Drawing.Size(56, 17)
+        Me.lblApellido.TabIndex = 14
+        Me.lblApellido.Text = "Gosling"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(511, 112)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(55, 17)
+        Me.Label11.TabIndex = 15
+        Me.Label11.Text = "Correo:"
+        '
+        'lblCorreo
+        '
+        Me.lblCorreo.AutoSize = True
+        Me.lblCorreo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCorreo.Location = New System.Drawing.Point(586, 112)
+        Me.lblCorreo.Name = "lblCorreo"
+        Me.lblCorreo.Size = New System.Drawing.Size(119, 17)
+        Me.lblCorreo.TabIndex = 16
+        Me.lblCorreo.Text = "idrive@gmail.com"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(511, 154)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(68, 17)
+        Me.Label13.TabIndex = 17
+        Me.Label13.Text = "Teléfono:"
+        '
+        'lblTelefono2
+        '
+        Me.lblTelefono2.AutoSize = True
+        Me.lblTelefono2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTelefono2.Location = New System.Drawing.Point(600, 154)
+        Me.lblTelefono2.Name = "lblTelefono2"
+        Me.lblTelefono2.Size = New System.Drawing.Size(97, 17)
+        Me.lblTelefono2.TabIndex = 18
+        Me.lblTelefono2.Text = "507 651-5482"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(511, 198)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(60, 17)
+        Me.Label15.TabIndex = 19
+        Me.Label15.Text = "Género:"
+        '
+        'lblGenero
+        '
+        Me.lblGenero.AutoSize = True
+        Me.lblGenero.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblGenero.Location = New System.Drawing.Point(600, 198)
+        Me.lblGenero.Name = "lblGenero"
+        Me.lblGenero.Size = New System.Drawing.Size(73, 17)
+        Me.lblGenero.TabIndex = 20
+        Me.lblGenero.Text = "Conductor"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(76, 219)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(82, 25)
+        Me.Label10.TabIndex = 21
+        Me.Label10.Text = "Detalles"
+        '
+        'txtDetalles
+        '
+        Me.txtDetalles.Location = New System.Drawing.Point(6, 247)
+        Me.txtDetalles.Multiline = True
+        Me.txtDetalles.Name = "txtDetalles"
+        Me.txtDetalles.ReadOnly = True
+        Me.txtDetalles.Size = New System.Drawing.Size(727, 86)
+        Me.txtDetalles.TabIndex = 22
+        '
+        'TabControl1
+        '
+        Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Location = New System.Drawing.Point(19, 73)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(756, 365)
+        Me.TabControl1.TabIndex = 3
         '
         'frmUsuarios
         '
@@ -415,24 +333,17 @@ Partial Class frmUsuarios
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmUsuarios"
         Me.Text = "Usuario"
-        Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
-        CType(Me.ptblogo2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ptblogo, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
-        Me.TabPage3.ResumeLayout(False)
-        Me.TabPage3.PerformLayout()
-        Me.TabPage4.ResumeLayout(False)
-        Me.TabPage4.PerformLayout()
+        CType(Me.ptblogo2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControl1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents txtDetalles As TextBox
     Friend WithEvents Label10 As Label
@@ -456,11 +367,5 @@ Partial Class frmUsuarios
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents ptblogo As PictureBox
-    Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents Label12 As Label
-    Friend WithEvents TabPage3 As TabPage
-    Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TabPage4 As TabPage
-    Friend WithEvents Label14 As Label
+    Friend WithEvents TabControl1 As TabControl
 End Class

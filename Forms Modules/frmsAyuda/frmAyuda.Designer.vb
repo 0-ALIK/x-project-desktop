@@ -24,13 +24,13 @@ Partial Class frmAyuda
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.gbAyuda = New System.Windows.Forms.GroupBox()
-        Me.txtPreguntas = New System.Windows.Forms.TextBox()
         Me.btnAyudaPoliticas = New FontAwesome.Sharp.IconButton()
         Me.btnAyudaUsuario = New FontAwesome.Sharp.IconButton()
         Me.btnAyudaPedidos = New FontAwesome.Sharp.IconButton()
         Me.btnAyudaEntrega = New FontAwesome.Sharp.IconButton()
         Me.btnAyudaDevo = New FontAwesome.Sharp.IconButton()
         Me.btnAyudaPago = New FontAwesome.Sharp.IconButton()
+        Me.txtPreguntas = New System.Windows.Forms.TextBox()
         Me.gbAyuda.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -58,15 +58,6 @@ Partial Class frmAyuda
         Me.gbAyuda.Size = New System.Drawing.Size(746, 387)
         Me.gbAyuda.TabIndex = 5
         Me.gbAyuda.TabStop = False
-        '
-        'txtPreguntas
-        '
-        Me.txtPreguntas.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPreguntas.Location = New System.Drawing.Point(47, 61)
-        Me.txtPreguntas.Multiline = True
-        Me.txtPreguntas.Name = "txtPreguntas"
-        Me.txtPreguntas.Size = New System.Drawing.Size(417, 34)
-        Me.txtPreguntas.TabIndex = 6
         '
         'btnAyudaPoliticas
         '
@@ -157,6 +148,15 @@ Partial Class frmAyuda
         Me.btnAyudaPago.Text = "Pago y Promociones"
         Me.btnAyudaPago.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnAyudaPago.UseVisualStyleBackColor = True
+        '
+        'txtPreguntas
+        '
+        Me.txtPreguntas.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtPreguntas.Location = New System.Drawing.Point(47, 61)
+        Me.txtPreguntas.Multiline = True
+        Me.txtPreguntas.Name = "txtPreguntas"
+        Me.txtPreguntas.Size = New System.Drawing.Size(417, 34)
+        Me.txtPreguntas.TabIndex = 6
         '
         'frmAyuda
         '

@@ -1,9 +1,11 @@
 ﻿Public Class frmEditarEmpresa
     Private Property RucEmpresa As String
+    Private ClientesDao As ClientesInterfaces
 
-    Public Sub New(ruc As String)
+    Public Sub New(ruc As String, ClientesDao As ClientesInterfaces)
         InitializeComponent()
         RucEmpresa = ruc
+        Me.ClientesDao = ClientesDao
     End Sub
 
     Private Sub frmEditarEmpresa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -12,7 +14,7 @@
     End Sub
 
     Private Sub CargarDatosEmpresa()
-        Dim datosEmpresa As DataRow = ClientesModule.ObtenerEmpresaPorRUC(RucEmpresa)
+        Dim datosEmpresa As DataRow = ClientesDao.ObtenerEmpresaPorRUC(RucEmpresa)
 
         If datosEmpresa IsNot Nothing Then
             ' Llena los controles del formulario con los datos obtenidos
@@ -27,6 +29,8 @@
         Else
             MsgBox("No se encontraron datos para la empresa.", MsgBoxStyle.Information)
             Me.Close()
+            Dim frmClientes As New frmClientes(New clientesDAO(myConnectionDB))
+            SetPanel(frmClientes, frmMenu.PanelContent)
         End If
     End Sub
 
@@ -42,10 +46,12 @@
             {"Detalles", txtDetallesEmpresa.Text}
         }
 
-        ClientesModule.ActualizarEmpresa(RucEmpresa, nuevosDatos)
+        ClientesDao.ActualizarEmpresa(RucEmpresa, nuevosDatos)
         MsgBox("Empresa actualizada correctamente.", MsgBoxStyle.Information)
 
         ' Cierra el formulario de edición después de la actualización
         Me.Close()
+        Dim frmClientes As New frmClientes(New clientesDAO(myConnectionDB))
+        SetPanel(frmClientes, frmMenu.PanelContent)
     End Sub
 End Class

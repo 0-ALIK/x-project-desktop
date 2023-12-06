@@ -138,6 +138,7 @@ Partial Class frmEditarUsuario
         Me.Label6.Size = New System.Drawing.Size(37, 20)
         Me.Label6.TabIndex = 11
         Me.Label6.Text = "Rol:"
+        Me.Label6.Visible = False
         '
         'Label7
         '
@@ -190,6 +191,7 @@ Partial Class frmEditarUsuario
         Me.cboRol.Name = "cboRol"
         Me.cboRol.Size = New System.Drawing.Size(121, 21)
         Me.cboRol.TabIndex = 18
+        Me.cboRol.Visible = False
         '
         'cboGenero
         '

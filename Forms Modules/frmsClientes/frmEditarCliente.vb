@@ -1,9 +1,11 @@
 ﻿Public Class frmEditarCliente
     Private Property CedulaCliente As String
+    Private ClientesDao As ClientesInterfaces
 
-    Public Sub New(cedula As String)
+    Public Sub New(cedula As String, ClientesDao As ClientesInterfaces)
         InitializeComponent()
         CedulaCliente = cedula
+        Me.ClientesDao = ClientesDao
     End Sub
 
     Private Sub frmEditarCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -25,7 +27,7 @@
     Private Sub CargarDatosCliente()
         Try
             ' Llama a la función del módulo para obtener los datos del cliente por cédula
-            Dim datosCliente As DataRow = ClientesModule.ObtenerClientePorCedula(CedulaCliente)
+            Dim datosCliente As DataRow = ClientesDao.ObtenerClientePorCedula(CedulaCliente)
 
             If datosCliente IsNot Nothing Then
                 ' Llena los controles del formulario con los datos obtenidos
@@ -63,10 +65,12 @@
             {"tipo", cboTipo.Text}
         }
 
-        ClientesModule.ActualizarCliente(CedulaCliente, nuevosDatos)
+        ClientesDao.ActualizarCliente(CedulaCliente, nuevosDatos)
         MsgBox("Cliente actualizado correctamente.", MsgBoxStyle.Information)
 
         ' Cierra el formulario de edición después de la actualización
         Me.Close()
+        Dim frmClientes As New frmClientes(New clientesDAO(myConnectionDB))
+        SetPanel(frmClientes, frmMenu.PanelContent)
     End Sub
 End Class

@@ -165,6 +165,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class Modules\analitica\analiticaReporteInventarioDAO.vb" />
+    <Compile Include="Class Modules\clientes\clientesDAO.vb" />
     <Compile Include="Class Modules\clientes\ClientesModule.vb" />
     <Compile Include="Class Modules\tickets\ticketsDAO.vb" />
     <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboard.Designer.vb">
@@ -293,6 +294,12 @@
     <Compile Include="Forms Modules\frmsClientes\frmEditarUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms Modules\frmsClientes\frmMenuCliente.Designer.vb">
+      <DependentUpon>frmMenuCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsClientes\frmMenuCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms Modules\frmsTickets\frmCrearTickets.Designer.vb">
       <DependentUpon>frmCrearTickets.vb</DependentUpon>
     </Compile>
@@ -330,6 +337,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Interfaces Modules\analitica\analitycReporteInterfaces.vb" />
+    <Compile Include="Interfaces Modules\clientes\ClientesInterface.vb" />
     <Compile Include="Interfaces Modules\tickets\ticketsInterfaces.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -421,6 +429,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsClientes\frmEditarUsuario.resx">
       <DependentUpon>frmEditarUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsClientes\frmMenuCliente.resx">
+      <DependentUpon>frmMenuCliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsTickets\frmCrearTickets.resx">
       <DependentUpon>frmCrearTickets.vb</DependentUpon>

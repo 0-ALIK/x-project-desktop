@@ -1,11 +1,13 @@
 ﻿Public Class frmEditarUsuario
-
-
+    Private ClientesDao As ClientesInterfaces
     Private Property CedulaUsuario As String
 
-    Public Sub New(cedula As String)
+
+
+    Public Sub New(ClientesDao As ClientesInterfaces, cedula As String)
         InitializeComponent()
         CedulaUsuario = cedula
+        Me.ClientesDao = ClientesDao
     End Sub
 
     Private Sub frmEditarUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -28,7 +30,7 @@
 
 
     Private Sub CargarDatosUsuario()
-        Dim datosUsuario As DataRow = ClientesModule.ObtenerUsuarioPorCedula(CedulaUsuario)
+        Dim datosUsuario As DataRow = ClientesDao.ObtenerUsuarioPorCedula(CedulaUsuario)
 
         ' Verifica si se encontraron datos para la cédula proporcionada
         If datosUsuario IsNot Nothing Then
@@ -44,6 +46,8 @@
         Else
             MsgBox("No se encontraron datos para el usuario.", MsgBoxStyle.Information)
             Me.Close()
+            Dim frmClientes As New frmClientes(New clientesDAO(myConnectionDB))
+            SetPanel(frmClientes, frmMenu.PanelContent)
         End If
     End Sub
 
@@ -60,12 +64,13 @@
             {"detalles", txtDetalles.Text}
         }
 
-        ClientesModule.ActualizarUsuario(CedulaUsuario, nuevosDatos)
+        ClientesDao.ActualizarUsuario(CedulaUsuario, nuevosDatos)
         MsgBox("Usuario actualizado correctamente.", MsgBoxStyle.Information)
 
         ' Cierra el formulario de edición después de la actualización
         Me.Close()
+        Dim frmClientes As New frmClientes(New clientesDAO(myConnectionDB))
+        SetPanel(frmClientes, frmMenu.PanelContent)
     End Sub
-
 
 End Class
