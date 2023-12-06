@@ -503,6 +503,10 @@
     <Content Include="Store Procedures\tickets\StoredProceduresTickets.sql" />
     <None Include="Resources\logo.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Store Procedures\ayuda\" />
+    <Folder Include="Store Procedures\clientes\" />
+    <Folder Include="Store Procedures\ventas\" />
+  </ItemGroup>  
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
