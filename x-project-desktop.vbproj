@@ -151,7 +151,6 @@
   <ItemGroup>
     <Compile Include="Class Modules\analitica\analiticaReporteInventarioDAO.vb" />
     <Compile Include="Class Modules\clientes\clientesDAO.vb" />
-    <Compile Include="Class Modules\inventario\Class4.vb" />
     <Compile Include="Class Modules\tickets\ticketsDAO.vb" />
     <Compile Include="Class Modules\ventas\Class6.vb" />
     <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboard.Designer.vb">
@@ -469,6 +468,7 @@
     <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Class Modules\inventario\" />
     <Folder Include="Store Procedures\ayuda\" />
     <Folder Include="Store Procedures\clientes\" />
     <Folder Include="Store Procedures\ventas\" />
