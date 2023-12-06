@@ -62,16 +62,20 @@ Public Class frmAgregarMarca
                 dgvVerMarcas.Visible = False
             End If
 
-            idMarca = Convert.ToInt32(dgvVerMarcas.Rows(e.RowIndex).Cells(0).Value)
+            Try
+                idMarca = Convert.ToInt32(dgvVerMarcas.Rows(e.RowIndex).Cells(0).Value)
 
-            Dim marca As DataTable = invenatyDao.ObtenerMarca(idMarca)
+                Dim marca As DataTable = invenatyDao.ObtenerMarca(idMarca)
 
-            txtNombre.Text = marca.Rows(0).Item("nombre")
-            txtDescripcion.Text = marca.Rows(0).Item("descripcion")
+                txtNombre.Text = marca.Rows(0).Item("nombre")
+                txtDescripcion.Text = marca.Rows(0).Item("descripcion")
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
 
         ElseIf e.RowIndex >= 0 AndAlso dgvVerMarcas.Columns(e.ColumnIndex).Name = "eliminar" Then
             ' Aquí agregas el código para eliminar la marca
-            Dim idMarca As Integer = Convert.ToInt32(dgvVerMarcas.Rows(e.RowIndex).Cells(0).Value) ' Suponiendo que el id_marca es la primera columna
+            idMarca = Convert.ToInt32(dgvVerMarcas.Rows(e.RowIndex).Cells(0).Value) ' Suponiendo que el id_marca es la primera columna
 
             ' Consultar si hay productos asociados a la marca
             Dim productosAsociados As Boolean = invenatyDao.TieneProductosAsociados(idMarca)
@@ -117,6 +121,8 @@ Public Class frmAgregarMarca
                 MsgBox("Error al insertar los datos")
             Else
                 MsgBox("La marca ha sido insertada")
+                txtNombre.Clear()
+                txtDescripcion.Clear()
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -131,13 +137,17 @@ Public Class frmAgregarMarca
 
             If result <> 0 Then
                 MsgBox("No se puso actualizar la marca")
+                Button3.Visible = True
+                Button2.Visible = False
             Else
                 MsgBox("La marca ha sido actualizada")
+                Button3.Visible = False
+                Button2.Visible = True
+                txtNombre.Clear()
+                txtDescripcion.Clear()
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-        Button3.Visible = False
-        Button2.Visible = True
     End Sub
 End Class
