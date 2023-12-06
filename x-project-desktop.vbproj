@@ -150,8 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class Modules\analitica\analiticaReporteInventarioDAO.vb" />
-    <Compile Include="Class Modules\clientes\Class3.vb" />
-    <Compile Include="Class Modules\clientes\ClientesModule.vb" />
+    <Compile Include="Class Modules\clientes\clientesDAO.vb" />
     <Compile Include="Class Modules\inventario\Class4.vb" />
     <Compile Include="Class Modules\tickets\ticketsDAO.vb" />
     <Compile Include="Class Modules\ventas\Class6.vb" />
@@ -319,6 +318,7 @@
     </Compile>
     <Compile Include="Interfaces Modules\analitica\analitycClienteInterfaces.vb" />
     <Compile Include="Interfaces Modules\analitica\analitycReporteInterfaces.vb" />
+    <Compile Include="Interfaces Modules\clientes\ClientesInterfaces.vb" />
     <Compile Include="Interfaces Modules\tickets\ticketsInterfaces.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

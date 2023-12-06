@@ -2,6 +2,13 @@
 Imports System.Data
 
 Public Class frmClientes
+    Private ClientesDao As ClientesInterfaces
+
+    Public Sub New(ClientesDao As ClientesInterfaces)
+        InitializeComponent()
+
+        Me.ClientesDao = ClientesDao
+    End Sub
     Private Sub frmClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Llama a la función del módulo para obtener los usuarios y llenar el DataGridView
         CargarUsuariosEnDataGridView()
@@ -16,7 +23,7 @@ Public Class frmClientes
     Private Sub CargarUsuariosEnDataGridView()
         Try
             ' Llama a la función del módulo para obtener los usuarios
-            Dim dtUsuarios As DataTable = ObtenerUsuarios()
+            Dim dtUsuarios As DataTable = ClientesDao.ObtenerUsuarios()
 
             ' Limpia las filas existentes en el DataGridView
             dtgUsuarios.Rows.Clear()
@@ -48,7 +55,7 @@ Public Class frmClientes
     Private Sub CargarEmpresasEnDataGridView()
         Try
             ' Llama a la función del módulo para obtener las empresas
-            Dim dtEmpresas As DataTable = ObtenerEmpresas()
+            Dim dtEmpresas As DataTable = ClientesDao.ObtenerEmpresas()
 
             ' Limpia las filas existentes en el DataGridView de Empresas
             dtgEmpresas.Rows.Clear()
@@ -78,7 +85,7 @@ Public Class frmClientes
     Private Sub CargarClientesEnDataGridView()
         Try
             ' Llama a la función del módulo para obtener los clientes
-            Dim dtClientes As DataTable = ObtenerClientes()
+            Dim dtClientes As DataTable = ClientesDao.ObtenerClientes()
 
             ' Limpia las filas existentes en el DataGridView de Clientes
             dtgClientes.Rows.Clear()
@@ -112,7 +119,7 @@ Public Class frmClientes
             Dim respuesta As DialogResult = MessageBox.Show("¿Está seguro de eliminar este usuario?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
             If respuesta = DialogResult.Yes Then
-                ClientesModule.EliminarUsuarioPorCedula(cedula)
+                ClientesDao.EliminarUsuarioPorCedula(cedula)
                 CargarUsuariosEnDataGridView()
             End If
         Else
@@ -126,7 +133,7 @@ Public Class frmClientes
             Dim respuesta As DialogResult = MessageBox.Show("¿Está seguro de eliminar esta empresa?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
             If respuesta = DialogResult.Yes Then
-                ClientesModule.EliminarEmpresaPorRUC(ruc)
+                ClientesDao.EliminarEmpresaPorRUC(ruc)
                 CargarEmpresasEnDataGridView()
             End If
         Else
@@ -140,7 +147,7 @@ Public Class frmClientes
             Dim respuesta As DialogResult = MessageBox.Show("¿Está seguro de eliminar este cliente?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
             If respuesta = DialogResult.Yes Then
-                ClientesModule.EliminarClientePorCedula(cedula)
+                ClientesDao.EliminarClientePorCedula(cedula)
                 CargarClientesEnDataGridView()
             End If
         Else
@@ -154,13 +161,8 @@ Public Class frmClientes
             ' Obtiene la cédula del usuario seleccionado
             Dim cedula As String = dtgUsuarios.SelectedRows(0).Cells("Cedula").Value.ToString()
 
-            Dim frmEditarUsuario As New frmEditarUsuario(cedula)
-
-            frmEditarUsuario.MdiParent = Me.MdiParent
-            frmEditarUsuario.WindowState = FormWindowState.Maximized
-
-            ' Muestra el formulario de edición
-            frmEditarUsuario.Show()
+            Dim frmEditarUsuario As New frmEditarUsuario(New clientesDAO, cedula)
+            SetPanel(frmEditarUsuario, PanelClientes)
 
             CargarUsuariosEnDataGridView()
         Else
@@ -172,9 +174,8 @@ Public Class frmClientes
         If dtgEmpresas.SelectedRows.Count > 0 Then
             Dim ruc As String = dtgEmpresas.SelectedRows(0).Cells("RUC").Value.ToString()
             Dim frmEditarEmpresa As New frmEditarEmpresa(ruc)
-            frmEditarEmpresa.MdiParent = Me.MdiParent
-            frmEditarEmpresa.WindowState = FormWindowState.Maximized
-            frmEditarEmpresa.Show()
+            Dim frmEditarUsuario As New frmEditarEmpresa(New analiticaReporteInventarioDAO(myConnectionDB), Cedula)
+            SetPanel(frmEditarUsuario, PanelClientes)
 
             CargarEmpresasEnDataGridView()
         Else

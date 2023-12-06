@@ -67,6 +67,7 @@ Partial Class frmClientes
         Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PanelClientes = New System.Windows.Forms.Panel()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.dtgUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -375,6 +376,13 @@ Partial Class frmClientes
         Me.DataGridViewTextBoxColumn14.HeaderText = "Acciones"
         Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
         '
+        'PanelClientes
+        '
+        Me.PanelClientes.Location = New System.Drawing.Point(2, 2)
+        Me.PanelClientes.Name = "PanelClientes"
+        Me.PanelClientes.Size = New System.Drawing.Size(796, 449)
+        Me.PanelClientes.TabIndex = 4
+        '
         'frmClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -383,6 +391,7 @@ Partial Class frmClientes
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.PanelClientes)
         Me.Name = "frmClientes"
         Me.Text = "Clientes"
         Me.TabControl1.ResumeLayout(False)
@@ -442,4 +451,5 @@ Partial Class frmClientes
     Friend WithEvents Column14 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn13 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
+    Friend WithEvents PanelClientes As Panel
 End Class

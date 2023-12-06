@@ -1,7 +1,7 @@
 ﻿Imports System.Windows.Documents
 Imports FontAwesome.Sharp
 Public Class frmMenu
-
+    Private ClientesDao As ClientesInterfaces
     Private leftBorderBtn As Panel
 
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -14,7 +14,7 @@ Public Class frmMenu
 
     End Sub
 
-    Public Sub New()
+    Public Sub New(ClientesDao As ClientesInterfaces)
 
         InitializeComponent()
         leftBorderBtn = New Panel()
@@ -22,6 +22,7 @@ Public Class frmMenu
         PanelMenu.Controls.Add(leftBorderBtn)
         Me.BackColor = Color.Black
         Me.IsMdiContainer = True
+        Me.ClientesDao = ClientesDao
 
     End Sub
 
@@ -42,7 +43,7 @@ Public Class frmMenu
     Private Sub btnCustomers_Click(sender As Object, e As EventArgs) Handles btnCustomers.Click
 
         ActivateButton(sender, RGBColors.ShadeBlue, "Clientes", leftBorderBtn, IconCurrentForm, lblFormTitle)
-        SetPanel(New frmClientes(), PanelContent)
+        SetPanel(New frmClientes(clientesDAO), PanelContent)
 
     End Sub
 
@@ -54,9 +55,10 @@ Public Class frmMenu
     End Sub
 
     Private Sub btnUsers_Click(sender As Object, e As EventArgs) Handles btnUsers.Click
+        Dim cedula As String = "123456789"
 
         ActivateButton(sender, RGBColors.Ambar, "Usuarios", leftBorderBtn, IconCurrentForm, lblFormTitle)
-        SetPanel(New frmUsuarios(), PanelContent)
+        SetPanel(New frmUsuarios(cedula, ClientesDao), PanelContent)
 
     End Sub
 
