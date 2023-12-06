@@ -140,6 +140,28 @@ Public Class inventaryDAO
         End Try
     End Function
 
+    ' Select -> marca
+
+    Public Function ObtenerMarca(ByVal id_marca As Integer) As DataTable Implements inventaryInterfaces.ObtenerMarca
+        Try
+            Using glCommand As New MySqlCommand("SP_ObtenerMarca", myConnectionDB)
+                glCommand.CommandTimeout = 0
+                glCommand.CommandType = CommandType.StoredProcedure
+                glCommand.Parameters.AddWithValue("marca_id", id_marca)
+
+                Using adapter As New MySqlDataAdapter(glCommand)
+                    Dim datatable As New DataTable()
+                    adapter.Fill(datatable)
+                    Return datatable
+                End Using
+            End Using
+        Catch ex As Exception
+            Throw New Exception("No se pudo obtener la marca especificada", ex)
+        Finally
+            If myConecctionDB.State <> ConnectionState.Closed Then myConecctionDB.Close()
+        End Try
+    End Function
+
     'Insert -> Marcas
 
     Public Function InsertarMarca(ByVal nombre As String, ByVal descripcion As String, ByVal logo As String) As Integer Implements inventaryInterfaces.InsertarMarca
@@ -152,7 +174,6 @@ Public Class inventaryDAO
                 glCommand.Parameters.AddWithValue("nombre", nombre)
                 glCommand.Parameters.AddWithValue("descripcion", descripcion)
                 glCommand.Parameters.AddWithValue("logo", logo)
-                'glCommand.Parameters.AddWithValue("resultado", MySqlDbType.Int32)
 
                 myConecctionDB.Open()
 
@@ -167,16 +188,26 @@ Public Class inventaryDAO
 
     'Update -> Marcas
 
-    Public Function ActualizarMarca() As Integer Implements inventaryInterfaces.ActualizarMarca
+    Public Function ActualizarMarca(ByVal id As Integer, ByVal nombre As String, ByVal descripcion As String, ByVal logo As String) As Integer Implements inventaryInterfaces.ActualizarMarca
+        Dim resultado As Integer = 0
+
         Try
-            Using glCommand As New MySqlCommand("SP_ActualizarMarca", myConnectionDB)
+            Using glCommand As New MySqlCommand("SP_ActualizarMarcas", myConecctionDB)
                 glCommand.CommandTimeout = 0
                 glCommand.CommandType = CommandType.StoredProcedure
+                glCommand.Parameters.AddWithValue("id_marca", id)
+                glCommand.Parameters.AddWithValue("nombre", nombre)
+                glCommand.Parameters.AddWithValue("descripcion", descripcion)
+                glCommand.Parameters.AddWithValue("logo", logo)
 
+                myConecctionDB.Open()
 
+                resultado = glCommand.ExecuteNonQuery()
             End Using
         Catch ex As Exception
-            Throw New Exception("Error al procesar la operacion:", ex)
+            Throw New Exception("Error al actualizar la marca: " & ex.Message)
+        Finally
+            If myConecctionDB.State <> ConnectionState.Closed Then myConecctionDB.Close()
         End Try
     End Function
 
