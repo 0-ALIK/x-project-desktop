@@ -25,9 +25,7 @@ Partial Class frmMenuReportes
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.InventarioGlobalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteDeClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReporteDeVentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.panelTablaReportes = New System.Windows.Forms.Panel()
-        Me.VentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -35,7 +33,7 @@ Partial Class frmMenuReportes
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.Transparent
         Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InventarioGlobalToolStripMenuItem, Me.ReporteDeClientesToolStripMenuItem, Me.ReporteDeVentasToolStripMenuItem, Me.VentasToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InventarioGlobalToolStripMenuItem, Me.ReporteDeClientesToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
@@ -55,24 +53,12 @@ Partial Class frmMenuReportes
         Me.ReporteDeClientesToolStripMenuItem.Size = New System.Drawing.Size(83, 25)
         Me.ReporteDeClientesToolStripMenuItem.Text = "Clientes"
         '
-        'ReporteDeVentasToolStripMenuItem
-        '
-        Me.ReporteDeVentasToolStripMenuItem.Name = "ReporteDeVentasToolStripMenuItem"
-        Me.ReporteDeVentasToolStripMenuItem.Size = New System.Drawing.Size(88, 25)
-        Me.ReporteDeVentasToolStripMenuItem.Text = "Finanzas"
-        '
         'panelTablaReportes
         '
         Me.panelTablaReportes.Location = New System.Drawing.Point(0, 32)
         Me.panelTablaReportes.Name = "panelTablaReportes"
         Me.panelTablaReportes.Size = New System.Drawing.Size(1299, 590)
         Me.panelTablaReportes.TabIndex = 2
-        '
-        'VentasToolStripMenuItem
-        '
-        Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
-        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(73, 25)
-        Me.VentasToolStripMenuItem.Text = "Ventas"
         '
         'frmMenuReportes
         '
@@ -95,7 +81,5 @@ Partial Class frmMenuReportes
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents InventarioGlobalToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReporteDeClientesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ReporteDeVentasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents panelTablaReportes As Panel
-    Friend WithEvents VentasToolStripMenuItem As ToolStripMenuItem
 End Class
