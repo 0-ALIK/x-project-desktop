@@ -14,7 +14,8 @@
     Function ObtenerMarca(ByVal id_marca As Integer) As DataTable
     Function InsertarMarca(ByVal nombre As String, ByVal descripcion As String, ByVal logo As String) As Integer
     Function ActualizarMarca(ByVal id As Integer, ByVal nombre As String, ByVal descripcion As String, ByVal logo As String) As Integer
-    Function EliminarMarca() As Integer
+    Function TieneProductosAsociados(idMarca As Integer) As Boolean
+    Function EliminarMarca(idMarca As Integer) As Integer
 
     'Select - Insert - Update - Delete -> Categorias
     Function VerCategorias() As DataTable

@@ -69,4 +69,7 @@ Public Class frmInventario
         End Try
     End Sub
 
+    Private Sub tsAgregarInv_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class

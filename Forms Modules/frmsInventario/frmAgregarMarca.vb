@@ -69,9 +69,41 @@ Public Class frmAgregarMarca
             txtNombre.Text = marca.Rows(0).Item("nombre")
             txtDescripcion.Text = marca.Rows(0).Item("descripcion")
 
-        Else
-            'aquí agregas el codigo de eliminar marca
-            MsgBox("Elimina un producto")
+        ElseIf e.RowIndex >= 0 AndAlso dgvVerMarcas.Columns(e.ColumnIndex).Name = "eliminar" Then
+            ' Aquí agregas el código para eliminar la marca
+            Dim idMarca As Integer = Convert.ToInt32(dgvVerMarcas.Rows(e.RowIndex).Cells(0).Value) ' Suponiendo que el id_marca es la primera columna
+
+            ' Consultar si hay productos asociados a la marca
+            Dim productosAsociados As Boolean = invenatyDao.TieneProductosAsociados(idMarca)
+
+            If productosAsociados Then
+                ' Mostrar un mensaje indicando que no se puede eliminar la marca debido a productos asociados
+                MessageBox.Show("No puedes eliminar esta marca porque tiene productos asociados. Primero, elimina o cambia la marca de los productos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Else
+                ' Abrir la conexión a la base de datos
+                conexionDB()
+                myConnectionDB.Open()
+
+                Try
+                    ' Crear y ejecutar el comando SQL para eliminar la marca
+                    Dim command As New MySqlCommand("SP_EliminarMarca", myConnectionDB)
+                    command.CommandType = CommandType.StoredProcedure
+                    command.Parameters.AddWithValue("@id", idMarca)
+                    command.ExecuteNonQuery()
+
+                    ' Actualizar el DataGridView después de la eliminación
+                    Dim marcasDataTable As DataTable = invenatyDao.VerMarcas
+                    dgvVerMarcas.Rows.Clear()
+                    For Each row As DataRow In marcasDataTable.Rows
+                        dgvVerMarcas.Rows.Add(row("id_marca"), row("nombre"))
+                    Next
+                Catch ex As MySqlException
+                    ' Otro tipo de error
+                    MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Finally
+                    If myConnectionDB.State <> ConnectionState.Closed Then myConnectionDB.Close()
+                End Try
+            End If
         End If
     End Sub
 
