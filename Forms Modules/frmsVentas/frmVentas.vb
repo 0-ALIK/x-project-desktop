@@ -1,6 +1,6 @@
 ﻿Public Class frmVentas
 
-    Private comprasDAO As comprasDAO ' Asegúrate de tener una instancia válida de ComprasDAO
+    Private comprasDAO As comprasDAO
 
     Private Sub frmVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try

@@ -59,7 +59,7 @@ Public Class frmDetalleVentas
                 ' Llenar el importe total
                 txtImporteTotal.Text = detallesPedido.Rows(0)("ImporteTotal").ToString()
 
-                ' Aquí puedes seguir llenando los demás controles
+
             Else
                 MessageBox.Show("No se encontraron detalles para el pedido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Close()

@@ -22,8 +22,8 @@ Partial Class frmVentas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.panelFrmInventario = New System.Windows.Forms.Panel()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
@@ -40,9 +40,9 @@ Partial Class frmVentas
         Me.btnLimpiarInv = New FontAwesome.Sharp.IconButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.btnEliminarPedido = New FontAwesome.Sharp.IconButton()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnEliminarPedido = New FontAwesome.Sharp.IconButton()
         Me.panelFrmInventario.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -139,14 +139,14 @@ Partial Class frmVentas
         Me.dgvPedidos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
         Me.dgvPedidos.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvPedidos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvPedidos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvPedidos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvPedidos.ColumnHeadersHeight = 50
         Me.dgvPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgvPedidos.EnableHeadersVisualStyles = False
@@ -157,12 +157,12 @@ Partial Class frmVentas
         Me.dgvPedidos.ReadOnly = True
         Me.dgvPedidos.RowHeadersVisible = False
         Me.dgvPedidos.RowHeadersWidth = 100
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White
-        Me.dgvPedidos.RowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
+        Me.dgvPedidos.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvPedidos.RowTemplate.Height = 50
         Me.dgvPedidos.RowTemplate.ReadOnly = True
         Me.dgvPedidos.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
@@ -292,6 +292,23 @@ Partial Class frmVentas
         Me.Panel4.Size = New System.Drawing.Size(261, 53)
         Me.Panel4.TabIndex = 1
         '
+        'btnEliminarPedido
+        '
+        Me.btnEliminarPedido.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.btnEliminarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEliminarPedido.ForeColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.btnEliminarPedido.IconChar = FontAwesome.Sharp.IconChar.FilterCircleXmark
+        Me.btnEliminarPedido.IconColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.btnEliminarPedido.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnEliminarPedido.IconSize = 35
+        Me.btnEliminarPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEliminarPedido.Location = New System.Drawing.Point(89, 3)
+        Me.btnEliminarPedido.Name = "btnEliminarPedido"
+        Me.btnEliminarPedido.Size = New System.Drawing.Size(159, 44)
+        Me.btnEliminarPedido.TabIndex = 6
+        Me.btnEliminarPedido.Text = "      Eliminar pedido"
+        Me.btnEliminarPedido.UseVisualStyleBackColor = True
+        '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
@@ -315,23 +332,6 @@ Partial Class frmVentas
         Me.Label2.Size = New System.Drawing.Size(105, 31)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Ventas"
-        '
-        'btnEliminarPedido
-        '
-        Me.btnEliminarPedido.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.btnEliminarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEliminarPedido.ForeColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.btnEliminarPedido.IconChar = FontAwesome.Sharp.IconChar.FilterCircleXmark
-        Me.btnEliminarPedido.IconColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.btnEliminarPedido.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnEliminarPedido.IconSize = 35
-        Me.btnEliminarPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEliminarPedido.Location = New System.Drawing.Point(89, 3)
-        Me.btnEliminarPedido.Name = "btnEliminarPedido"
-        Me.btnEliminarPedido.Size = New System.Drawing.Size(159, 44)
-        Me.btnEliminarPedido.TabIndex = 6
-        Me.btnEliminarPedido.Text = "      Eliminar pedido"
-        Me.btnEliminarPedido.UseVisualStyleBackColor = True
         '
         'frmVentas
         '
