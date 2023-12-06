@@ -218,7 +218,7 @@ Public Class inventaryDAO
 
     Public Function EliminarMarca(idMarca As Integer) As Integer Implements inventaryInterfaces.EliminarMarca
         Try
-            Using glCommand As New MySqlCommand("SP_EliminarProducto", myConecctionDB)
+            Using glCommand As New MySqlCommand("SP_EliminarMarca", myConecctionDB)
                 glCommand.CommandType = CommandType.StoredProcedure
                 glCommand.Parameters.AddWithValue("@id", idMarca)
                 Return glCommand.ExecuteNonQuery()

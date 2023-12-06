@@ -12,12 +12,21 @@ Public Class frmInventario
             Dim InventarioDataTable As DataTable = invenatyDao.VerProductos
 
             For Each row As DataRow In InventarioDataTable.Rows
-                ' Verificar si la columna "foto" es DBNull.Value
                 Dim imagen As Image = If(row("foto") IsNot DBNull.Value, DecodificarImagen(row("foto")), Nothing)
 
+                If imagen IsNot Nothing Then
+                    ' Crear una nueva imagen redimensionada con un ancho de 100 píxeles
+                    Dim nuevoAncho As Integer = 100
+                    Dim nuevoAlto As Integer = CInt(imagen.Height * (nuevoAncho / imagen.Width))
+                    Dim imagenRedimensionada As New Bitmap(imagen, nuevoAncho, nuevoAlto)
 
-                ' Agregar una nueva fila al DataGridView con los valores de las columnas
-                dgvInv.Rows.Add(row("id"), row("Producto"), row("Categoria"), row("Marca"), row("Precio Unit"), row("Stock"), imagen, row("P.reorden"))
+                    ' Agregar una nueva fila al DataGridView con la imagen redimensionada y otros valores de las columnas
+                    dgvInv.Rows.Add(row("id"), row("Producto"), row("Categoria"), row("Marca"), row("Precio Unit"), row("Stock"), imagenRedimensionada, row("P.reorden"))
+                Else
+                    ' Agregar una nueva fila al DataGridView con los valores de las columnas (la imagen es Nothing)
+                    dgvInv.Rows.Add(row("id"), row("Producto"), row("Categoria"), row("Marca"), row("Precio Unit"), row("Stock"), Nothing, row("P.reorden"))
+                End If
+
             Next
 
             dgvInv.ClearSelection()
@@ -92,9 +101,9 @@ Public Class frmInventario
     Private Sub dgvInv_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles dgvInv.CellFormatting
         If e.ColumnIndex = 7 Then
             If e.Value.ToString() = "Aplica" Then
-                'e.CellStyle.ForeColor = Color.IndianRed
+                e.CellStyle.ForeColor = System.Drawing.Color.LightGreen
             Else
-                ' e.CellStyle.ForeColor = Color.LightGreen
+                e.CellStyle.ForeColor = System.Drawing.Color.IndianRed
             End If
         End If
     End Sub

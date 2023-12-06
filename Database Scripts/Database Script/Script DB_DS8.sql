@@ -9,7 +9,7 @@ CREATE TABLE Marca (
     id_marca INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(255) UNIQUE,
     descripcion VARCHAR(255),
-    logo VARCHAR(255)
+    logo LONGTEXT
 );
 -- Creación de tabla Categoria
 CREATE TABLE Categoria (
@@ -26,7 +26,7 @@ CREATE TABLE Producto (
     nombre VARCHAR(255),
     precio_unit DECIMAL(10,2),
     cantidad_por_cajas INT,
-    foto VARCHAR(255),
+    foto LONGTEXT,
     punto_reorden INT,
     cantidad_cajas INT
 );

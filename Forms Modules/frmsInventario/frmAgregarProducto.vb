@@ -1,7 +1,4 @@
-﻿Imports System.IO
-Imports FontAwesome.Sharp
-Imports MySql.Data.MySqlClient
-Imports ZstdSharp.Unsafe
+﻿Imports MySql.Data.MySqlClient
 
 Public Class frmAgregarProducto
     Dim myConnectionDB As MySqlConnection
@@ -64,6 +61,14 @@ Public Class frmAgregarProducto
                 selectedImage
             ) Then
                 MessageBox.Show("El producto fue agregado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                txtNomProducto.Clear()
+                txtPrecioU.Clear()
+                txtCantPCajas.Clear()
+                txtCantidad.Clear()
+                txtReorden.Clear()
+                BoxCategoria.Items.Clear()
+                BoxMarca.Items.Clear()
+                BoxPicture.Image = Nothing
             End If
         Catch ex As Exception
             MessageBox.Show("Error al agregar el producto: " & ex.Message)
