@@ -33,6 +33,14 @@ BEGIN
 END $$
 DELIMITER ;
 
+--Procedimiento para Ver Productos Asociados a las Marcas
+
+DELIMITER $$
+CREATE PROCEDURE SP_TieneProductosAsociados(IN idMarca INT, OUT tieneProductos BIT)
+BEGIN
+    SELECT COUNT(*) INTO tieneProductos FROM producto WHERE marca_id = idMarca;
+END $$
+DELIMITER ;
 
 
 -- Procedimiento para Actualizar Marcas
@@ -42,3 +50,4 @@ BEGIN
 
 END $$
 DELIMITER ;
+

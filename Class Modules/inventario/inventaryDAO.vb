@@ -211,6 +211,38 @@ Public Class inventaryDAO
         End Try
     End Function
 
+    'BuscarProductosAsociadosAMarca
+
+    Public Function TieneProductosAsociados(idMarca As Integer) As Boolean Implements inventaryInterfaces.TieneProductosAsociados
+        Try
+            Using glCommand As New MySqlCommand("SP_TieneProductosAsociados", myConnectionDB)
+                glCommand.CommandType = CommandType.StoredProcedure
+
+                ' Agregar parámetros al comando
+                glCommand.Parameters.AddWithValue("@idMarca", idMarca)
+                glCommand.Parameters.Add("@tieneProductos", MySqlDbType.Bit)
+                glCommand.Parameters("@tieneProductos").Direction = ParameterDirection.Output
+
+                ' Abrir la conexión a la base de datos
+                myConnectionDB.Open()
+
+                ' Ejecutar el procedimiento almacenado
+                glCommand.ExecuteNonQuery()
+
+                ' Obtener el resultado del parámetro de salida
+                Dim tieneProductos As Boolean = Convert.ToBoolean(glCommand.Parameters("@tieneProductos").Value)
+                Return tieneProductos
+            End Using
+        Catch ex As Exception
+            ' Manejar errores
+            Throw New Exception("Error al procesar la operación:", ex)
+        Finally
+            ' Cerrar la conexión en el bloque Finally
+            If myConnectionDB.State <> ConnectionState.Closed Then myConnectionDB.Close()
+        End Try
+    End Function
+
+
     'Delete -> Marcas
 
     Public Function EliminarMarca(idMarca As Integer) As Integer Implements inventaryInterfaces.EliminarMarca
