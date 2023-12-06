@@ -48,6 +48,15 @@ Partial Class frmInventario
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.panelFrmInventario = New System.Windows.Forms.Panel()
+        Me.id_producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.categoria = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.marca = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precio_unit = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cantidad_por_cajas = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.foto = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.punto_reorden = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.acciones = New System.Windows.Forms.DataGridViewButtonColumn()
         tsMarcaInv = New System.Windows.Forms.ToolStripMenuItem()
         tsAgregarInv = New System.Windows.Forms.ToolStripDropDownButton()
         Me.TabControl1.SuspendLayout()
@@ -214,6 +223,7 @@ Partial Class frmInventario
         Me.dgvInv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvInv.ColumnHeadersHeight = 50
         Me.dgvInv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dgvInv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_producto, Me.Producto, Me.categoria, Me.marca, Me.precio_unit, Me.cantidad_por_cajas, Me.foto, Me.punto_reorden, Me.acciones})
         Me.dgvInv.EnableHeadersVisualStyles = False
         Me.dgvInv.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
         Me.dgvInv.Location = New System.Drawing.Point(20, 5)
@@ -393,6 +403,62 @@ Partial Class frmInventario
         Me.panelFrmInventario.Size = New System.Drawing.Size(984, 569)
         Me.panelFrmInventario.TabIndex = 4
         '
+        'id_producto
+        '
+        Me.id_producto.HeaderText = "id_producto"
+        Me.id_producto.Name = "id_producto"
+        Me.id_producto.ReadOnly = True
+        Me.id_producto.Visible = False
+        '
+        'Producto
+        '
+        Me.Producto.HeaderText = "Producto"
+        Me.Producto.Name = "Producto"
+        Me.Producto.ReadOnly = True
+        '
+        'categoria
+        '
+        Me.categoria.HeaderText = "Categoria"
+        Me.categoria.Name = "categoria"
+        Me.categoria.ReadOnly = True
+        '
+        'marca
+        '
+        Me.marca.HeaderText = "Marca"
+        Me.marca.Name = "marca"
+        Me.marca.ReadOnly = True
+        '
+        'precio_unit
+        '
+        Me.precio_unit.HeaderText = "precio_unit"
+        Me.precio_unit.Name = "precio_unit"
+        Me.precio_unit.ReadOnly = True
+        '
+        'cantidad_por_cajas
+        '
+        Me.cantidad_por_cajas.HeaderText = "cantidad_por_cajas"
+        Me.cantidad_por_cajas.Name = "cantidad_por_cajas"
+        Me.cantidad_por_cajas.ReadOnly = True
+        '
+        'foto
+        '
+        Me.foto.HeaderText = "foto"
+        Me.foto.Name = "foto"
+        Me.foto.ReadOnly = True
+        '
+        'punto_reorden
+        '
+        Me.punto_reorden.HeaderText = "punto_reorden"
+        Me.punto_reorden.Name = "punto_reorden"
+        Me.punto_reorden.ReadOnly = True
+        '
+        'acciones
+        '
+        Me.acciones.HeaderText = "acciones"
+        Me.acciones.Name = "acciones"
+        Me.acciones.ReadOnly = True
+        Me.acciones.UseColumnTextForButtonValue = True
+        '
         'frmInventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -454,4 +520,13 @@ Partial Class frmInventario
     Friend WithEvents tsCategoriaInv As ToolStripMenuItem
     Friend WithEvents tsRealizarCompraInv As ToolStripMenuItem
     Friend WithEvents btnBuscarInv As FontAwesome.Sharp.IconButton
+    Friend WithEvents id_producto As DataGridViewTextBoxColumn
+    Friend WithEvents Producto As DataGridViewTextBoxColumn
+    Friend WithEvents categoria As DataGridViewTextBoxColumn
+    Friend WithEvents marca As DataGridViewTextBoxColumn
+    Friend WithEvents precio_unit As DataGridViewTextBoxColumn
+    Friend WithEvents cantidad_por_cajas As DataGridViewTextBoxColumn
+    Friend WithEvents foto As DataGridViewImageColumn
+    Friend WithEvents punto_reorden As DataGridViewTextBoxColumn
+    Friend WithEvents acciones As DataGridViewButtonColumn
 End Class

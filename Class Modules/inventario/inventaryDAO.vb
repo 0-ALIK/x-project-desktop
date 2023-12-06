@@ -37,7 +37,11 @@ Public Class inventaryDAO
                 glCommand.CommandTimeout = 0
                 glCommand.CommandType = CommandType.StoredProcedure
 
-
+                Using adapter As New MySqlDataAdapter(glCommand)
+                    Dim datatable As New DataTable()
+                    adapter.Fill(datatable)
+                    Return datatable
+                End Using
             End Using
         Catch ex As Exception
             Throw New Exception("Error al procesar la operacion:", ex)

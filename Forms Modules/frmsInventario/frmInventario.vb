@@ -8,8 +8,10 @@ Public Class frmInventario
         Try
             conexionDB()
             myConnectionDB.Open()
-            Dim InventarioDataTable As DataTable = invenatyDao.VerInventario
-            dgvInv.DataSource = InventarioDataTable
+            Dim InventarioDataTable As DataTable = invenatyDao.VerProductos
+            For Each rows As DataRow In InventarioDataTable.Rows
+                dgvInv.Rows.Add(rows("id"), rows("Producto"), rows("Categoria"), rows("Marca"), rows("Precio Unit"), rows("Stock"), rows("foto"), rows("P.reorden"))
+            Next
 
         Catch ex As Exception
             MsgBox("Error al realizar la conexión" & vbCrLf & "Error: " & ex.Message, MsgBoxStyle.Critical, "Error")
@@ -31,6 +33,10 @@ Public Class frmInventario
     End Sub
 
     Private Sub tsAgregarInv_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub dgvInv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvInv.CellContentClick
 
     End Sub
 End Class
