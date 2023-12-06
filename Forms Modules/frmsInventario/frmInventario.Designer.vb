@@ -36,6 +36,7 @@ Partial Class frmInventario
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.dgvInv = New System.Windows.Forms.DataGridView()
+        Me.Eliminar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.pan = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.btnBuscarInv = New FontAwesome.Sharp.IconButton()
@@ -48,7 +49,6 @@ Partial Class frmInventario
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.panelFrmInventario = New System.Windows.Forms.Panel()
-        Me.Eliminar = New System.Windows.Forms.DataGridViewButtonColumn()
         tsMarcaInv = New System.Windows.Forms.ToolStripMenuItem()
         tsAgregarInv = New System.Windows.Forms.ToolStripDropDownButton()
         Me.TabControl1.SuspendLayout()
@@ -237,6 +237,18 @@ Partial Class frmInventario
         Me.dgvInv.Size = New System.Drawing.Size(897, 288)
         Me.dgvInv.TabIndex = 2
         '
+        'Eliminar
+        '
+        Me.Eliminar.HeaderText = "Eliminar"
+        Me.Eliminar.Name = "Eliminar"
+        Me.Eliminar.ReadOnly = True
+        Me.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.Eliminar.Text = "Eliminar"
+        Me.Eliminar.ToolTipText = "Eliminar"
+        Me.Eliminar.UseColumnTextForButtonValue = True
+        Me.Eliminar.Width = 89
+        '
         'pan
         '
         Me.pan.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
@@ -367,7 +379,7 @@ Partial Class frmInventario
         Me.ToolStrip1.Location = New System.Drawing.Point(137, 11)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.ToolStrip1.Size = New System.Drawing.Size(111, 33)
+        Me.ToolStrip1.Size = New System.Drawing.Size(142, 33)
         Me.ToolStrip1.Stretch = True
         Me.ToolStrip1.TabIndex = 2
         Me.ToolStrip1.Text = "ToolStrip1"
@@ -394,18 +406,6 @@ Partial Class frmInventario
         Me.panelFrmInventario.Padding = New System.Windows.Forms.Padding(20)
         Me.panelFrmInventario.Size = New System.Drawing.Size(984, 569)
         Me.panelFrmInventario.TabIndex = 4
-        '
-        'Eliminar
-        '
-        Me.Eliminar.HeaderText = "Eliminar"
-        Me.Eliminar.Name = "Eliminar"
-        Me.Eliminar.ReadOnly = True
-        Me.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.Eliminar.Text = "Eliminar"
-        Me.Eliminar.ToolTipText = "Eliminar"
-        Me.Eliminar.UseColumnTextForButtonValue = True
-        Me.Eliminar.Width = 89
         '
         'frmInventario
         '
