@@ -27,7 +27,7 @@ DELIMITER ;
 
 -- Procedimiento para Eliminar Marcas
 DELIMITER $$
-CREATE PROCEDURE SP_EliminarMarcas()
+CREATE PROCEDURE SP_EliminarMarca()
 BEGIN
     DELETE FROM Marca WHERE id_marca = id;
 END $$

@@ -50,14 +50,40 @@ Public Class frmAgregarMarca
     End Sub
 
     Private Sub dgvVerMarcas_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVerMarcas.CellContentClick
-        If dgvVerMarcas.Columns(e.ColumnIndex).Name = "editar" Then
-            'aqui agregas lo el codigo para editar la marca
-            MsgBox("Edicicon de productos")
-        Else
-            'aquí agregas el codigo de eliminar marca
-            MsgBox("Elimina un producto")
+        If e.RowIndex >= 0 AndAlso dgvVerMarcas.Columns(e.ColumnIndex).Name = "editar" Then
+            ' Aquí agregas el código para editar la marca
+            MsgBox("Edición de productos")
+
+
+
+
+        ElseIf e.RowIndex >= 0 AndAlso dgvVerMarcas.Columns(e.ColumnIndex).Name = "eliminar" Then
+            ' Aquí agregas el código para eliminar la marca
+            Dim idMarca As Integer = Convert.ToInt32(dgvVerMarcas.Rows(e.RowIndex).Cells(0).Value)
+            ' Mostrar un mensaje de confirmación al usuario
+            Dim confirmacion As DialogResult = MessageBox.Show("¿Estás seguro de que quieres eliminar esta marca?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If confirmacion = DialogResult.Yes Then
+                ' Abrir la conexión a la base de datos
+                conexionDB()
+                myConnectionDB.Open()
+
+                ' Crear y ejecutar el comando SQL para eliminar la marca
+                Dim command As New MySqlCommand("SP_EliminarMarca", myConnectionDB)
+                command.CommandType = CommandType.StoredProcedure
+                command.Parameters.AddWithValue("@id", idMarca)
+                command.ExecuteNonQuery()
+
+                ' Actualizar el DataGridView después de la eliminación
+                Dim marcasDataTable As DataTable = invenatyDao.VerMarcas
+                dgvVerMarcas.Rows.Clear()
+                For Each row As DataRow In marcasDataTable.Rows
+                    dgvVerMarcas.Rows.Add(row("id_marca"), row("nombre"))
+                Next
+            End If
         End If
     End Sub
+
+
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim result As Integer

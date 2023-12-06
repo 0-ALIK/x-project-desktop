@@ -13,7 +13,7 @@
     Function VerMarcas() As DataTable
     Function InsertarMarca(ByVal nombre As String, ByVal descripcion As String, ByVal logo As String) As Integer
     Function ActualizarMarca() As Integer
-    Function EliminarMarca() As Integer
+    Function EliminarMarca(idMarca As Integer) As Integer
 
     'Select - Insert - Update - Delete -> Categorias
     Function VerCategorias() As DataTable
