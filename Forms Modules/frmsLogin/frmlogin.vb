@@ -1,7 +1,36 @@
 ﻿Imports System.Runtime.InteropServices
 
 Public Class frmlogin
+    Private loginDAO As loginInterface
+    Public Sub New(loginDAO As loginInterface
+                   )
 
+        ' Esta llamada es exigida por el diseñador.
+        InitializeComponent()
+
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+        Me.loginDAO = loginDAO
+    End Sub
+
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        If String.IsNullOrWhiteSpace(txtUser.Text) OrElse String.IsNullOrWhiteSpace(txtPass.Text) Then
+            MessageBox.Show("Por favor, complete todos los campos.")
+            Return
+        End If
+
+        Dim user As String = txtUser.Text
+        Dim pass As String = txtPass.Text
+
+
+
+        If loginDAO.ValidarUsuario(user, pass) Then
+            MessageBox.Show("Inicio de sesión exitoso")
+
+        Else
+            MessageBox.Show("Contraseña o usuario incorrectos.")
+
+        End If
+    End Sub
 
 
 #Region "Diseño"
@@ -41,6 +70,7 @@ Public Class frmlogin
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
+
 
 
     'Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click

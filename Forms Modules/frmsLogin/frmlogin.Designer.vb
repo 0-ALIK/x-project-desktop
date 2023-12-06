@@ -92,9 +92,9 @@ Partial Class frmlogin
         Me.Label2.ForeColor = System.Drawing.Color.Silver
         Me.Label2.Location = New System.Drawing.Point(38, 353)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(77, 21)
+        Me.Label2.Size = New System.Drawing.Size(89, 21)
         Me.Label2.TabIndex = 25
-        Me.Label2.Text = "Password"
+        Me.Label2.Text = "Contraseña"
         '
         'txtUser
         '

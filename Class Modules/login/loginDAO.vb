@@ -1,10 +1,12 @@
 ﻿Imports System.Configuration
 Imports System.Data.SqlClient
+Imports System.Runtime.InteropServices.WindowsRuntime
 Imports System.Security.Cryptography
 Imports System.Text
 Imports MySql.Data.MySqlClient
 Public Class loginDAO
     Implements loginInterface
+
     Private myConnectionDB As SqlConnection
     Public Sub New(myConnecti As SqlConnection)
         Me.myConnectionDB = myConnecti
@@ -48,6 +50,28 @@ Public Class loginDAO
             End Using
 
         End Using
+
+    End Function
+
+
+    Public Function ValidarUsuario(nombre As String, pass As String) As Boolean Implements loginInterface.ValidarUsuario
+
+        Try
+            Using glCommand As New SqlCommand("SELECT * FROM usuario WHERE nombre = @p_nombre AND pass = @p_pass")
+                glCommand.Parameters.AddWithValue("@p_nombre", nombre)
+                glCommand.Parameters.AddWithValue("@p_pass", pass)
+                myConnectionDB.Open()
+                Dim count As Integer = Convert.ToInt32(glCommand.ExecuteScalar())
+                Return count > 0
+            End Using
+
+        Catch ex As Exception
+            Throw New Exception("Error al iniciar Sesión", ex)
+
+        Finally
+            If myConnectionDB.State <> ConnectionState.Closed Then myConnectionDB.Close()
+
+        End Try
 
     End Function
 End Class
