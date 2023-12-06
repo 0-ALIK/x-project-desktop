@@ -153,7 +153,6 @@
     <Compile Include="Class Modules\clientes\Class3.vb" />
     <Compile Include="Class Modules\inventario\inventaryDAO.vb" />
     <Compile Include="Class Modules\clientes\ClientesModule.vb" />
-    <Compile Include="Class Modules\inventario\Class4.vb" />
     <Compile Include="Class Modules\tickets\ticketsDAO.vb" />
     <Compile Include="Class Modules\ventas\Class6.vb" />
     <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboard.Designer.vb">
@@ -502,11 +501,6 @@
     <Content Include="Store Procedures\tickets\SP_ObtenerCategoria.sql" />
     <Content Include="Store Procedures\tickets\StoredProceduresTickets.sql" />
     <None Include="Resources\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Store Procedures\ayuda\" />
-    <Folder Include="Store Procedures\clientes\" />
-    <Folder Include="Store Procedures\ventas\" />
   </ItemGroup>  
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
