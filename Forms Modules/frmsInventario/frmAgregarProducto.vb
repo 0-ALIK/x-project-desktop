@@ -50,7 +50,7 @@ Public Class frmAgregarProducto
         End If
 
         Try
-            Dim selectedImage As Image = BoxPicture.Image
+            Dim selectedImage As String = CodificarImagen(BoxPicture.Image, BoxPicture)
 
             ' Llamar a la función de la clase productoDao
             If productoDao.InsertarProducto(

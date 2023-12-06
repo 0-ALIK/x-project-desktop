@@ -31,7 +31,7 @@ Public Class inventaryDAO
 
     'Insert -> Productos
 
-    Public Function InsertarProducto(nombre As String, precioUnitario As Decimal, cantidadPorCajas As Integer?, puntoReorden As Integer?, cantidadCajas As Integer?, marcaId As Integer, categoriaId As Integer, imagen As Image) As Boolean Implements inventaryInterfaces.InsertarProducto
+    Public Function InsertarProducto(nombre As String, precioUnitario As Decimal, cantidadPorCajas As Integer?, puntoReorden As Integer?, cantidadCajas As Integer?, marcaId As Integer, categoriaId As Integer, imagen As String) As Boolean Implements inventaryInterfaces.InsertarProducto
         Try
             myConnectionDB.Open()
 
@@ -46,17 +46,8 @@ Public Class inventaryDAO
                 glCommand.Parameters.AddWithValue("@p_marca_id", marcaId)
                 glCommand.Parameters.AddWithValue("@p_categoria_id", categoriaId)
 
-                ' Convertir la imagen a un arreglo de bytes
-                Dim photoBytes As Byte() = Nothing
-                If imagen IsNot Nothing Then
-                    Using ms As New MemoryStream()
-                        imagen.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg)
-                        photoBytes = ms.ToArray()
-                    End Using
-                End If
-
                 ' Agregar el parámetro para la imagen
-                glCommand.Parameters.AddWithValue("@p_imagen", If(photoBytes IsNot Nothing, photoBytes, DBNull.Value))
+                glCommand.Parameters.AddWithValue("@p_imagen", If(imagen IsNot Nothing, imagen, DBNull.Value))
 
                 ' Ejecutar el procedimiento almacenado
                 glCommand.ExecuteNonQuery()

@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Windows.Media
+Imports MySql.Data.MySqlClient
 
 Public Class frmInventario
 
@@ -10,8 +11,13 @@ Public Class frmInventario
             myConnectionDB.Open()
             Dim InventarioDataTable As DataTable = invenatyDao.VerProductos
 
-            For Each rows As DataRow In InventarioDataTable.Rows
-                dgvInv.Rows.Add(rows("id"), rows("Producto"), rows("Categoria"), rows("Marca"), rows("Precio Unit"), rows("Stock"), rows("foto"), rows("P.reorden"))
+            For Each row As DataRow In InventarioDataTable.Rows
+                ' Verificar si la columna "foto" es DBNull.Value
+                Dim imagen As Image = If(row("foto") IsNot DBNull.Value, DecodificarImagen(row("foto")), Nothing)
+
+
+                ' Agregar una nueva fila al DataGridView con los valores de las columnas
+                dgvInv.Rows.Add(row("id"), row("Producto"), row("Categoria"), row("Marca"), row("Precio Unit"), row("Stock"), imagen, row("P.reorden"))
             Next
 
             dgvInv.ClearSelection()
@@ -86,9 +92,9 @@ Public Class frmInventario
     Private Sub dgvInv_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles dgvInv.CellFormatting
         If e.ColumnIndex = 7 Then
             If e.Value.ToString() = "Aplica" Then
-                e.CellStyle.ForeColor = Color.IndianRed
+                'e.CellStyle.ForeColor = Color.IndianRed
             Else
-                e.CellStyle.ForeColor = Color.LightGreen
+                ' e.CellStyle.ForeColor = Color.LightGreen
             End If
         End If
     End Sub
