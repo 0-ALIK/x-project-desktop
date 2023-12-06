@@ -263,4 +263,23 @@ Public Class comprasDAO
         End Try
     End Function
 
+    Public Sub EliminarPedido(idPedido As Integer)
+        Try
+            Using glCommand As New MySqlCommand("DELETE FROM pedido WHERE id_pedido = @idPedido", myConnection)
+                glCommand.Parameters.AddWithValue("@idPedido", idPedido)
+                glCommand.CommandType = CommandType.Text
+
+                myConnection.Open()
+                glCommand.ExecuteNonQuery()
+            End Using
+        Catch ex As Exception
+            Throw New Exception($"Error al eliminar el pedido. Detalles: {ex.Message}", ex)
+        Finally
+            If myConnection.State = ConnectionState.Open Then
+                myConnection.Close()
+            End If
+        End Try
+    End Sub
+
+
 End Class

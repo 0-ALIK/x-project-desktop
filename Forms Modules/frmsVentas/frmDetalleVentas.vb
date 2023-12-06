@@ -156,4 +156,11 @@ Public Class frmDetalleVentas
             MessageBox.Show($"Error al cargar el historial de pagos. Detalles: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+
+    Private Sub btnGenerarFactura_Click(sender As Object, e As EventArgs) Handles btnGenerarFactura.Click
+        MessageBox.Show("Esta funcionalidad estará disponible en futuras versiones.", "Funcionalidad a Futuro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
+
+
 End Class

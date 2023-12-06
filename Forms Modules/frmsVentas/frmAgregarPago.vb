@@ -4,6 +4,7 @@ Public Class frmAgregarPago
     Private myConnection As MySqlConnection
     Private comprasDAO As comprasDAO
     Private pedidoId As Integer
+
     Public Event PagoRealizado As Action(Of Decimal)
 
     Public Sub New(connection As MySqlConnection, pedidoId As Integer)
