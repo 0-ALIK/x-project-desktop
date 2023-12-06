@@ -157,7 +157,6 @@
     <Compile Include="Class Modules\clientes\Class3.vb" />
     <Compile Include="Class Modules\inventario\Class4.vb" />
     <Compile Include="Class Modules\tickets\ticketsDAO.vb" />
-    <Compile Include="Class Modules\ventas\Class6.vb" />
     <Compile Include="Class Modules\ventas\comprasDAO.vb" />
     <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboard.Designer.vb">
       <DependentUpon>frmDashboard.vb</DependentUpon>
@@ -285,10 +284,10 @@
     <Compile Include="Forms Modules\frmsTickets\frmHomeTicket.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms Modules\frmsVentas\frmAgregarCompra.Designer.vb">
-      <DependentUpon>frmAgregarCompra.vb</DependentUpon>
+    <Compile Include="Forms Modules\frmsVentas\frmAgregarPedido.Designer.vb">
+      <DependentUpon>frmAgregarPedido.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms Modules\frmsVentas\frmAgregarCompra.vb">
+    <Compile Include="Forms Modules\frmsVentas\frmAgregarPedido.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms Modules\frmsVentas\frmDetalleVentas.Designer.vb">
@@ -316,6 +315,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Interfaces Modules\analitica\analitycInterfaces.vb" />
+    <Compile Include="Interfaces Modules\inventario\inventaryInterfaces.vb" />
     <Compile Include="Interfaces Modules\tickets\ticketsInterfaces.vb" />
     <Compile Include="Interfaces Modules\ventas\ComprasInterfaces.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -409,8 +409,8 @@
     <EmbeddedResource Include="Forms Modules\frmsTickets\frmHomeTicket.resx">
       <DependentUpon>frmHomeTicket.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms Modules\frmsVentas\frmAgregarCompra.resx">
-      <DependentUpon>frmAgregarCompra.vb</DependentUpon>
+    <EmbeddedResource Include="Forms Modules\frmsVentas\frmAgregarPedido.resx">
+      <DependentUpon>frmAgregarPedido.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsVentas\frmDetalleVentas.resx">
       <DependentUpon>frmDetalleVentas.vb</DependentUpon>

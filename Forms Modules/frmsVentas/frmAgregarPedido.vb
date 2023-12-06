@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports x_project_desktop.StandardModules.DB_Conecction
 
-Public Class frmAgregarCompra
+Public Class frmAgregarPedido
     Private comprasDAO As comprasDAO
 
     Private Sub frmAgregarCompra_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -15,14 +15,14 @@ Public Class frmAgregarCompra
         ' Cargar datos en los ComboBox
         cboProductos.DataSource = comprasDAO.ObtenerProductos()
         cboProductos.DisplayMember = "NombreProducto"
-        cboProductos.ValueMember = "IdProducto"
+        cboProductos.ValueMember = "id_producto"
 
         cboClientes.DataSource = comprasDAO.ObtenerClientes()
-        cboClientes.DisplayMember = "NombreCliente"
-        cboClientes.ValueMember = "IdCliente"
+        cboClientes.DisplayMember = "nombre"
+        cboClientes.ValueMember = "id_cliente"
     End Sub
 
-    Private Sub btnRealizarCompra_Click(sender As Object, e As EventArgs) Handles btnRealizarCompra.Click
+    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         ' Obtener valores del formulario
         Dim fecha As DateTime = dtpFechaC.Value
         Dim cantidad As Integer = Convert.ToInt32(txtCantidad.Text)

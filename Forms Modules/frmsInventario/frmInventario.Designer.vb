@@ -25,19 +25,22 @@ Partial Class frmInventario
         Dim tsAgregarInv As System.Windows.Forms.ToolStripDropDownButton
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmInventario))
         Dim tsMarcaInv As System.Windows.Forms.ToolStripMenuItem
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim ToolStripDropDownButton3 As System.Windows.Forms.ToolStripDropDownButton
         Dim tsMarcaEnt As System.Windows.Forms.ToolStripMenuItem
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.tsProductoInv = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsCategoriaInv = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsRealizarCompraInv = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsProductoEnt = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsCategoriaEnt = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsRealizarCompraEnt = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.tsProductoInv = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsCategoriaInv = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsRealizarCompraInv = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
@@ -53,9 +56,6 @@ Partial Class frmInventario
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.Panel13 = New System.Windows.Forms.Panel()
         Me.tsAgregarEnt = New System.Windows.Forms.ToolStrip()
-        Me.tsProductoEnt = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsCategoriaEnt = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsRealizarCompraEnt = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.panelFrmInventario = New System.Windows.Forms.Panel()
@@ -99,51 +99,6 @@ Partial Class frmInventario
         Me.Panel7.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(364, 23)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(54, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Inventario"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(30, 14)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(131, 31)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Entradas"
-        '
-        'Panel4
-        '
-        Me.Panel4.Controls.Add(Me.ToolStrip1)
-        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel4.Location = New System.Drawing.Point(492, 0)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Padding = New System.Windows.Forms.Padding(30, 10, 10, 10)
-        Me.Panel4.Size = New System.Drawing.Size(261, 53)
-        Me.Panel4.TabIndex = 1
-        '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.None
-        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {tsAgregarInv})
-        Me.ToolStrip1.Location = New System.Drawing.Point(137, 11)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.ToolStrip1.Size = New System.Drawing.Size(111, 33)
-        Me.ToolStrip1.Stretch = True
-        Me.ToolStrip1.TabIndex = 2
-        Me.ToolStrip1.Text = "ToolStrip1"
         '
         'tsAgregarInv
         '
@@ -205,6 +160,110 @@ Partial Class frmInventario
         Me.tsRealizarCompraInv.Size = New System.Drawing.Size(224, 30)
         Me.tsRealizarCompraInv.Text = "Realizar Compra"
         '
+        'ToolStripDropDownButton3
+        '
+        ToolStripDropDownButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        ToolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        ToolStripDropDownButton3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {tsMarcaEnt, Me.tsProductoEnt, Me.tsCategoriaEnt, Me.tsRealizarCompraEnt})
+        ToolStripDropDownButton3.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ToolStripDropDownButton3.Image = CType(resources.GetObject("ToolStripDropDownButton3.Image"), System.Drawing.Image)
+        ToolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.BlueViolet
+        ToolStripDropDownButton3.Margin = New System.Windows.Forms.Padding(0)
+        ToolStripDropDownButton3.MergeAction = System.Windows.Forms.MergeAction.MatchOnly
+        ToolStripDropDownButton3.Name = "ToolStripDropDownButton3"
+        ToolStripDropDownButton3.Padding = New System.Windows.Forms.Padding(2, 2, 12, 2)
+        ToolStripDropDownButton3.Size = New System.Drawing.Size(108, 33)
+        ToolStripDropDownButton3.Text = "Agregar"
+        ToolStripDropDownButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        ToolStripDropDownButton3.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal
+        ToolStripDropDownButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
+        ToolStripDropDownButton3.ToolTipText = "Agregar"
+        '
+        'tsMarcaEnt
+        '
+        tsMarcaEnt.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        tsMarcaEnt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        tsMarcaEnt.ForeColor = System.Drawing.Color.White
+        tsMarcaEnt.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        tsMarcaEnt.ImageTransparentColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        tsMarcaEnt.Name = "tsMarcaEnt"
+        tsMarcaEnt.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
+        tsMarcaEnt.ShowShortcutKeys = False
+        tsMarcaEnt.Size = New System.Drawing.Size(224, 30)
+        tsMarcaEnt.Text = "Marca"
+        '
+        'tsProductoEnt
+        '
+        Me.tsProductoEnt.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.tsProductoEnt.ForeColor = System.Drawing.Color.White
+        Me.tsProductoEnt.Name = "tsProductoEnt"
+        Me.tsProductoEnt.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
+        Me.tsProductoEnt.Size = New System.Drawing.Size(224, 30)
+        Me.tsProductoEnt.Text = "Producto"
+        '
+        'tsCategoriaEnt
+        '
+        Me.tsCategoriaEnt.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.tsCategoriaEnt.ForeColor = System.Drawing.Color.White
+        Me.tsCategoriaEnt.Name = "tsCategoriaEnt"
+        Me.tsCategoriaEnt.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
+        Me.tsCategoriaEnt.Size = New System.Drawing.Size(224, 30)
+        Me.tsCategoriaEnt.Text = "Categoria"
+        '
+        'tsRealizarCompraEnt
+        '
+        Me.tsRealizarCompraEnt.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.tsRealizarCompraEnt.ForeColor = System.Drawing.Color.White
+        Me.tsRealizarCompraEnt.Name = "tsRealizarCompraEnt"
+        Me.tsRealizarCompraEnt.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
+        Me.tsRealizarCompraEnt.Size = New System.Drawing.Size(224, 30)
+        Me.tsRealizarCompraEnt.Text = "Realizar Compra"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(364, 23)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(54, 13)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Inventario"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(30, 14)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(131, 31)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Entradas"
+        '
+        'Panel4
+        '
+        Me.Panel4.Controls.Add(Me.ToolStrip1)
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Panel4.Location = New System.Drawing.Point(492, 0)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Padding = New System.Windows.Forms.Padding(30, 10, 10, 10)
+        Me.Panel4.Size = New System.Drawing.Size(261, 53)
+        Me.Panel4.TabIndex = 1
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.None
+        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {tsAgregarInv})
+        Me.ToolStrip1.Location = New System.Drawing.Point(137, 11)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
+        Me.ToolStrip1.Size = New System.Drawing.Size(111, 33)
+        Me.ToolStrip1.Stretch = True
+        Me.ToolStrip1.TabIndex = 2
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
@@ -238,7 +297,7 @@ Partial Class frmInventario
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Margin = New System.Windows.Forms.Padding(0)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Size = New System.Drawing.Size(937, 503)
+        Me.TabPage2.Size = New System.Drawing.Size(753, 384)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Entradas"
         '
@@ -251,7 +310,7 @@ Partial Class frmInventario
         Me.Panel8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Padding = New System.Windows.Forms.Padding(15, 0, 15, 15)
-        Me.Panel8.Size = New System.Drawing.Size(937, 383)
+        Me.Panel8.Size = New System.Drawing.Size(753, 264)
         Me.Panel8.TabIndex = 8
         '
         'dgvEnt
@@ -292,7 +351,7 @@ Partial Class frmInventario
         Me.dgvEnt.RowTemplate.ReadOnly = True
         Me.dgvEnt.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvEnt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvEnt.Size = New System.Drawing.Size(897, 295)
+        Me.dgvEnt.Size = New System.Drawing.Size(713, 176)
         Me.dgvEnt.TabIndex = 3
         '
         'Panel9
@@ -304,7 +363,7 @@ Partial Class frmInventario
         Me.Panel9.Location = New System.Drawing.Point(0, 53)
         Me.Panel9.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(937, 67)
+        Me.Panel9.Size = New System.Drawing.Size(753, 67)
         Me.Panel9.TabIndex = 7
         '
         'Panel10
@@ -313,7 +372,7 @@ Partial Class frmInventario
         Me.Panel10.Controls.Add(Me.btnBuscarEnt)
         Me.Panel10.Controls.Add(Me.txtBuscarEnt)
         Me.Panel10.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel10.Location = New System.Drawing.Point(637, 0)
+        Me.Panel10.Location = New System.Drawing.Point(453, 0)
         Me.Panel10.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(300, 67)
@@ -403,14 +462,14 @@ Partial Class frmInventario
         Me.Panel12.Location = New System.Drawing.Point(0, 0)
         Me.Panel12.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(937, 53)
+        Me.Panel12.Size = New System.Drawing.Size(753, 53)
         Me.Panel12.TabIndex = 9
         '
         'Panel13
         '
         Me.Panel13.Controls.Add(Me.tsAgregarEnt)
         Me.Panel13.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel13.Location = New System.Drawing.Point(676, 0)
+        Me.Panel13.Location = New System.Drawing.Point(492, 0)
         Me.Panel13.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel13.Name = "Panel13"
         Me.Panel13.Padding = New System.Windows.Forms.Padding(30, 10, 10, 10)
@@ -429,65 +488,6 @@ Partial Class frmInventario
         Me.tsAgregarEnt.Stretch = True
         Me.tsAgregarEnt.TabIndex = 3
         Me.tsAgregarEnt.Text = "ToolStrip3"
-        '
-        'ToolStripDropDownButton3
-        '
-        ToolStripDropDownButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
-        ToolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        ToolStripDropDownButton3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {tsMarcaEnt, Me.tsProductoEnt, Me.tsCategoriaEnt, Me.tsRealizarCompraEnt})
-        ToolStripDropDownButton3.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ToolStripDropDownButton3.Image = CType(resources.GetObject("ToolStripDropDownButton3.Image"), System.Drawing.Image)
-        ToolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.BlueViolet
-        ToolStripDropDownButton3.Margin = New System.Windows.Forms.Padding(0)
-        ToolStripDropDownButton3.MergeAction = System.Windows.Forms.MergeAction.MatchOnly
-        ToolStripDropDownButton3.Name = "ToolStripDropDownButton3"
-        ToolStripDropDownButton3.Padding = New System.Windows.Forms.Padding(2, 2, 12, 2)
-        ToolStripDropDownButton3.Size = New System.Drawing.Size(108, 33)
-        ToolStripDropDownButton3.Text = "Agregar"
-        ToolStripDropDownButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        ToolStripDropDownButton3.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal
-        ToolStripDropDownButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
-        ToolStripDropDownButton3.ToolTipText = "Agregar"
-        '
-        'tsMarcaEnt
-        '
-        tsMarcaEnt.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        tsMarcaEnt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        tsMarcaEnt.ForeColor = System.Drawing.Color.White
-        tsMarcaEnt.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        tsMarcaEnt.ImageTransparentColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        tsMarcaEnt.Name = "tsMarcaEnt"
-        tsMarcaEnt.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        tsMarcaEnt.ShowShortcutKeys = False
-        tsMarcaEnt.Size = New System.Drawing.Size(224, 30)
-        tsMarcaEnt.Text = "Marca"
-        '
-        'tsProductoEnt
-        '
-        Me.tsProductoEnt.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.tsProductoEnt.ForeColor = System.Drawing.Color.White
-        Me.tsProductoEnt.Name = "tsProductoEnt"
-        Me.tsProductoEnt.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.tsProductoEnt.Size = New System.Drawing.Size(224, 30)
-        Me.tsProductoEnt.Text = "Producto"
-        '
-        'tsCategoriaEnt
-        '
-        Me.tsCategoriaEnt.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.tsCategoriaEnt.ForeColor = System.Drawing.Color.White
-        Me.tsCategoriaEnt.Name = "tsCategoriaEnt"
-        Me.tsCategoriaEnt.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.tsCategoriaEnt.Size = New System.Drawing.Size(224, 30)
-        Me.tsCategoriaEnt.Text = "Categoria"
-        '
-        'tsRealizarCompraEnt
-        '
-        Me.tsRealizarCompraEnt.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.tsRealizarCompraEnt.ForeColor = System.Drawing.Color.White
-        Me.tsRealizarCompraEnt.Name = "tsRealizarCompraEnt"
-        Me.tsRealizarCompraEnt.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.tsRealizarCompraEnt.Size = New System.Drawing.Size(224, 30)
-        Me.tsRealizarCompraEnt.Text = "Realizar Compra"
         '
         'Panel15
         '

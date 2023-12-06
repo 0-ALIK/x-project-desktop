@@ -3,7 +3,7 @@
 Public Class frmInventario
 
     Dim invenatyDao As New inventaryDAO(myConnectionDB)
-
+    Private comprasDAO As comprasDAO
     Private Sub frmInventario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             conexionDB()
@@ -31,7 +31,9 @@ Public Class frmInventario
     End Sub
 
     Private Sub tsRealizarCompraInv_Click(sender As Object, e As EventArgs) Handles tsRealizarCompraInv.Click
-
+        ' Abrir el formulario de realizar compra
+        Dim frmAgregarCompra As New frmAgregarPedido()
+        frmAgregarCompra.ShowDialog()
     End Sub
 
     'Private Sub tsMarcaEnt_Click(sender As Object, e As EventArgs)
@@ -47,11 +49,9 @@ Public Class frmInventario
         userInput = InputBox("Introduzca el nombre de la categoria que desee agregar:", "Agregar Categoria")
     End Sub
 
-    Private Sub tsRealizarCompraEnt_Click(sender As Object, e As EventArgs) Handles tsRealizarCompraEnt.Click
-
-    End Sub
 
     Private Sub tsAgregarInv_Click(sender As Object, e As EventArgs)
 
     End Sub
+
 End Class

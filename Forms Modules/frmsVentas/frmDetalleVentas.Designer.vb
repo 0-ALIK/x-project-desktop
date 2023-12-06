@@ -22,28 +22,59 @@ Partial Class frmDetalleVentas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.panelFrmInventario = New System.Windows.Forms.Panel()
+        Me.dgvProductosCliente = New System.Windows.Forms.DataGridView()
+        Me.dgvPagos = New System.Windows.Forms.DataGridView()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnPagar = New FontAwesome.Sharp.IconButton()
+        Me.txtDeuda = New System.Windows.Forms.TextBox()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.txtImporteTotal = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Panel14 = New System.Windows.Forms.Panel()
+        Me.txtDetallesCliente = New System.Windows.Forms.TextBox()
+        Me.txtTelefono = New System.Windows.Forms.TextBox()
+        Me.txtProvincia = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel13 = New System.Windows.Forms.Panel()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.txtEmpresaDetalleDireccion = New System.Windows.Forms.TextBox()
+        Me.txtRuc = New System.Windows.Forms.TextBox()
+        Me.txtRazonSocial = New System.Windows.Forms.TextBox()
         Me.IconPictureBox2 = New FontAwesome.Sharp.IconPictureBox()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtCedula = New System.Windows.Forms.TextBox()
+        Me.txtNombreCliente = New System.Windows.Forms.TextBox()
         Me.IconPictureBox1 = New FontAwesome.Sharp.IconPictureBox()
         Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.cboEstadoPedido = New System.Windows.Forms.ComboBox()
+        Me.txtIdPedido = New System.Windows.Forms.TextBox()
         Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.btnCambiarEstado = New FontAwesome.Sharp.IconButton()
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -57,36 +88,38 @@ Partial Class frmDetalleVentas
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.dgvInv = New System.Windows.Forms.DataGridView()
-        Me.Panel14 = New System.Windows.Forms.Panel()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
         Me.panelFrmInventario.SuspendLayout()
+        CType(Me.dgvProductosCliente, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvPagos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.FlowLayoutPanel2.SuspendLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.FlowLayoutPanel1.SuspendLayout()
+        Me.Panel14.SuspendLayout()
         Me.Panel13.SuspendLayout()
         CType(Me.IconPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel8.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel11.SuspendLayout()
+        Me.Panel10.SuspendLayout()
         Me.Panel12.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvInv, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel14.SuspendLayout()
         Me.SuspendLayout()
         '
         'panelFrmInventario
         '
         Me.panelFrmInventario.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
+        Me.panelFrmInventario.Controls.Add(Me.dgvProductosCliente)
+        Me.panelFrmInventario.Controls.Add(Me.dgvPagos)
+        Me.panelFrmInventario.Controls.Add(Me.DataGridView2)
+        Me.panelFrmInventario.Controls.Add(Me.DataGridView1)
         Me.panelFrmInventario.Controls.Add(Me.FlowLayoutPanel2)
         Me.panelFrmInventario.Controls.Add(Me.FlowLayoutPanel1)
         Me.panelFrmInventario.Controls.Add(Me.IconButton1)
-        Me.panelFrmInventario.Controls.Add(Me.TextBox14)
+        Me.panelFrmInventario.Controls.Add(Me.txtImporteTotal)
         Me.panelFrmInventario.Controls.Add(Me.Label10)
         Me.panelFrmInventario.Controls.Add(Me.Label11)
         Me.panelFrmInventario.Controls.Add(Me.Panel14)
@@ -99,8 +132,377 @@ Partial Class frmDetalleVentas
         Me.panelFrmInventario.Margin = New System.Windows.Forms.Padding(75, 77, 75, 77)
         Me.panelFrmInventario.Name = "panelFrmInventario"
         Me.panelFrmInventario.Padding = New System.Windows.Forms.Padding(20)
-        Me.panelFrmInventario.Size = New System.Drawing.Size(800, 656)
+        Me.panelFrmInventario.Size = New System.Drawing.Size(800, 701)
         Me.panelFrmInventario.TabIndex = 7
+        '
+        'dgvProductosCliente
+        '
+        Me.dgvProductosCliente.AllowDrop = True
+        Me.dgvProductosCliente.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvProductosCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgvProductosCliente.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.dgvProductosCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvProductosCliente.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvProductosCliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvProductosCliente.ColumnHeadersHeight = 50
+        Me.dgvProductosCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dgvProductosCliente.EnableHeadersVisualStyles = False
+        Me.dgvProductosCliente.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.dgvProductosCliente.Location = New System.Drawing.Point(391, 282)
+        Me.dgvProductosCliente.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dgvProductosCliente.Name = "dgvProductosCliente"
+        Me.dgvProductosCliente.ReadOnly = True
+        Me.dgvProductosCliente.RowHeadersVisible = False
+        Me.dgvProductosCliente.RowHeadersWidth = 100
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
+        Me.dgvProductosCliente.RowsDefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvProductosCliente.RowTemplate.Height = 50
+        Me.dgvProductosCliente.RowTemplate.ReadOnly = True
+        Me.dgvProductosCliente.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvProductosCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvProductosCliente.Size = New System.Drawing.Size(369, 132)
+        Me.dgvProductosCliente.TabIndex = 63
+        '
+        'dgvPagos
+        '
+        Me.dgvPagos.AllowDrop = True
+        Me.dgvPagos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvPagos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgvPagos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.dgvPagos.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvPagos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvPagos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvPagos.ColumnHeadersHeight = 50
+        Me.dgvPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dgvPagos.EnableHeadersVisualStyles = False
+        Me.dgvPagos.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.dgvPagos.Location = New System.Drawing.Point(378, 521)
+        Me.dgvPagos.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dgvPagos.Name = "dgvPagos"
+        Me.dgvPagos.ReadOnly = True
+        Me.dgvPagos.RowHeadersVisible = False
+        Me.dgvPagos.RowHeadersWidth = 100
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
+        Me.dgvPagos.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.dgvPagos.RowTemplate.Height = 50
+        Me.dgvPagos.RowTemplate.ReadOnly = True
+        Me.dgvPagos.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvPagos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvPagos.Size = New System.Drawing.Size(398, 128)
+        Me.dgvPagos.TabIndex = 62
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowDrop = True
+        Me.DataGridView2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.DataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        Me.DataGridView2.ColumnHeadersHeight = 50
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DataGridView2.EnableHeadersVisualStyles = False
+        Me.DataGridView2.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.DataGridView2.Location = New System.Drawing.Point(4, 35)
+        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.ReadOnly = True
+        Me.DataGridView2.RowHeadersVisible = False
+        Me.DataGridView2.RowHeadersWidth = 100
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White
+        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle6
+        Me.DataGridView2.RowTemplate.Height = 50
+        Me.DataGridView2.RowTemplate.ReadOnly = True
+        Me.DataGridView2.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView2.Size = New System.Drawing.Size(398, 0)
+        Me.DataGridView2.TabIndex = 61
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowDrop = True
+        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        Me.DataGridView1.ColumnHeadersHeight = 50
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DataGridView1.EnableHeadersVisualStyles = False
+        Me.DataGridView1.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.DataGridView1.Location = New System.Drawing.Point(4, 112)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersVisible = False
+        Me.DataGridView1.RowHeadersWidth = 100
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle8
+        Me.DataGridView1.RowTemplate.Height = 50
+        Me.DataGridView1.RowTemplate.ReadOnly = True
+        Me.DataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView1.Size = New System.Drawing.Size(398, 0)
+        Me.DataGridView1.TabIndex = 60
+        '
+        'FlowLayoutPanel2
+        '
+        Me.FlowLayoutPanel2.Controls.Add(Me.DataGridView3)
+        Me.FlowLayoutPanel2.Controls.Add(Me.Button2)
+        Me.FlowLayoutPanel2.Controls.Add(Me.btnPagar)
+        Me.FlowLayoutPanel2.Controls.Add(Me.txtDeuda)
+        Me.FlowLayoutPanel2.Location = New System.Drawing.Point(372, 425)
+        Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
+        Me.FlowLayoutPanel2.Size = New System.Drawing.Size(405, 231)
+        Me.FlowLayoutPanel2.TabIndex = 58
+        '
+        'DataGridView3
+        '
+        Me.DataGridView3.AllowDrop = True
+        Me.DataGridView3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.DataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.DataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGridView3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+        Me.DataGridView3.ColumnHeadersHeight = 50
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DataGridView3.EnableHeadersVisualStyles = False
+        Me.DataGridView3.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.DataGridView3.Location = New System.Drawing.Point(4, 5)
+        Me.DataGridView3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.ReadOnly = True
+        Me.DataGridView3.RowHeadersVisible = False
+        Me.DataGridView3.RowHeadersWidth = 100
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White
+        Me.DataGridView3.RowsDefaultCellStyle = DataGridViewCellStyle10
+        Me.DataGridView3.RowTemplate.Height = 50
+        Me.DataGridView3.RowTemplate.ReadOnly = True
+        Me.DataGridView3.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView3.Size = New System.Drawing.Size(382, 0)
+        Me.DataGridView3.TabIndex = 62
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(3, 13)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(402, 24)
+        Me.Button2.TabIndex = 1
+        Me.Button2.Text = "Pagos"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'btnPagar
+        '
+        Me.btnPagar.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.btnPagar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.btnPagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPagar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.btnPagar.IconChar = FontAwesome.Sharp.IconChar.Upload
+        Me.btnPagar.IconColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.btnPagar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnPagar.IconSize = 35
+        Me.btnPagar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnPagar.Location = New System.Drawing.Point(3, 43)
+        Me.btnPagar.Name = "btnPagar"
+        Me.btnPagar.Size = New System.Drawing.Size(140, 45)
+        Me.btnPagar.TabIndex = 61
+        Me.btnPagar.Text = "Agregar pago"
+        Me.btnPagar.UseVisualStyleBackColor = False
+        '
+        'txtDeuda
+        '
+        Me.txtDeuda.Location = New System.Drawing.Point(149, 43)
+        Me.txtDeuda.Multiline = True
+        Me.txtDeuda.Name = "txtDeuda"
+        Me.txtDeuda.Size = New System.Drawing.Size(239, 45)
+        Me.txtDeuda.TabIndex = 62
+        '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.Controls.Add(Me.Button1)
+        Me.FlowLayoutPanel1.Controls.Add(Me.TextBox2)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(375, 187)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(405, 232)
+        Me.FlowLayoutPanel1.TabIndex = 57
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(3, 3)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(402, 24)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Productos"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.TextBox2.ForeColor = System.Drawing.Color.White
+        Me.TextBox2.Location = New System.Drawing.Point(3, 33)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(398, 59)
+        Me.TextBox2.TabIndex = 51
+        '
+        'IconButton1
+        '
+        Me.IconButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.IconButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Upload
+        Me.IconButton1.IconColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton1.IconSize = 35
+        Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton1.Location = New System.Drawing.Point(16, 574)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Size = New System.Drawing.Size(167, 44)
+        Me.IconButton1.TabIndex = 56
+        Me.IconButton1.Text = " Generar factura" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.IconButton1.UseVisualStyleBackColor = False
+        '
+        'txtImporteTotal
+        '
+        Me.txtImporteTotal.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.txtImporteTotal.ForeColor = System.Drawing.Color.White
+        Me.txtImporteTotal.Location = New System.Drawing.Point(16, 536)
+        Me.txtImporteTotal.Multiline = True
+        Me.txtImporteTotal.Name = "txtImporteTotal"
+        Me.txtImporteTotal.Size = New System.Drawing.Size(214, 32)
+        Me.txtImporteTotal.TabIndex = 55
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Arial", 14.0!)
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(16, 511)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(172, 22)
+        Me.Label10.TabIndex = 54
+        Me.Label10.Text = "Importe de la venta"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Arial", 14.0!)
+        Me.Label11.ForeColor = System.Drawing.Color.White
+        Me.Label11.Location = New System.Drawing.Point(16, 369)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(167, 22)
+        Me.Label11.TabIndex = 53
+        Me.Label11.Text = "Direccion de envio"
+        '
+        'Panel14
+        '
+        Me.Panel14.Controls.Add(Me.txtDetallesCliente)
+        Me.Panel14.Controls.Add(Me.txtTelefono)
+        Me.Panel14.Controls.Add(Me.txtProvincia)
+        Me.Panel14.Location = New System.Drawing.Point(16, 394)
+        Me.Panel14.Name = "Panel14"
+        Me.Panel14.Size = New System.Drawing.Size(335, 114)
+        Me.Panel14.TabIndex = 52
+        '
+        'txtDetallesCliente
+        '
+        Me.txtDetallesCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.txtDetallesCliente.ForeColor = System.Drawing.Color.White
+        Me.txtDetallesCliente.Location = New System.Drawing.Point(8, 59)
+        Me.txtDetallesCliente.Multiline = True
+        Me.txtDetallesCliente.Name = "txtDetallesCliente"
+        Me.txtDetallesCliente.Size = New System.Drawing.Size(315, 45)
+        Me.txtDetallesCliente.TabIndex = 51
+        '
+        'txtTelefono
+        '
+        Me.txtTelefono.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.txtTelefono.ForeColor = System.Drawing.Color.White
+        Me.txtTelefono.Location = New System.Drawing.Point(7, 31)
+        Me.txtTelefono.Multiline = True
+        Me.txtTelefono.Name = "txtTelefono"
+        Me.txtTelefono.Size = New System.Drawing.Size(316, 22)
+        Me.txtTelefono.TabIndex = 49
+        '
+        'txtProvincia
+        '
+        Me.txtProvincia.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.txtProvincia.ForeColor = System.Drawing.Color.White
+        Me.txtProvincia.Location = New System.Drawing.Point(7, 3)
+        Me.txtProvincia.Multiline = True
+        Me.txtProvincia.Name = "txtProvincia"
+        Me.txtProvincia.Size = New System.Drawing.Size(316, 22)
+        Me.txtProvincia.TabIndex = 48
         '
         'Label8
         '
@@ -116,9 +518,9 @@ Partial Class frmDetalleVentas
         'Panel13
         '
         Me.Panel13.Controls.Add(Me.Label9)
-        Me.Panel13.Controls.Add(Me.TextBox10)
-        Me.Panel13.Controls.Add(Me.TextBox8)
-        Me.Panel13.Controls.Add(Me.TextBox9)
+        Me.Panel13.Controls.Add(Me.txtEmpresaDetalleDireccion)
+        Me.Panel13.Controls.Add(Me.txtRuc)
+        Me.Panel13.Controls.Add(Me.txtRazonSocial)
         Me.Panel13.Controls.Add(Me.IconPictureBox2)
         Me.Panel13.Location = New System.Drawing.Point(16, 187)
         Me.Panel13.Name = "Panel13"
@@ -136,35 +538,35 @@ Partial Class frmDetalleVentas
         Me.Label9.TabIndex = 5
         Me.Label9.Text = "Detalles"
         '
-        'TextBox10
+        'txtEmpresaDetalleDireccion
         '
-        Me.TextBox10.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.TextBox10.ForeColor = System.Drawing.Color.White
-        Me.TextBox10.Location = New System.Drawing.Point(145, 95)
-        Me.TextBox10.Multiline = True
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(186, 76)
-        Me.TextBox10.TabIndex = 50
+        Me.txtEmpresaDetalleDireccion.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.txtEmpresaDetalleDireccion.ForeColor = System.Drawing.Color.White
+        Me.txtEmpresaDetalleDireccion.Location = New System.Drawing.Point(145, 95)
+        Me.txtEmpresaDetalleDireccion.Multiline = True
+        Me.txtEmpresaDetalleDireccion.Name = "txtEmpresaDetalleDireccion"
+        Me.txtEmpresaDetalleDireccion.Size = New System.Drawing.Size(186, 76)
+        Me.txtEmpresaDetalleDireccion.TabIndex = 50
         '
-        'TextBox8
+        'txtRuc
         '
-        Me.TextBox8.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.TextBox8.ForeColor = System.Drawing.Color.White
-        Me.TextBox8.Location = New System.Drawing.Point(145, 46)
-        Me.TextBox8.Multiline = True
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(186, 22)
-        Me.TextBox8.TabIndex = 49
+        Me.txtRuc.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.txtRuc.ForeColor = System.Drawing.Color.White
+        Me.txtRuc.Location = New System.Drawing.Point(145, 46)
+        Me.txtRuc.Multiline = True
+        Me.txtRuc.Name = "txtRuc"
+        Me.txtRuc.Size = New System.Drawing.Size(186, 22)
+        Me.txtRuc.TabIndex = 49
         '
-        'TextBox9
+        'txtRazonSocial
         '
-        Me.TextBox9.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.TextBox9.ForeColor = System.Drawing.Color.White
-        Me.TextBox9.Location = New System.Drawing.Point(145, 18)
-        Me.TextBox9.Multiline = True
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(186, 22)
-        Me.TextBox9.TabIndex = 48
+        Me.txtRazonSocial.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.txtRazonSocial.ForeColor = System.Drawing.Color.White
+        Me.txtRazonSocial.Location = New System.Drawing.Point(145, 18)
+        Me.txtRazonSocial.Multiline = True
+        Me.txtRazonSocial.Name = "txtRazonSocial"
+        Me.txtRazonSocial.Size = New System.Drawing.Size(186, 22)
+        Me.txtRazonSocial.TabIndex = 48
         '
         'IconPictureBox2
         '
@@ -196,18 +598,18 @@ Partial Class frmDetalleVentas
         'Panel9
         '
         Me.Panel9.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel9.Location = New System.Drawing.Point(460, 0)
+        Me.Panel9.Location = New System.Drawing.Point(501, 0)
         Me.Panel9.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Padding = New System.Windows.Forms.Padding(30, 10, 10, 10)
-        Me.Panel9.Size = New System.Drawing.Size(300, 70)
+        Me.Panel9.Size = New System.Drawing.Size(259, 70)
         Me.Panel9.TabIndex = 1
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.TextBox5)
-        Me.Panel2.Controls.Add(Me.TextBox4)
+        Me.Panel2.Controls.Add(Me.txtCedula)
+        Me.Panel2.Controls.Add(Me.txtNombreCliente)
         Me.Panel2.Controls.Add(Me.IconPictureBox1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
@@ -216,25 +618,25 @@ Partial Class frmDetalleVentas
         Me.Panel2.Size = New System.Drawing.Size(325, 70)
         Me.Panel2.TabIndex = 0
         '
-        'TextBox5
+        'txtCedula
         '
-        Me.TextBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.TextBox5.ForeColor = System.Drawing.Color.White
-        Me.TextBox5.Location = New System.Drawing.Point(79, 35)
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(186, 22)
-        Me.TextBox5.TabIndex = 46
+        Me.txtCedula.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.txtCedula.ForeColor = System.Drawing.Color.White
+        Me.txtCedula.Location = New System.Drawing.Point(79, 35)
+        Me.txtCedula.Multiline = True
+        Me.txtCedula.Name = "txtCedula"
+        Me.txtCedula.Size = New System.Drawing.Size(186, 22)
+        Me.txtCedula.TabIndex = 46
         '
-        'TextBox4
+        'txtNombreCliente
         '
-        Me.TextBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.TextBox4.ForeColor = System.Drawing.Color.White
-        Me.TextBox4.Location = New System.Drawing.Point(79, 7)
-        Me.TextBox4.Multiline = True
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(186, 22)
-        Me.TextBox4.TabIndex = 45
+        Me.txtNombreCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.txtNombreCliente.ForeColor = System.Drawing.Color.White
+        Me.txtNombreCliente.Location = New System.Drawing.Point(79, 7)
+        Me.txtNombreCliente.Multiline = True
+        Me.txtNombreCliente.Name = "txtNombreCliente"
+        Me.txtNombreCliente.Size = New System.Drawing.Size(186, 22)
+        Me.txtNombreCliente.TabIndex = 45
         '
         'IconPictureBox1
         '
@@ -254,8 +656,8 @@ Partial Class frmDetalleVentas
         'Panel11
         '
         Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.Panel11.Controls.Add(Me.TextBox7)
-        Me.Panel11.Controls.Add(Me.TextBox6)
+        Me.Panel11.Controls.Add(Me.cboEstadoPedido)
+        Me.Panel11.Controls.Add(Me.txtIdPedido)
         Me.Panel11.Controls.Add(Me.Panel10)
         Me.Panel11.Controls.Add(Me.Panel12)
         Me.Panel11.Dock = System.Windows.Forms.DockStyle.Top
@@ -265,35 +667,54 @@ Partial Class frmDetalleVentas
         Me.Panel11.Size = New System.Drawing.Size(760, 67)
         Me.Panel11.TabIndex = 48
         '
-        'TextBox7
+        'cboEstadoPedido
         '
-        Me.TextBox7.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.TextBox7.ForeColor = System.Drawing.Color.White
-        Me.TextBox7.Location = New System.Drawing.Point(335, 25)
-        Me.TextBox7.Multiline = True
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(112, 32)
-        Me.TextBox7.TabIndex = 48
+        Me.cboEstadoPedido.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboEstadoPedido.FormattingEnabled = True
+        Me.cboEstadoPedido.Location = New System.Drawing.Point(331, 19)
+        Me.cboEstadoPedido.Margin = New System.Windows.Forms.Padding(2)
+        Me.cboEstadoPedido.Name = "cboEstadoPedido"
+        Me.cboEstadoPedido.Size = New System.Drawing.Size(164, 38)
+        Me.cboEstadoPedido.TabIndex = 59
         '
-        'TextBox6
+        'txtIdPedido
         '
-        Me.TextBox6.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.TextBox6.ForeColor = System.Drawing.Color.White
-        Me.TextBox6.Location = New System.Drawing.Point(207, 25)
-        Me.TextBox6.Multiline = True
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(112, 32)
-        Me.TextBox6.TabIndex = 47
+        Me.txtIdPedido.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.txtIdPedido.ForeColor = System.Drawing.Color.White
+        Me.txtIdPedido.Location = New System.Drawing.Point(207, 25)
+        Me.txtIdPedido.Multiline = True
+        Me.txtIdPedido.Name = "txtIdPedido"
+        Me.txtIdPedido.Size = New System.Drawing.Size(112, 32)
+        Me.txtIdPedido.TabIndex = 47
         '
         'Panel10
         '
         Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.Panel10.Controls.Add(Me.btnCambiarEstado)
         Me.Panel10.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel10.Location = New System.Drawing.Point(460, 0)
+        Me.Panel10.Location = New System.Drawing.Point(501, 0)
         Me.Panel10.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(300, 67)
+        Me.Panel10.Size = New System.Drawing.Size(259, 67)
         Me.Panel10.TabIndex = 8
+        '
+        'btnCambiarEstado
+        '
+        Me.btnCambiarEstado.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.btnCambiarEstado.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.btnCambiarEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCambiarEstado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.btnCambiarEstado.IconChar = FontAwesome.Sharp.IconChar.Upload
+        Me.btnCambiarEstado.IconColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.btnCambiarEstado.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnCambiarEstado.IconSize = 35
+        Me.btnCambiarEstado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCambiarEstado.Location = New System.Drawing.Point(57, 19)
+        Me.btnCambiarEstado.Name = "btnCambiarEstado"
+        Me.btnCambiarEstado.Size = New System.Drawing.Size(153, 38)
+        Me.btnCambiarEstado.TabIndex = 59
+        Me.btnCambiarEstado.Text = "Cambiar estado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.btnCambiarEstado.UseVisualStyleBackColor = False
         '
         'Panel12
         '
@@ -428,45 +849,45 @@ Partial Class frmDetalleVentas
         Me.dgvInv.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
         Me.dgvInv.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvInv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
-        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvInv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvInv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
         Me.dgvInv.ColumnHeadersHeight = 50
         Me.dgvInv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvInv.DefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvInv.DefaultCellStyle = DataGridViewCellStyle12
         Me.dgvInv.EnableHeadersVisualStyles = False
         Me.dgvInv.Location = New System.Drawing.Point(44, 55)
         Me.dgvInv.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.dgvInv.Name = "dgvInv"
         Me.dgvInv.ReadOnly = True
-        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle19.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvInv.RowHeadersDefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvInv.RowHeadersDefaultCellStyle = DataGridViewCellStyle13
         Me.dgvInv.RowHeadersVisible = False
         Me.dgvInv.RowHeadersWidth = 100
-        DataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
-        DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle20.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
-        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.White
-        Me.dgvInv.RowsDefaultCellStyle = DataGridViewCellStyle20
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White
+        Me.dgvInv.RowsDefaultCellStyle = DataGridViewCellStyle14
         Me.dgvInv.RowTemplate.Height = 50
         Me.dgvInv.RowTemplate.ReadOnly = True
         Me.dgvInv.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
@@ -474,121 +895,28 @@ Partial Class frmDetalleVentas
         Me.dgvInv.Size = New System.Drawing.Size(713, 176)
         Me.dgvInv.TabIndex = 2
         '
-        'Panel14
-        '
-        Me.Panel14.Controls.Add(Me.TextBox11)
-        Me.Panel14.Controls.Add(Me.TextBox12)
-        Me.Panel14.Controls.Add(Me.TextBox13)
-        Me.Panel14.Location = New System.Drawing.Point(16, 394)
-        Me.Panel14.Name = "Panel14"
-        Me.Panel14.Size = New System.Drawing.Size(335, 114)
-        Me.Panel14.TabIndex = 52
-        '
-        'TextBox12
-        '
-        Me.TextBox12.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.TextBox12.ForeColor = System.Drawing.Color.White
-        Me.TextBox12.Location = New System.Drawing.Point(7, 31)
-        Me.TextBox12.Multiline = True
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(316, 22)
-        Me.TextBox12.TabIndex = 49
-        '
-        'TextBox13
-        '
-        Me.TextBox13.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.TextBox13.ForeColor = System.Drawing.Color.White
-        Me.TextBox13.Location = New System.Drawing.Point(7, 3)
-        Me.TextBox13.Multiline = True
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(316, 22)
-        Me.TextBox13.TabIndex = 48
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Arial", 14.0!)
-        Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(16, 369)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(167, 22)
-        Me.Label11.TabIndex = 53
-        Me.Label11.Text = "Direccion de envio"
-        '
-        'TextBox11
-        '
-        Me.TextBox11.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.TextBox11.ForeColor = System.Drawing.Color.White
-        Me.TextBox11.Location = New System.Drawing.Point(8, 59)
-        Me.TextBox11.Multiline = True
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(315, 45)
-        Me.TextBox11.TabIndex = 51
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Arial", 14.0!)
-        Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(16, 511)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(172, 22)
-        Me.Label10.TabIndex = 54
-        Me.Label10.Text = "Importe de la venta"
-        '
-        'TextBox14
-        '
-        Me.TextBox14.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.TextBox14.ForeColor = System.Drawing.Color.White
-        Me.TextBox14.Location = New System.Drawing.Point(16, 536)
-        Me.TextBox14.Multiline = True
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(214, 32)
-        Me.TextBox14.TabIndex = 55
-        '
-        'IconButton1
-        '
-        Me.IconButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.IconButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Upload
-        Me.IconButton1.IconColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.IconSize = 35
-        Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton1.Location = New System.Drawing.Point(16, 574)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(167, 44)
-        Me.IconButton1.TabIndex = 56
-        Me.IconButton1.Text = " Generar factura" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.IconButton1.UseVisualStyleBackColor = False
-        '
-        'FlowLayoutPanel1
-        '
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(375, 187)
-        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(405, 100)
-        Me.FlowLayoutPanel1.TabIndex = 57
-        '
-        'FlowLayoutPanel2
-        '
-        Me.FlowLayoutPanel2.Location = New System.Drawing.Point(375, 293)
-        Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
-        Me.FlowLayoutPanel2.Size = New System.Drawing.Size(405, 100)
-        Me.FlowLayoutPanel2.TabIndex = 58
-        '
         'frmDetalleVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 656)
+        Me.ClientSize = New System.Drawing.Size(800, 701)
         Me.Controls.Add(Me.panelFrmInventario)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmDetalleVentas"
         Me.Text = "detalleVentas"
         Me.panelFrmInventario.ResumeLayout(False)
         Me.panelFrmInventario.PerformLayout()
+        CType(Me.dgvProductosCliente, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvPagos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.FlowLayoutPanel2.ResumeLayout(False)
+        Me.FlowLayoutPanel2.PerformLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.FlowLayoutPanel1.ResumeLayout(False)
+        Me.FlowLayoutPanel1.PerformLayout()
+        Me.Panel14.ResumeLayout(False)
+        Me.Panel14.PerformLayout()
         Me.Panel13.ResumeLayout(False)
         Me.Panel13.PerformLayout()
         CType(Me.IconPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -598,12 +926,11 @@ Partial Class frmDetalleVentas
         CType(Me.IconPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel11.ResumeLayout(False)
         Me.Panel11.PerformLayout()
+        Me.Panel10.ResumeLayout(False)
         Me.Panel12.ResumeLayout(False)
         Me.Panel12.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvInv, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel14.ResumeLayout(False)
-        Me.Panel14.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -628,25 +955,36 @@ Partial Class frmDetalleVentas
     Friend WithEvents Panel10 As Panel
     Friend WithEvents Panel12 As Panel
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents txtCedula As TextBox
+    Friend WithEvents txtNombreCliente As TextBox
+    Friend WithEvents txtIdPedido As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Panel13 As Panel
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents txtRuc As TextBox
+    Friend WithEvents txtRazonSocial As TextBox
     Friend WithEvents IconPictureBox2 As FontAwesome.Sharp.IconPictureBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox14 As TextBox
+    Friend WithEvents txtEmpresaDetalleDireccion As TextBox
+    Friend WithEvents txtImporteTotal As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Panel14 As Panel
-    Friend WithEvents TextBox11 As TextBox
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents txtDetallesCliente As TextBox
+    Friend WithEvents txtTelefono As TextBox
+    Friend WithEvents txtProvincia As TextBox
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents FlowLayoutPanel2 As FlowLayoutPanel
+    Friend WithEvents cboEstadoPedido As ComboBox
+    Friend WithEvents btnCambiarEstado As FontAwesome.Sharp.IconButton
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents btnPagar As FontAwesome.Sharp.IconButton
+    Friend WithEvents txtDeuda As TextBox
+    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents DataGridView3 As DataGridView
+    Friend WithEvents dgvProductosCliente As DataGridView
+    Friend WithEvents dgvPagos As DataGridView
+    Friend WithEvents TextBox2 As TextBox
 End Class
