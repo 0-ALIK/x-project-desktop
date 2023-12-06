@@ -35,19 +35,22 @@ Partial Class frmEditarCliente
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtTelefono = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtFoto = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.btnAceptar = New System.Windows.Forms.Button()
         Me.cboGenero = New System.Windows.Forms.ComboBox()
         Me.cboTipo = New System.Windows.Forms.ComboBox()
+        Me.btnSeleccionar = New FontAwesome.Sharp.IconButton()
+        Me.pbPreview = New System.Windows.Forms.PictureBox()
+        CType(Me.pbPreview, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(308, 25)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(222, 39)
@@ -58,6 +61,7 @@ Partial Class frmEditarCliente
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(58, 105)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(65, 20)
@@ -82,6 +86,7 @@ Partial Class frmEditarCliente
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(58, 163)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(65, 20)
@@ -99,6 +104,7 @@ Partial Class frmEditarCliente
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(58, 270)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(73, 20)
@@ -116,6 +122,7 @@ Partial Class frmEditarCliente
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(58, 212)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(59, 20)
@@ -124,7 +131,7 @@ Partial Class frmEditarCliente
         '
         'txtDetalles
         '
-        Me.txtDetalles.Location = New System.Drawing.Point(439, 268)
+        Me.txtDetalles.Location = New System.Drawing.Point(678, 212)
         Me.txtDetalles.Name = "txtDetalles"
         Me.txtDetalles.Size = New System.Drawing.Size(100, 20)
         Me.txtDetalles.TabIndex = 16
@@ -133,7 +140,8 @@ Partial Class frmEditarCliente
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(341, 268)
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(580, 212)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(67, 20)
         Me.Label6.TabIndex = 15
@@ -141,7 +149,7 @@ Partial Class frmEditarCliente
         '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(439, 210)
+        Me.txtTelefono.Location = New System.Drawing.Point(678, 154)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(100, 20)
         Me.txtTelefono.TabIndex = 14
@@ -150,24 +158,19 @@ Partial Class frmEditarCliente
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(341, 210)
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(580, 154)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(71, 20)
         Me.Label7.TabIndex = 13
         Me.Label7.Text = "Telefono"
         '
-        'txtFoto
-        '
-        Me.txtFoto.Location = New System.Drawing.Point(439, 161)
-        Me.txtFoto.Name = "txtFoto"
-        Me.txtFoto.Size = New System.Drawing.Size(100, 20)
-        Me.txtFoto.TabIndex = 12
-        '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(341, 161)
+        Me.Label8.ForeColor = System.Drawing.Color.White
+        Me.Label8.Location = New System.Drawing.Point(341, 156)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(42, 20)
         Me.Label8.TabIndex = 11
@@ -177,6 +180,7 @@ Partial Class frmEditarCliente
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.Location = New System.Drawing.Point(341, 103)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(63, 20)
@@ -187,6 +191,7 @@ Partial Class frmEditarCliente
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
         Me.Label10.Location = New System.Drawing.Point(580, 101)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(39, 20)
@@ -218,11 +223,37 @@ Partial Class frmEditarCliente
         Me.cboTipo.Size = New System.Drawing.Size(121, 21)
         Me.cboTipo.TabIndex = 21
         '
+        'btnSeleccionar
+        '
+        Me.btnSeleccionar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSeleccionar.IconChar = FontAwesome.Sharp.IconChar.FileImage
+        Me.btnSeleccionar.IconColor = System.Drawing.Color.Black
+        Me.btnSeleccionar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnSeleccionar.IconSize = 30
+        Me.btnSeleccionar.Location = New System.Drawing.Point(416, 270)
+        Me.btnSeleccionar.Name = "btnSeleccionar"
+        Me.btnSeleccionar.Size = New System.Drawing.Size(114, 42)
+        Me.btnSeleccionar.TabIndex = 25
+        Me.btnSeleccionar.Text = "Seleccionar Archivo"
+        Me.btnSeleccionar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnSeleccionar.UseVisualStyleBackColor = True
+        '
+        'pbPreview
+        '
+        Me.pbPreview.Location = New System.Drawing.Point(389, 147)
+        Me.pbPreview.Name = "pbPreview"
+        Me.pbPreview.Size = New System.Drawing.Size(156, 117)
+        Me.pbPreview.TabIndex = 28
+        Me.pbPreview.TabStop = False
+        '
         'frmEditarCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.pbPreview)
+        Me.Controls.Add(Me.btnSeleccionar)
         Me.Controls.Add(Me.cboTipo)
         Me.Controls.Add(Me.cboGenero)
         Me.Controls.Add(Me.btnAceptar)
@@ -231,7 +262,6 @@ Partial Class frmEditarCliente
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtTelefono)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.txtFoto)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.txtEmpresa)
@@ -245,6 +275,7 @@ Partial Class frmEditarCliente
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmEditarCliente"
         Me.Text = "frmEditarCliente"
+        CType(Me.pbPreview, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -263,11 +294,12 @@ Partial Class frmEditarCliente
     Friend WithEvents Label6 As Label
     Friend WithEvents txtTelefono As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents txtFoto As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents btnAceptar As Button
     Friend WithEvents cboGenero As ComboBox
     Friend WithEvents cboTipo As ComboBox
+    Friend WithEvents btnSeleccionar As FontAwesome.Sharp.IconButton
+    Friend WithEvents pbPreview As PictureBox
 End Class
