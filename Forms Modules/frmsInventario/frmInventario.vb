@@ -80,9 +80,26 @@ Public Class frmInventario
                     ' Refresca la pantalla (actualiza el DataGridView)
                     dgvInv.Rows.Clear()
                     Dim InventarioDataTable As DataTable = invenatyDao.VerProductos
-                    For Each rows As DataRow In InventarioDataTable.Rows
-                        dgvInv.Rows.Add(rows("id"), rows("Producto"), rows("Categoria"), rows("Marca"), rows("Precio Unit"), rows("Stock"), rows("foto"), rows("P.reorden"))
+
+
+                    For Each row As DataRow In InventarioDataTable.Rows
+                        Dim imagen As Image = If(row("foto") IsNot DBNull.Value, DecodificarImagen(row("foto")), Nothing)
+
+                        If imagen IsNot Nothing Then
+                            ' Crear una nueva imagen redimensionada con un ancho de 100 píxeles
+                            Dim nuevoAncho As Integer = 100
+                            Dim nuevoAlto As Integer = CInt(imagen.Height * (nuevoAncho / imagen.Width))
+                            Dim imagenRedimensionada As New Bitmap(imagen, nuevoAncho, nuevoAlto)
+
+                            ' Agregar una nueva fila al DataGridView con la imagen redimensionada y otros valores de las columnas
+                            dgvInv.Rows.Add(row("id"), row("Producto"), row("Categoria"), row("Marca"), row("Precio Unit"), row("Stock"), imagenRedimensionada, row("P.reorden"))
+                        Else
+                            ' Agregar una nueva fila al DataGridView con los valores de las columnas (la imagen es Nothing)
+                            dgvInv.Rows.Add(row("id"), row("Producto"), row("Categoria"), row("Marca"), row("Precio Unit"), row("Stock"), Nothing, row("P.reorden"))
+                        End If
+
                     Next
+
                     dgvInv.ClearSelection()
 
                     'Centrado de celdas especificas
