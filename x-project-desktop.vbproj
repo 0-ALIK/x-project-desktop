@@ -234,6 +234,18 @@
     <Compile Include="Forms Modules\frmsAyuda\frmAyudaUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms Modules\frmsClientes\frmDirecciones.Designer.vb">
+      <DependentUpon>frmDirecciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsClientes\frmDirecciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsClientes\frmDireccionesClientes.Designer.vb">
+      <DependentUpon>frmDireccionesClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsClientes\frmDireccionesClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms Modules\frmsClientes\frmEditarCliente.Designer.vb">
       <DependentUpon>frmEditarCliente.vb</DependentUpon>
     </Compile>
@@ -256,6 +268,12 @@
       <DependentUpon>frmEditarUsuario.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms Modules\frmsClientes\frmEditarUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Modules\frmsClientes\frmMenuCliente.Designer.vb">
+      <DependentUpon>frmMenuCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Modules\frmsClientes\frmMenuCliente.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms Modules\frmsTickets\frmCrearTickets.Designer.vb">
@@ -295,6 +313,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Interfaces Modules\analitica\analitycReporteInterfaces.vb" />
+    <Compile Include="Interfaces Modules\clientes\ClientesInterface.vb" />
     <Compile Include="Interfaces Modules\tickets\ticketsInterfaces.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -372,6 +391,12 @@
     <EmbeddedResource Include="Forms Modules\frmsAyuda\frmAyudaUsuario.resx">
       <DependentUpon>frmAyudaUsuario.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsClientes\frmDirecciones.resx">
+      <DependentUpon>frmDirecciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsClientes\frmDireccionesClientes.resx">
+      <DependentUpon>frmDireccionesClientes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsClientes\frmEditarCliente.resx">
       <DependentUpon>frmEditarCliente.vb</DependentUpon>
     </EmbeddedResource>
@@ -383,6 +408,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsClientes\frmEditarUsuario.resx">
       <DependentUpon>frmEditarUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Modules\frmsClientes\frmMenuCliente.resx">
+      <DependentUpon>frmMenuCliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms Modules\frmsTickets\frmCrearTickets.resx">
       <DependentUpon>frmCrearTickets.vb</DependentUpon>

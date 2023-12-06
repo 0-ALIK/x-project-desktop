@@ -2,6 +2,13 @@
 Imports System.Data
 
 Public Class frmClientes
+    Private ClientesDao As ClientesInterfaces
+
+    Public Sub New(ClientesDao As ClientesInterfaces)
+        InitializeComponent()
+
+        Me.ClientesDao = ClientesDao
+    End Sub
     Private Sub frmClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Llama a la función del módulo para obtener los usuarios y llenar el DataGridView
         CargarUsuariosEnDataGridView()
@@ -16,7 +23,7 @@ Public Class frmClientes
     Private Sub CargarUsuariosEnDataGridView()
         Try
             ' Llama a la función del módulo para obtener los usuarios
-            Dim dtUsuarios As DataTable = ObtenerUsuarios()
+            Dim dtUsuarios As DataTable = ClientesDao.ObtenerUsuarios()
 
             ' Limpia las filas existentes en el DataGridView
             dtgUsuarios.Rows.Clear()
@@ -48,7 +55,7 @@ Public Class frmClientes
     Private Sub CargarEmpresasEnDataGridView()
         Try
             ' Llama a la función del módulo para obtener las empresas
-            Dim dtEmpresas As DataTable = ObtenerEmpresas()
+            Dim dtEmpresas As DataTable = ClientesDao.ObtenerEmpresas()
 
             ' Limpia las filas existentes en el DataGridView de Empresas
             dtgEmpresas.Rows.Clear()
@@ -78,7 +85,7 @@ Public Class frmClientes
     Private Sub CargarClientesEnDataGridView()
         Try
             ' Llama a la función del módulo para obtener los clientes
-            Dim dtClientes As DataTable = ObtenerClientes()
+            Dim dtClientes As DataTable = ClientesDao.ObtenerClientes()
 
             ' Limpia las filas existentes en el DataGridView de Clientes
             dtgClientes.Rows.Clear()
@@ -105,14 +112,13 @@ Public Class frmClientes
         End Try
     End Sub
 
-
-    Private Sub btnEliminarUsuario_Click(sender As Object, e As EventArgs) Handles btnEliminarUsuario.Click
+    Private Sub btnEliminarUsuario_Click_1(sender As Object, e As EventArgs) Handles btnEliminarUsuario.Click
         If dtgUsuarios.SelectedRows.Count > 0 Then
             Dim cedula As String = dtgUsuarios.SelectedRows(0).Cells("Cedula").Value.ToString()
             Dim respuesta As DialogResult = MessageBox.Show("¿Está seguro de eliminar este usuario?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
             If respuesta = DialogResult.Yes Then
-                ClientesModule.EliminarUsuarioPorCedula(cedula)
+                ClientesDao.EliminarUsuarioPorCedula(cedula)
                 CargarUsuariosEnDataGridView()
             End If
         Else
@@ -120,47 +126,14 @@ Public Class frmClientes
         End If
     End Sub
 
-    Private Sub btnEliminarEmpresa_Click(sender As Object, e As EventArgs) Handles btnEliminarEmpresa.Click
-        If dtgEmpresas.SelectedRows.Count > 0 Then
-            Dim ruc As String = dtgEmpresas.SelectedRows(0).Cells("RUC").Value.ToString()
-            Dim respuesta As DialogResult = MessageBox.Show("¿Está seguro de eliminar esta empresa?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-
-            If respuesta = DialogResult.Yes Then
-                ClientesModule.EliminarEmpresaPorRUC(ruc)
-                CargarEmpresasEnDataGridView()
-            End If
-        Else
-            MsgBox("Seleccione una fila para eliminar.", MsgBoxStyle.Information)
-        End If
-    End Sub
-
-    Private Sub btnEliminarCliente_Click(sender As Object, e As EventArgs) Handles btnEliminarCliente.Click
-        If dtgClientes.SelectedRows.Count > 0 Then
-            Dim cedula As String = dtgClientes.SelectedRows(0).Cells("Cedulacl").Value.ToString()
-            Dim respuesta As DialogResult = MessageBox.Show("¿Está seguro de eliminar este cliente?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-
-            If respuesta = DialogResult.Yes Then
-                ClientesModule.EliminarClientePorCedula(cedula)
-                CargarClientesEnDataGridView()
-            End If
-        Else
-            MsgBox("Seleccione una fila para eliminar.", MsgBoxStyle.Information)
-        End If
-    End Sub
-
-    Private Sub btnEditarUsuario_Click(sender As Object, e As EventArgs) Handles btnEditarUsuario.Click
+    Private Sub btnEditarUsuario_Click_1(sender As Object, e As EventArgs) Handles btnEditarUsuario.Click
         ' Verifica que se haya seleccionado una fila
         If dtgUsuarios.SelectedRows.Count > 0 Then
             ' Obtiene la cédula del usuario seleccionado
             Dim cedula As String = dtgUsuarios.SelectedRows(0).Cells("Cedula").Value.ToString()
 
-            Dim frmEditarUsuario As New frmEditarUsuario(cedula)
-
-            frmEditarUsuario.MdiParent = Me.MdiParent
-            frmEditarUsuario.WindowState = FormWindowState.Maximized
-
-            ' Muestra el formulario de edición
-            frmEditarUsuario.Show()
+            Dim frmEditarUsuario As New frmEditarUsuario(New clientesDAO(myConnectionDB), cedula)
+            SetPanel(frmEditarUsuario, frmMenu.PanelContent)
 
             CargarUsuariosEnDataGridView()
         Else
@@ -168,13 +141,25 @@ Public Class frmClientes
         End If
     End Sub
 
-    Private Sub btnEditarEmpresa_Click(sender As Object, e As EventArgs) Handles btnEditarEmpresa.Click
+    Private Sub btnEliminarEmpresa_Click_1(sender As Object, e As EventArgs) Handles btnEliminarEmpresa.Click
         If dtgEmpresas.SelectedRows.Count > 0 Then
             Dim ruc As String = dtgEmpresas.SelectedRows(0).Cells("RUC").Value.ToString()
-            Dim frmEditarEmpresa As New frmEditarEmpresa(ruc)
-            frmEditarEmpresa.MdiParent = Me.MdiParent
-            frmEditarEmpresa.WindowState = FormWindowState.Maximized
-            frmEditarEmpresa.Show()
+            Dim respuesta As DialogResult = MessageBox.Show("¿Está seguro de eliminar esta empresa?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+            If respuesta = DialogResult.Yes Then
+                ClientesDao.EliminarEmpresaPorRUC(ruc)
+                CargarEmpresasEnDataGridView()
+            End If
+        Else
+            MsgBox("Seleccione una fila para eliminar.", MsgBoxStyle.Information)
+        End If
+    End Sub
+
+    Private Sub btnEditarEmpresa_Click_1(sender As Object, e As EventArgs) Handles btnEditarEmpresa.Click
+        If dtgEmpresas.SelectedRows.Count > 0 Then
+            Dim ruc As String = dtgEmpresas.SelectedRows(0).Cells("RUC").Value.ToString()
+            Dim frmEditarEmpresa As New frmEditarEmpresa(ruc, ClientesDao)
+            SetPanel(frmEditarEmpresa, frmMenu.PanelContent)
 
             CargarEmpresasEnDataGridView()
         Else
@@ -182,21 +167,66 @@ Public Class frmClientes
         End If
     End Sub
 
+    Private Sub btnDireccionEmpresa_Click_1(sender As Object, e As EventArgs) Handles btnDireccionEmpresa.Click
+        ' Verifica si se ha seleccionado una fila en el DataGridView de Clientes
+        If dtgEmpresas.SelectedRows.Count > 0 Then
+            ' Obtiene el id de la empresa seleccionada
+            Dim ruc As String = dtgEmpresas.SelectedRows(0).Cells("RUC").Value.ToString()
 
-    Private Sub btnEditarCliente_Click(sender As Object, e As EventArgs) Handles btnEditarCliente.Click
+            ' Abre el formulario de edición pasando el id como parámetro
+            Dim frmDirecciones As New frmDirecciones(ruc, ClientesDao)
+            SetPanel(frmDirecciones, frmMenu.PanelContent)
+
+            ' Vuelve a cargar los clientes en el DataGridView después de la edición
+            'CargarClientesEnDataGridView()
+        Else
+            MsgBox("Seleccione una fila para editar.", MsgBoxStyle.Information)
+        End If
+    End Sub
+
+    Private Sub btnEliminarCliente_Click_1(sender As Object, e As EventArgs) Handles btnEliminarCliente.Click
+        If dtgClientes.SelectedRows.Count > 0 Then
+            Dim cedula As String = dtgClientes.SelectedRows(0).Cells("Cedulacl").Value.ToString()
+            Dim respuesta As DialogResult = MessageBox.Show("¿Está seguro de eliminar este cliente?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+            If respuesta = DialogResult.Yes Then
+                ClientesDao.EliminarClientePorCedula(cedula)
+                CargarClientesEnDataGridView()
+            End If
+        Else
+            MsgBox("Seleccione una fila para eliminar.", MsgBoxStyle.Information)
+        End If
+    End Sub
+
+    Private Sub btnEditarCliente_Click_1(sender As Object, e As EventArgs) Handles btnEditarCliente.Click
         ' Verifica si se ha seleccionado una fila en el DataGridView de Clientes
         If dtgClientes.SelectedRows.Count > 0 Then
             ' Obtiene la cédula del cliente seleccionado
             Dim cedula As String = dtgClientes.SelectedRows(0).Cells("Cedulacl").Value.ToString()
 
             ' Abre el formulario de edición pasando la cédula como parámetro
-            Dim frmEditarCliente As New frmEditarCliente(cedula)
-            frmEditarCliente.MdiParent = Me.MdiParent
-            frmEditarCliente.WindowState = FormWindowState.Maximized
-            frmEditarCliente.Show()
+            Dim frmEditarCliente As New frmEditarCliente(cedula, ClientesDao)
+            SetPanel(frmEditarCliente, frmMenu.PanelContent)
 
             ' Vuelve a cargar los clientes en el DataGridView después de la edición
             CargarClientesEnDataGridView()
+        Else
+            MsgBox("Seleccione una fila para editar.", MsgBoxStyle.Information)
+        End If
+    End Sub
+
+    Private Sub btnDireccionClientes_Click_1(sender As Object, e As EventArgs) Handles btnDireccionClientes.Click
+        ' Verifica si se ha seleccionado una fila en el DataGridView de Clientes
+        If dtgClientes.SelectedRows.Count > 0 Then
+            ' Obtiene el id de la empresa seleccionada
+            Dim ruc As String = dtgClientes.SelectedRows(0).Cells("Cedulacl").Value.ToString()
+
+            ' Abre el formulario de edición pasando el id como parámetro
+            Dim frmDireccionesClientes As New frmDireccionesClientes(ruc, ClientesDao)
+            SetPanel(frmDireccionesClientes, frmMenu.PanelContent)
+
+            ' Vuelve a cargar los clientes en el DataGridView después de la edición
+            'CargarClientesEnDataGridView()
         Else
             MsgBox("Seleccione una fila para editar.", MsgBoxStyle.Information)
         End If
