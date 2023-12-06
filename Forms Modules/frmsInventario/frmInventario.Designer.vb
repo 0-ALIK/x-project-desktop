@@ -84,7 +84,7 @@ Partial Class frmInventario
         tsMarcaInv.Name = "tsMarcaInv"
         tsMarcaInv.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
         tsMarcaInv.ShowShortcutKeys = False
-        tsMarcaInv.Size = New System.Drawing.Size(180, 30)
+        tsMarcaInv.Size = New System.Drawing.Size(167, 30)
         tsMarcaInv.Text = "Marca"
         AddHandler tsMarcaInv.Click, AddressOf Me.tsMarcaInv_Click
         '
@@ -114,7 +114,7 @@ Partial Class frmInventario
         Me.tsProductoInv.ForeColor = System.Drawing.Color.White
         Me.tsProductoInv.Name = "tsProductoInv"
         Me.tsProductoInv.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.tsProductoInv.Size = New System.Drawing.Size(180, 30)
+        Me.tsProductoInv.Size = New System.Drawing.Size(167, 30)
         Me.tsProductoInv.Text = "Producto"
         '
         'tsCategoriaInv
@@ -123,7 +123,7 @@ Partial Class frmInventario
         Me.tsCategoriaInv.ForeColor = System.Drawing.Color.White
         Me.tsCategoriaInv.Name = "tsCategoriaInv"
         Me.tsCategoriaInv.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.tsCategoriaInv.Size = New System.Drawing.Size(180, 30)
+        Me.tsCategoriaInv.Size = New System.Drawing.Size(167, 30)
         Me.tsCategoriaInv.Text = "Categoria"
         '
         'Label1
@@ -225,7 +225,7 @@ Partial Class frmInventario
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
         Me.dgvInv.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvInv.RowTemplate.Height = 50

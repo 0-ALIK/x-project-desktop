@@ -9,13 +9,11 @@ Public Class frmInventario
             conexionDB()
             myConnectionDB.Open()
             Dim InventarioDataTable As DataTable = invenatyDao.VerProductos
-            'dgvInv.DataSource = InventarioDataTable
-
-            'dgvInv.Columns("id").Visible = False 'Esta línea es para evitar que se vea la columna id del inventario
 
             For Each rows As DataRow In InventarioDataTable.Rows
                 dgvInv.Rows.Add(rows("id"), rows("Producto"), rows("Categoria"), rows("Marca"), rows("Precio Unit"), rows("Stock"), rows("foto"), rows("P.reorden"))
             Next
+
             dgvInv.ClearSelection()
 
             'Centrado de celdas especificas
@@ -88,10 +86,24 @@ Public Class frmInventario
     Private Sub dgvInv_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles dgvInv.CellFormatting
         If e.ColumnIndex = 7 Then
             If e.Value.ToString() = "Aplica" Then
-                e.CellStyle.BackColor = Color.IndianRed
+                e.CellStyle.ForeColor = Color.IndianRed
             Else
-                e.CellStyle.BackColor = Color.LightGreen
+                e.CellStyle.ForeColor = Color.LightGreen
             End If
         End If
     End Sub
+
+    Private Sub dgvInv_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvInv.CellContentDoubleClick
+        If e.RowIndex >= 0 Then ' Verifica que se haya hecho doble clic en una fila válida
+            If dgvInv.SelectedCells.Count > 0 Then
+                ' Obtiene el valor de la celda en la columna "Producto" de la fila seleccionada
+                Dim nombreProducto As String = dgvInv.Rows(e.RowIndex).Cells("Producto").Value.ToString()
+
+                ' Muestra un MsgBox con el nombre del producto
+                MsgBox("Producto seleccionado: " & nombreProducto)
+            End If
+        End If
+    End Sub
+
+
 End Class

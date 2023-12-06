@@ -28,6 +28,7 @@ Partial Class frmAgregarProducto
         Me.BtnCancel = New FontAwesome.Sharp.IconButton()
         Me.BtnChoose = New FontAwesome.Sharp.IconButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.txtCantPCajas = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.BtnAgregar = New System.Windows.Forms.Button()
         Me.txtReorden = New System.Windows.Forms.TextBox()
@@ -45,7 +46,6 @@ Partial Class frmAgregarProducto
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BoxPicture = New FontAwesome.Sharp.IconPictureBox()
-        Me.txtCantPCajas = New System.Windows.Forms.TextBox()
         Me.panelFrmAgregarProducto.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.BoxPicture, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -162,6 +162,16 @@ Partial Class frmAgregarProducto
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(409, 537)
         Me.Panel1.TabIndex = 5
+        '
+        'txtCantPCajas
+        '
+        Me.txtCantPCajas.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
+        Me.txtCantPCajas.Font = New System.Drawing.Font("Arial", 16.0!)
+        Me.txtCantPCajas.ForeColor = System.Drawing.Color.White
+        Me.txtCantPCajas.Location = New System.Drawing.Point(15, 232)
+        Me.txtCantPCajas.Name = "txtCantPCajas"
+        Me.txtCantPCajas.Size = New System.Drawing.Size(289, 32)
+        Me.txtCantPCajas.TabIndex = 21
         '
         'Label9
         '
@@ -368,16 +378,6 @@ Partial Class frmAgregarProducto
         Me.BoxPicture.Size = New System.Drawing.Size(205, 187)
         Me.BoxPicture.TabIndex = 1
         Me.BoxPicture.TabStop = False
-        '
-        'txtCantPCajas
-        '
-        Me.txtCantPCajas.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
-        Me.txtCantPCajas.Font = New System.Drawing.Font("Arial", 16.0!)
-        Me.txtCantPCajas.ForeColor = System.Drawing.Color.White
-        Me.txtCantPCajas.Location = New System.Drawing.Point(15, 232)
-        Me.txtCantPCajas.Name = "txtCantPCajas"
-        Me.txtCantPCajas.Size = New System.Drawing.Size(289, 32)
-        Me.txtCantPCajas.TabIndex = 21
         '
         'frmAgregarProducto
         '

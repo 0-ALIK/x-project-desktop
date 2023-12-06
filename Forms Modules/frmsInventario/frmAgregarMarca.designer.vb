@@ -27,6 +27,7 @@ Partial Class frmAgregarMarca
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnActualizarMarca = New System.Windows.Forms.Button()
         Me.dgvVerMarcas = New System.Windows.Forms.DataGridView()
         Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -34,21 +35,19 @@ Partial Class frmAgregarMarca
         Me.eliminar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.edit = New System.Windows.Forms.DataGridViewImageColumn()
         Me.delet = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnAgregarMarca = New System.Windows.Forms.Button()
+        Me.btnVerMarcas = New System.Windows.Forms.Button()
         Me.txtDescripcion = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.pcbLogo = New FontAwesome.Sharp.IconPictureBox()
-        Me.IconButton2 = New FontAwesome.Sharp.IconButton()
-        Me.IconButton3 = New FontAwesome.Sharp.IconButton()
-        Me.IconButton4 = New FontAwesome.Sharp.IconButton()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.pbMarca = New FontAwesome.Sharp.IconPictureBox()
+        Me.btnCancelUpload = New FontAwesome.Sharp.IconButton()
+        Me.btnUpload = New FontAwesome.Sharp.IconButton()
         Me.Panel1.SuspendLayout()
         CType(Me.dgvVerMarcas, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pcbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbMarca, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label4
@@ -64,10 +63,10 @@ Partial Class frmAgregarMarca
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Controls.Add(Me.btnActualizarMarca)
         Me.Panel1.Controls.Add(Me.dgvVerMarcas)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.btnAgregarMarca)
+        Me.Panel1.Controls.Add(Me.btnVerMarcas)
         Me.Panel1.Controls.Add(Me.txtDescripcion)
         Me.Panel1.Controls.Add(Me.txtNombre)
         Me.Panel1.Controls.Add(Me.Label3)
@@ -76,6 +75,18 @@ Partial Class frmAgregarMarca
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(401, 226)
         Me.Panel1.TabIndex = 28
+        '
+        'btnActualizarMarca
+        '
+        Me.btnActualizarMarca.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.btnActualizarMarca.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnActualizarMarca.Location = New System.Drawing.Point(231, 179)
+        Me.btnActualizarMarca.Name = "btnActualizarMarca"
+        Me.btnActualizarMarca.Size = New System.Drawing.Size(135, 40)
+        Me.btnActualizarMarca.TabIndex = 41
+        Me.btnActualizarMarca.Text = "Actualizar"
+        Me.btnActualizarMarca.UseVisualStyleBackColor = False
+        Me.btnActualizarMarca.Visible = False
         '
         'dgvVerMarcas
         '
@@ -176,27 +187,27 @@ Partial Class frmAgregarMarca
         Me.delet.Visible = False
         Me.delet.Width = 5
         '
-        'Button2
+        'btnAgregarMarca
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(231, 179)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(135, 40)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Agregar Marca"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnAgregarMarca.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.btnAgregarMarca.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAgregarMarca.Location = New System.Drawing.Point(231, 179)
+        Me.btnAgregarMarca.Name = "btnAgregarMarca"
+        Me.btnAgregarMarca.Size = New System.Drawing.Size(135, 40)
+        Me.btnAgregarMarca.TabIndex = 5
+        Me.btnAgregarMarca.Text = "Agregar Marca"
+        Me.btnAgregarMarca.UseVisualStyleBackColor = False
         '
-        'Button1
+        'btnVerMarcas
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(33, 179)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(135, 40)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Ver Marcas"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnVerMarcas.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.btnVerMarcas.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnVerMarcas.Location = New System.Drawing.Point(33, 179)
+        Me.btnVerMarcas.Name = "btnVerMarcas"
+        Me.btnVerMarcas.Size = New System.Drawing.Size(135, 40)
+        Me.btnVerMarcas.TabIndex = 4
+        Me.btnVerMarcas.Text = "Ver Marcas"
+        Me.btnVerMarcas.UseVisualStyleBackColor = False
         '
         'txtDescripcion
         '
@@ -251,86 +262,56 @@ Partial Class frmAgregarMarca
         Me.Label1.TabIndex = 27
         Me.Label1.Text = "Agregar Marca"
         '
-        'pcbLogo
+        'pbMarca
         '
-        Me.pcbLogo.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.pcbLogo.ForeColor = System.Drawing.SystemColors.Control
-        Me.pcbLogo.IconChar = FontAwesome.Sharp.IconChar.Image
-        Me.pcbLogo.IconColor = System.Drawing.SystemColors.Control
-        Me.pcbLogo.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.pcbLogo.IconSize = 162
-        Me.pcbLogo.Location = New System.Drawing.Point(66, 98)
-        Me.pcbLogo.Margin = New System.Windows.Forms.Padding(2)
-        Me.pcbLogo.Name = "pcbLogo"
-        Me.pcbLogo.Size = New System.Drawing.Size(188, 162)
-        Me.pcbLogo.TabIndex = 34
-        Me.pcbLogo.TabStop = False
+        Me.pbMarca.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.pbMarca.ForeColor = System.Drawing.SystemColors.Control
+        Me.pbMarca.IconChar = FontAwesome.Sharp.IconChar.Image
+        Me.pbMarca.IconColor = System.Drawing.SystemColors.Control
+        Me.pbMarca.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.pbMarca.IconSize = 162
+        Me.pbMarca.Location = New System.Drawing.Point(75, 98)
+        Me.pbMarca.Margin = New System.Windows.Forms.Padding(2)
+        Me.pbMarca.Name = "pbMarca"
+        Me.pbMarca.Size = New System.Drawing.Size(164, 162)
+        Me.pbMarca.TabIndex = 34
+        Me.pbMarca.TabStop = False
         '
-        'IconButton2
+        'btnCancelUpload
         '
-        Me.IconButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.IconButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.IconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.PlusSquare
-        Me.IconButton2.IconColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton2.IconSize = 35
-        Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton2.Location = New System.Drawing.Point(66, 280)
-        Me.IconButton2.Name = "IconButton2"
-        Me.IconButton2.Size = New System.Drawing.Size(91, 44)
-        Me.IconButton2.TabIndex = 38
-        Me.IconButton2.Text = "       Choose"
-        Me.IconButton2.UseVisualStyleBackColor = False
+        Me.btnCancelUpload.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.btnCancelUpload.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.btnCancelUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancelUpload.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.btnCancelUpload.IconChar = FontAwesome.Sharp.IconChar.Xmark
+        Me.btnCancelUpload.IconColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.btnCancelUpload.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnCancelUpload.IconSize = 35
+        Me.btnCancelUpload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCancelUpload.Location = New System.Drawing.Point(66, 280)
+        Me.btnCancelUpload.Name = "btnCancelUpload"
+        Me.btnCancelUpload.Size = New System.Drawing.Size(91, 44)
+        Me.btnCancelUpload.TabIndex = 39
+        Me.btnCancelUpload.Text = "       Cancel"
+        Me.btnCancelUpload.UseVisualStyleBackColor = False
         '
-        'IconButton3
+        'btnUpload
         '
-        Me.IconButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.IconButton3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.IconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.IconButton3.IconChar = FontAwesome.Sharp.IconChar.Xmark
-        Me.IconButton3.IconColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton3.IconSize = 35
-        Me.IconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton3.Location = New System.Drawing.Point(110, 330)
-        Me.IconButton3.Name = "IconButton3"
-        Me.IconButton3.Size = New System.Drawing.Size(91, 44)
-        Me.IconButton3.TabIndex = 39
-        Me.IconButton3.Text = "       Cancel"
-        Me.IconButton3.UseVisualStyleBackColor = False
-        '
-        'IconButton4
-        '
-        Me.IconButton4.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.IconButton4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.IconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.IconButton4.IconChar = FontAwesome.Sharp.IconChar.Upload
-        Me.IconButton4.IconColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton4.IconSize = 35
-        Me.IconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton4.Location = New System.Drawing.Point(163, 280)
-        Me.IconButton4.Name = "IconButton4"
-        Me.IconButton4.Size = New System.Drawing.Size(91, 44)
-        Me.IconButton4.TabIndex = 40
-        Me.IconButton4.Text = "      Upload"
-        Me.IconButton4.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(231, 179)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(135, 40)
-        Me.Button3.TabIndex = 41
-        Me.Button3.Text = "Actualizar"
-        Me.Button3.UseVisualStyleBackColor = False
-        Me.Button3.Visible = False
+        Me.btnUpload.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.btnUpload.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUpload.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.btnUpload.IconChar = FontAwesome.Sharp.IconChar.Upload
+        Me.btnUpload.IconColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.btnUpload.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnUpload.IconSize = 35
+        Me.btnUpload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnUpload.Location = New System.Drawing.Point(163, 280)
+        Me.btnUpload.Name = "btnUpload"
+        Me.btnUpload.Size = New System.Drawing.Size(91, 44)
+        Me.btnUpload.TabIndex = 40
+        Me.btnUpload.Text = "      Upload"
+        Me.btnUpload.UseVisualStyleBackColor = False
         '
         'frmAgregarMarca
         '
@@ -338,10 +319,9 @@ Partial Class frmAgregarMarca
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(919, 455)
-        Me.Controls.Add(Me.IconButton4)
-        Me.Controls.Add(Me.IconButton3)
-        Me.Controls.Add(Me.IconButton2)
-        Me.Controls.Add(Me.pcbLogo)
+        Me.Controls.Add(Me.btnUpload)
+        Me.Controls.Add(Me.btnCancelUpload)
+        Me.Controls.Add(Me.pbMarca)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
@@ -350,7 +330,7 @@ Partial Class frmAgregarMarca
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.dgvVerMarcas, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pcbLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbMarca, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -358,17 +338,16 @@ Partial Class frmAgregarMarca
 
     Friend WithEvents Label4 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnVerMarcas As Button
     Friend WithEvents txtDescripcion As TextBox
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents pcbLogo As FontAwesome.Sharp.IconPictureBox
-    Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
-    Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
-    Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton
-    Friend WithEvents Button2 As Button
+    Friend WithEvents pbMarca As FontAwesome.Sharp.IconPictureBox
+    Friend WithEvents btnCancelUpload As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnUpload As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnAgregarMarca As Button
     Friend WithEvents dgvVerMarcas As DataGridView
     Friend WithEvents id As DataGridViewTextBoxColumn
     Friend WithEvents nombre As DataGridViewTextBoxColumn
@@ -376,5 +355,5 @@ Partial Class frmAgregarMarca
     Friend WithEvents eliminar As DataGridViewButtonColumn
     Friend WithEvents edit As DataGridViewImageColumn
     Friend WithEvents delet As DataGridViewImageColumn
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btnActualizarMarca As Button
 End Class

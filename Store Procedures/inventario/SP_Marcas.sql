@@ -32,7 +32,7 @@ CREATE PROCEDURE SP_EliminarMarca(
 )
 BEGIN
 
-    DELETE FROM Marca WHERE id_marca = id;
+    DELETE FROM marca WHERE id_marca = id;
 
 END $$
 DELIMITER ;

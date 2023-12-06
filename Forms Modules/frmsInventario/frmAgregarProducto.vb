@@ -108,4 +108,12 @@ Public Class frmAgregarProducto
         BoxCategoria.DisplayMember = "nombre"
         BoxCategoria.ValueMember = "id_categoria"
     End Sub
+
+    Private Sub BtnChoose_Click(sender As Object, e As EventArgs) Handles BtnChoose.Click
+        DialogoArchivo(BoxPicture)
+    End Sub
+
+    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
+        BoxPicture.Image = Nothing
+    End Sub
 End Class

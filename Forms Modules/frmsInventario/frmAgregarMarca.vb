@@ -1,11 +1,12 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+Imports MySql.Data.MySqlClient
 Imports Mysqlx.XDevAPI.Common
 Public Class frmAgregarMarca
     Dim invenatyDao As New inventaryDAO(myConnectionDB)
     Dim idMarca As Integer
     Public MouseDownPosition
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub btnVerMarcas_Click(sender As Object, e As EventArgs) Handles btnVerMarcas.Click
         Dim marcasDataTable As DataTable
         Try
             dgvVerMarcas.Rows.Clear()
@@ -45,7 +46,7 @@ Public Class frmAgregarMarca
         ' Si el datagridview está visible y el mouse no está sobre el botón y el
         ' mouse no está sobre la posición del click inicial, lo oculta
         If dgvVerMarcas.Visible Then
-            If Not dgvVerMarcas.HitTest(e.X, e.Y) Is Button1 And Not dgvVerMarcas.Location = MouseDownPosition Then
+            If Not dgvVerMarcas.HitTest(e.X, e.Y) Is btnVerMarcas And Not dgvVerMarcas.Location = MouseDownPosition Then
                 dgvVerMarcas.Visible = False
             End If
         End If
@@ -55,8 +56,8 @@ Public Class frmAgregarMarca
     Private Sub dgvVerMarcas_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVerMarcas.CellContentClick
 
         If dgvVerMarcas.Columns(e.ColumnIndex).Name = "editar" Then
-            Button2.Visible = False
-            Button3.Visible = True
+            btnAgregarMarca.Visible = False
+            btnActualizarMarca.Visible = True
 
             If dgvVerMarcas.Visible Then
                 dgvVerMarcas.Visible = False
@@ -111,16 +112,38 @@ Public Class frmAgregarMarca
         End If
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim result As Integer
+    Private Sub btnAgregarMarca_Click(sender As Object, e As EventArgs) Handles btnAgregarMarca.Click
+        Dim imagenEnBase64 As String = If(VerificarImagen(pbMarca), CodificarImagen(pbMarca.Image, pbMarca), "")
 
         Try
-            result = invenatyDao.InsertarMarca(txtNombre.Text, txtDescripcion.Text, "hola")
-
+            Dim result As Integer = invenatyDao.InsertarMarca(txtNombre.Text, txtDescripcion.Text, imagenEnBase64)
             If result <> 0 Then
                 MsgBox("Error al insertar los datos")
             Else
                 MsgBox("La marca ha sido insertada")
+                txtNombre.Clear()
+                txtDescripcion.Clear()
+                pbMarca.Image = Nothing
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub btnActualizarMarca_Click(sender As Object, e As EventArgs) Handles btnActualizarMarca.Click
+        Dim result As Integer
+        Try
+            result = invenatyDao.ActualizarMarca(idMarca, txtNombre.Text, txtDescripcion.Text, "hola")
+
+            If result <> 0 Then
+                MsgBox("No se puso actualizar la marca")
+                btnActualizarMarca.Visible = True
+                btnAgregarMarca.Visible = False
+            Else
+                MsgBox("La marca ha sido actualizada")
+                btnActualizarMarca.Visible = False
+                btnAgregarMarca.Visible = True
                 txtNombre.Clear()
                 txtDescripcion.Clear()
             End If
@@ -129,25 +152,11 @@ Public Class frmAgregarMarca
         End Try
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim result As Integer
-        Try
-            result = invenatyDao.ActualizarMarca(idMarca, txtNombre.Text, txtDescripcion.Text, "hola")
-            MsgBox(result)
+    Private Sub btnUpload_Click(sender As Object, e As EventArgs) Handles btnUpload.Click
+        DialogoArchivo(pbMarca)
+    End Sub
 
-            If result <> 0 Then
-                MsgBox("No se puso actualizar la marca")
-                Button3.Visible = True
-                Button2.Visible = False
-            Else
-                MsgBox("La marca ha sido actualizada")
-                Button3.Visible = False
-                Button2.Visible = True
-                txtNombre.Clear()
-                txtDescripcion.Clear()
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
+    Private Sub btnCancelUpload_Click(sender As Object, e As EventArgs) Handles btnCancelUpload.Click
+        pbMarca.Image = Nothing
     End Sub
 End Class
