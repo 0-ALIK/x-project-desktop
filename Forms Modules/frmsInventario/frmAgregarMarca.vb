@@ -2,12 +2,17 @@
 Imports Mysqlx.XDevAPI.Common
 Public Class frmAgregarMarca
     Dim invenatyDao As New inventaryDAO(myConnectionDB)
+    Dim idMarca As Integer
     Public MouseDownPosition
-    Private Sub frmAgregarMarca_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim marcasDataTable As DataTable
         Try
+            dgvVerMarcas.Rows.Clear()
+
             conexionDB()
             myConnectionDB.Open()
-            Dim marcasDataTable As DataTable = invenatyDao.VerMarcas
+            marcasDataTable = invenatyDao.VerMarcas
 
             For Each row As DataRow In marcasDataTable.Rows
                 dgvVerMarcas.Rows.Add(row("id_marca"), row("nombre"))
@@ -18,9 +23,7 @@ Public Class frmAgregarMarca
         Finally
             If myConnectionDB.State <> ConnectionState.Closed Then myConnectionDB.Close()
         End Try
-    End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         ' Si el datagridview está visible, lo oculta
         If dgvVerMarcas.Visible Then
             dgvVerMarcas.Visible = False
@@ -50,9 +53,22 @@ Public Class frmAgregarMarca
     End Sub
 
     Private Sub dgvVerMarcas_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVerMarcas.CellContentClick
+
         If dgvVerMarcas.Columns(e.ColumnIndex).Name = "editar" Then
-            'aqui agregas lo el codigo para editar la marca
-            MsgBox("Edicicon de productos")
+            Button2.Visible = False
+            Button3.Visible = True
+
+            If dgvVerMarcas.Visible Then
+                dgvVerMarcas.Visible = False
+            End If
+
+            idMarca = Convert.ToInt32(dgvVerMarcas.Rows(e.RowIndex).Cells(0).Value)
+
+            Dim marca As DataTable = invenatyDao.ObtenerMarca(idMarca)
+
+            txtNombre.Text = marca.Rows(0).Item("nombre")
+            txtDescripcion.Text = marca.Rows(0).Item("descripcion")
+
         Else
             'aquí agregas el codigo de eliminar marca
             MsgBox("Elimina un producto")
@@ -73,5 +89,23 @@ Public Class frmAgregarMarca
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim result As Integer
+        Try
+            result = invenatyDao.ActualizarMarca(idMarca, txtNombre.Text, txtDescripcion.Text, "hola")
+            MsgBox(result)
+
+            If result <> 0 Then
+                MsgBox("No se puso actualizar la marca")
+            Else
+                MsgBox("La marca ha sido actualizada")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        Button3.Visible = False
+        Button2.Visible = True
     End Sub
 End Class

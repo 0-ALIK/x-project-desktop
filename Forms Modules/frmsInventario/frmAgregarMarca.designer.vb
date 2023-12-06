@@ -28,6 +28,12 @@ Partial Class frmAgregarMarca
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.dgvVerMarcas = New System.Windows.Forms.DataGridView()
+        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.editar = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.eliminar = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.edit = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.delet = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.txtDescripcion = New System.Windows.Forms.TextBox()
@@ -39,12 +45,7 @@ Partial Class frmAgregarMarca
         Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.IconButton3 = New FontAwesome.Sharp.IconButton()
         Me.IconButton4 = New FontAwesome.Sharp.IconButton()
-        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.editar = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.eliminar = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.edit = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.delet = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.dgvVerMarcas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pcbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,6 +64,7 @@ Partial Class frmAgregarMarca
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.dgvVerMarcas)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Button1)
@@ -109,6 +111,70 @@ Partial Class frmAgregarMarca
         Me.dgvVerMarcas.Size = New System.Drawing.Size(174, 164)
         Me.dgvVerMarcas.TabIndex = 41
         Me.dgvVerMarcas.Visible = False
+        '
+        'id
+        '
+        Me.id.HeaderText = "id"
+        Me.id.Name = "id"
+        Me.id.ReadOnly = True
+        Me.id.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.id.Visible = False
+        '
+        'nombre
+        '
+        Me.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.nombre.HeaderText = "marca"
+        Me.nombre.Name = "nombre"
+        Me.nombre.ReadOnly = True
+        Me.nombre.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'editar
+        '
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
+        Me.editar.DefaultCellStyle = DataGridViewCellStyle1
+        Me.editar.HeaderText = "editar"
+        Me.editar.Name = "editar"
+        Me.editar.ReadOnly = True
+        Me.editar.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.editar.Text = "editar"
+        Me.editar.UseColumnTextForButtonValue = True
+        Me.editar.Width = 60
+        '
+        'eliminar
+        '
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
+        Me.eliminar.DefaultCellStyle = DataGridViewCellStyle2
+        Me.eliminar.HeaderText = "eliminar"
+        Me.eliminar.Name = "eliminar"
+        Me.eliminar.ReadOnly = True
+        Me.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.eliminar.Text = "eliminar"
+        Me.eliminar.UseColumnTextForButtonValue = True
+        Me.eliminar.Width = 70
+        '
+        'edit
+        '
+        Me.edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.edit.HeaderText = ""
+        Me.edit.Name = "edit"
+        Me.edit.ReadOnly = True
+        Me.edit.Visible = False
+        Me.edit.Width = 5
+        '
+        'delet
+        '
+        Me.delet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.delet.HeaderText = ""
+        Me.delet.Name = "delet"
+        Me.delet.ReadOnly = True
+        Me.delet.Visible = False
+        Me.delet.Width = 5
         '
         'Button2
         '
@@ -254,69 +320,17 @@ Partial Class frmAgregarMarca
         Me.IconButton4.Text = "      Upload"
         Me.IconButton4.UseVisualStyleBackColor = False
         '
-        'id
+        'Button3
         '
-        Me.id.HeaderText = "id"
-        Me.id.Name = "id"
-        Me.id.ReadOnly = True
-        Me.id.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.id.Visible = False
-        '
-        'nombre
-        '
-        Me.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.nombre.HeaderText = "marca"
-        Me.nombre.Name = "nombre"
-        Me.nombre.ReadOnly = True
-        Me.nombre.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        '
-        'editar
-        '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
-        Me.editar.DefaultCellStyle = DataGridViewCellStyle1
-        Me.editar.HeaderText = "editar"
-        Me.editar.Name = "editar"
-        Me.editar.ReadOnly = True
-        Me.editar.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.editar.Text = "editar"
-        Me.editar.UseColumnTextForButtonValue = True
-        Me.editar.Width = 60
-        '
-        'eliminar
-        '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
-        Me.eliminar.DefaultCellStyle = DataGridViewCellStyle2
-        Me.eliminar.HeaderText = "eliminar"
-        Me.eliminar.Name = "eliminar"
-        Me.eliminar.ReadOnly = True
-        Me.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.eliminar.Text = "eliminar"
-        Me.eliminar.UseColumnTextForButtonValue = True
-        Me.eliminar.Width = 70
-        '
-        'edit
-        '
-        Me.edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.edit.HeaderText = ""
-        Me.edit.Name = "edit"
-        Me.edit.ReadOnly = True
-        Me.edit.Visible = False
-        Me.edit.Width = 5
-        '
-        'delet
-        '
-        Me.delet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.delet.HeaderText = ""
-        Me.delet.Name = "delet"
-        Me.delet.ReadOnly = True
-        Me.delet.Visible = False
-        Me.delet.Width = 5
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(158, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(231, 179)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(135, 40)
+        Me.Button3.TabIndex = 41
+        Me.Button3.Text = "Actualizar"
+        Me.Button3.UseVisualStyleBackColor = False
+        Me.Button3.Visible = False
         '
         'frmAgregarMarca
         '
@@ -362,4 +376,5 @@ Partial Class frmAgregarMarca
     Friend WithEvents eliminar As DataGridViewButtonColumn
     Friend WithEvents edit As DataGridViewImageColumn
     Friend WithEvents delet As DataGridViewImageColumn
+    Friend WithEvents Button3 As Button
 End Class
