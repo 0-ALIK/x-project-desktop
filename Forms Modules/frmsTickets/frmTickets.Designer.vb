@@ -45,7 +45,8 @@ Partial Class frmTickets
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(177, 81)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(60, 40)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(76, 24)
         Me.Label1.TabIndex = 0
@@ -54,6 +55,8 @@ Partial Class frmTickets
         'dgvTickets
         '
         Me.dgvTickets.AllowUserToAddRows = False
+        Me.dgvTickets.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvTickets.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.dgvTickets.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
         Me.dgvTickets.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvTickets.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
@@ -70,7 +73,7 @@ Partial Class frmTickets
         Me.dgvTickets.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID_ticket, Me.Nombre, Me.Asunto, Me.Prioridad, Me.Estado, Me.Fecha, Me.Accion, Me.Eliminar})
         Me.dgvTickets.EnableHeadersVisualStyles = False
         Me.dgvTickets.GridColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.dgvTickets.Location = New System.Drawing.Point(142, 134)
+        Me.dgvTickets.Location = New System.Drawing.Point(16, 110)
         Me.dgvTickets.Name = "dgvTickets"
         Me.dgvTickets.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -87,16 +90,17 @@ Partial Class frmTickets
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(176, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(44, Byte), Integer))
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
         Me.dgvTickets.RowsDefaultCellStyle = DataGridViewCellStyle3
-        Me.dgvTickets.Size = New System.Drawing.Size(886, 304)
+        Me.dgvTickets.Size = New System.Drawing.Size(1160, 499)
         Me.dgvTickets.TabIndex = 1
         '
         'cboFiltrarEstado
         '
         Me.cboFiltrarEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboFiltrarEstado.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboFiltrarEstado.FormattingEnabled = True
-        Me.cboFiltrarEstado.Location = New System.Drawing.Point(593, 86)
+        Me.cboFiltrarEstado.Location = New System.Drawing.Point(443, 45)
         Me.cboFiltrarEstado.Name = "cboFiltrarEstado"
-        Me.cboFiltrarEstado.Size = New System.Drawing.Size(121, 21)
+        Me.cboFiltrarEstado.Size = New System.Drawing.Size(154, 28)
         Me.cboFiltrarEstado.TabIndex = 2
         '
         'btnFiltrar
@@ -104,7 +108,7 @@ Partial Class frmTickets
         Me.btnFiltrar.IconChar = FontAwesome.Sharp.IconChar.Filter
         Me.btnFiltrar.IconColor = System.Drawing.Color.Black
         Me.btnFiltrar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnFiltrar.Location = New System.Drawing.Point(737, 81)
+        Me.btnFiltrar.Location = New System.Drawing.Point(620, 40)
         Me.btnFiltrar.Name = "btnFiltrar"
         Me.btnFiltrar.Size = New System.Drawing.Size(46, 31)
         Me.btnFiltrar.TabIndex = 4
@@ -115,7 +119,7 @@ Partial Class frmTickets
         Me.btnLimpiarFiltro.IconChar = FontAwesome.Sharp.IconChar.FilterCircleXmark
         Me.btnLimpiarFiltro.IconColor = System.Drawing.Color.Black
         Me.btnLimpiarFiltro.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnLimpiarFiltro.Location = New System.Drawing.Point(789, 81)
+        Me.btnLimpiarFiltro.Location = New System.Drawing.Point(672, 40)
         Me.btnLimpiarFiltro.Name = "btnLimpiarFiltro"
         Me.btnLimpiarFiltro.Size = New System.Drawing.Size(49, 31)
         Me.btnLimpiarFiltro.TabIndex = 5
@@ -123,32 +127,30 @@ Partial Class frmTickets
         '
         'ID_ticket
         '
-        Me.ID_ticket.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.ID_ticket.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.ID_ticket.DataPropertyName = "id_tickets"
         Me.ID_ticket.HeaderText = "ID"
         Me.ID_ticket.Name = "ID_ticket"
         Me.ID_ticket.ReadOnly = True
-        Me.ID_ticket.Width = 49
         '
         'Nombre
         '
-        Me.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Nombre.DataPropertyName = "nombre"
         Me.Nombre.HeaderText = "Nombre"
         Me.Nombre.Name = "Nombre"
-        Me.Nombre.Width = 89
         '
         'Asunto
         '
-        Me.Asunto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Asunto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Asunto.DataPropertyName = "categoria"
         Me.Asunto.HeaderText = "Asunto"
         Me.Asunto.Name = "Asunto"
         Me.Asunto.ReadOnly = True
-        Me.Asunto.Width = 80
         '
         'Prioridad
         '
+        Me.Prioridad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Prioridad.DataPropertyName = "prioridad"
         Me.Prioridad.HeaderText = "Prioridad"
         Me.Prioridad.Name = "Prioridad"
@@ -156,46 +158,43 @@ Partial Class frmTickets
         '
         'Estado
         '
-        Me.Estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Estado.DataPropertyName = "estado"
         Me.Estado.HeaderText = "Estado"
         Me.Estado.Name = "Estado"
         Me.Estado.ReadOnly = True
-        Me.Estado.Width = 79
         '
         'Fecha
         '
-        Me.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Fecha.DataPropertyName = "fecha_cambio_estado"
         Me.Fecha.HeaderText = "Ultima Modificación"
         Me.Fecha.Name = "Fecha"
         Me.Fecha.ReadOnly = True
-        Me.Fecha.Width = 154
         '
         'Accion
         '
-        Me.Accion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Accion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Accion.HeaderText = "Detalles"
         Me.Accion.Name = "Accion"
         Me.Accion.ReadOnly = True
         Me.Accion.Text = "----->"
         Me.Accion.UseColumnTextForButtonValue = True
-        Me.Accion.Width = 69
         '
         'Eliminar
         '
-        Me.Eliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Eliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Eliminar.HeaderText = "Eliminar"
         Me.Eliminar.Name = "Eliminar"
         Me.Eliminar.ReadOnly = True
         Me.Eliminar.Text = "Eliminar"
         Me.Eliminar.UseColumnTextForButtonValue = True
-        Me.Eliminar.Width = 69
         '
         'frmTickets
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(879, 450)
         Me.Controls.Add(Me.btnLimpiarFiltro)
         Me.Controls.Add(Me.btnFiltrar)

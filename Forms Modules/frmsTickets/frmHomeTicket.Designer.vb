@@ -31,44 +31,47 @@ Partial Class frmHomeTicket
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TicketsToolStripMenuItem, Me.CrearTicketsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1067, 28)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'TicketsToolStripMenuItem
         '
+        Me.TicketsToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.TicketsToolStripMenuItem.Name = "TicketsToolStripMenuItem"
-        Me.TicketsToolStripMenuItem.Size = New System.Drawing.Size(93, 24)
+        Me.TicketsToolStripMenuItem.Size = New System.Drawing.Size(74, 20)
         Me.TicketsToolStripMenuItem.Text = "Ver Tickets"
         '
         'CrearTicketsToolStripMenuItem
         '
+        Me.CrearTicketsToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.CrearTicketsToolStripMenuItem.Name = "CrearTicketsToolStripMenuItem"
-        Me.CrearTicketsToolStripMenuItem.Size = New System.Drawing.Size(107, 24)
+        Me.CrearTicketsToolStripMenuItem.Size = New System.Drawing.Size(86, 20)
         Me.CrearTicketsToolStripMenuItem.Text = "Crear Tickets"
         '
         'panelHomeTicket
         '
+        Me.panelHomeTicket.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(21, Byte), Integer))
         Me.panelHomeTicket.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.panelHomeTicket.Location = New System.Drawing.Point(0, 28)
-        Me.panelHomeTicket.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.panelHomeTicket.Location = New System.Drawing.Point(0, 24)
         Me.panelHomeTicket.Name = "panelHomeTicket"
-        Me.panelHomeTicket.Size = New System.Drawing.Size(1067, 526)
+        Me.panelHomeTicket.Size = New System.Drawing.Size(800, 426)
         Me.panelHomeTicket.TabIndex = 3
         '
         'frmHomeTicket
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1067, 554)
+        Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.panelHomeTicket)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmHomeTicket"
         Me.Text = "frmHomeTicket"
         Me.MenuStrip1.ResumeLayout(False)

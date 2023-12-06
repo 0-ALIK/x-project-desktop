@@ -194,6 +194,7 @@ Partial Class frmDetalleTicket
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ControlLight
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.lblUsuario)
         Me.Controls.Add(Me.Label4)
@@ -208,6 +209,7 @@ Partial Class frmDetalleTicket
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblTicket)
+        Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Name = "frmDetalleTicket"
         Me.Text = "frmDetalleTicket"
         CType(Me.pbEvidencia, System.ComponentModel.ISupportInitialize).EndInit()
