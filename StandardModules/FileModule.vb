@@ -1,4 +1,6 @@
-﻿Imports System.IO
+﻿
+Imports System.Drawing.Imaging
+Imports System.IO
 
 Module FileModule
 
