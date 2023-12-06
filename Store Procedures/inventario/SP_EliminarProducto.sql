@@ -1,6 +1,7 @@
 ﻿-- Creación del procedimiento para
 DELIMITER $$
 CREATE PROCEDURE SP_EliminarProductos()
-
-END $$
+BEGIN
+    DELETE FROM producto WHERE id_producto = id;
+END; $$
 DELIMITER ;

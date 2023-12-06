@@ -202,10 +202,10 @@ Partial Class frmInventario
         '
         'dgvInv
         '
-        Me.dgvInv.AllowDrop = True
         Me.dgvInv.AllowUserToAddRows = False
         Me.dgvInv.AllowUserToDeleteRows = False
-        Me.dgvInv.AllowUserToOrderColumns = True
+        Me.dgvInv.AllowUserToResizeColumns = False
+        Me.dgvInv.AllowUserToResizeRows = False
         Me.dgvInv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -213,11 +213,11 @@ Partial Class frmInventario
         Me.dgvInv.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(33, Byte), Integer))
         Me.dgvInv.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvInv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(86, Byte), Integer))
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(47, Byte), Integer))
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvInv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
@@ -408,55 +408,73 @@ Partial Class frmInventario
         Me.id_producto.HeaderText = "id_producto"
         Me.id_producto.Name = "id_producto"
         Me.id_producto.ReadOnly = True
+        Me.id_producto.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.id_producto.Visible = False
         '
         'Producto
         '
+        Me.Producto.FillWeight = 121.8274!
         Me.Producto.HeaderText = "Producto"
         Me.Producto.Name = "Producto"
         Me.Producto.ReadOnly = True
+        Me.Producto.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
         'categoria
         '
+        Me.categoria.FillWeight = 96.88177!
         Me.categoria.HeaderText = "Categoria"
         Me.categoria.Name = "categoria"
         Me.categoria.ReadOnly = True
+        Me.categoria.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
         'marca
         '
+        Me.marca.FillWeight = 96.88177!
         Me.marca.HeaderText = "Marca"
         Me.marca.Name = "marca"
         Me.marca.ReadOnly = True
+        Me.marca.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
         'precio_unit
         '
-        Me.precio_unit.HeaderText = "precio_unit"
+        Me.precio_unit.FillWeight = 96.88177!
+        Me.precio_unit.HeaderText = "Precio Unit"
         Me.precio_unit.Name = "precio_unit"
         Me.precio_unit.ReadOnly = True
+        Me.precio_unit.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
         'cantidad_por_cajas
         '
-        Me.cantidad_por_cajas.HeaderText = "cantidad_por_cajas"
+        Me.cantidad_por_cajas.FillWeight = 96.88177!
+        Me.cantidad_por_cajas.HeaderText = "Stock"
         Me.cantidad_por_cajas.Name = "cantidad_por_cajas"
         Me.cantidad_por_cajas.ReadOnly = True
+        Me.cantidad_por_cajas.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
         'foto
         '
-        Me.foto.HeaderText = "foto"
+        Me.foto.FillWeight = 96.88177!
+        Me.foto.HeaderText = "Foto"
         Me.foto.Name = "foto"
         Me.foto.ReadOnly = True
+        Me.foto.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
         'punto_reorden
         '
-        Me.punto_reorden.HeaderText = "punto_reorden"
+        Me.punto_reorden.FillWeight = 96.88177!
+        Me.punto_reorden.HeaderText = "P.reorden"
         Me.punto_reorden.Name = "punto_reorden"
         Me.punto_reorden.ReadOnly = True
+        Me.punto_reorden.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
         'acciones
         '
-        Me.acciones.HeaderText = "acciones"
+        Me.acciones.FillWeight = 96.88177!
+        Me.acciones.HeaderText = "Acciones"
         Me.acciones.Name = "acciones"
         Me.acciones.ReadOnly = True
+        Me.acciones.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.acciones.Text = "Eliminar"
         Me.acciones.UseColumnTextForButtonValue = True
         '
         'frmInventario

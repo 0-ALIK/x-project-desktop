@@ -82,7 +82,7 @@ Public Class inventaryDAO
 
     Public Function EliminarProducto() As Integer Implements inventaryInterfaces.EliminarProducto
         Try
-            Using glCommand As New MySqlCommand("SP_EliminarProducto", myConnectionDB)
+            Using glCommand As New MySqlCommand("SP_EliminarProductos", myConnectionDB)
                 glCommand.CommandTimeout = 0
                 glCommand.CommandType = CommandType.StoredProcedure
 
@@ -195,7 +195,7 @@ Public Class inventaryDAO
 
     Public Function EliminarCategorias() As Integer Implements inventaryInterfaces.EliminarCategorias
         Try
-            Using glCommand As New MySqlCommand("SP_VerCategorias", myConnectionDB)
+            Using glCommand As New MySqlCommand("SP_EliminarCategorias", myConnectionDB)
                 glCommand.CommandTimeout = 0
                 glCommand.CommandType = CommandType.StoredProcedure
 
