@@ -117,13 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>Respuesta: Para realizar un pedido, inicia sesión en tu cuenta, selecciona los productos deseados y sigue el proceso de compra. Durante el proceso, se te pedirá confirmar la dirección de entrega, seleccionar el método de pago y revisar tu pedido antes de finalizar la transacción.</value>
-  </data>
-  <data name="Label6.Text" xml:space="preserve">
-    <value>Respuesta: Después de confirmar un pedido, las modificaciones directas en línea no son posibles. Si necesitas hacer cambios, te recomendamos que te comuniques con nuestro servicio de atención al cliente lo antes posible para evaluar las posibles opciones.</value>
-  </data>
-  <data name="Label8.Text" xml:space="preserve">
-    <value>Respuesta: Inicia sesión en tu cuenta y ve a la sección de historial de pedidos para verificar el estado de tu pedido. Además, recibirás notificaciones automáticas por correo electrónico o mensajes dentro del sistema en cada etapa crucial del proceso, desde la confirmación hasta la entrega.</value>
-  </data>
 </root>

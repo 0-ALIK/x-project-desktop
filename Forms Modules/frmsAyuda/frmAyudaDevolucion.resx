@@ -117,14 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Label8.Text" xml:space="preserve">
-    <value>Respuesta: Sí, existen plazos para solicitar devoluciones. Te recomendamos que notifiques cualquier problema con tu pedido dentro de los 5 
-días posteriores a la recepción. Las políticas específicas se detallan en nuestras políticas de devolución.</value>
-  </data>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>Respuesta: Para solicitar una devolución, utiliza la sección de Tickets y selecciona la categoría correspondiente. Un representante se pondrá en contacto contigo para guiar el proceso de devolución. El reembolso se procesará una vez que hayamos recibido y evaluado los productos devueltos.</value>
-  </data>
-  <data name="Label6.Text" xml:space="preserve">
-    <value>Respuesta: En caso de productos defectuosos o errores en el pedido, contáctanos a través de la sección de Soporte y Retroalimentación. Evaluaremos cada caso de manera individual y proporcionaremos las instrucciones necesarias para la devolución y el reembolso.</value>
-  </data>
 </root>
