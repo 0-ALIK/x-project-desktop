@@ -152,7 +152,6 @@
     <Compile Include="Class Modules\analitica\analiticaReporteInventarioDAO.vb" />
     <Compile Include="Class Modules\clientes\clientesDAO.vb" />
     <Compile Include="Class Modules\tickets\ticketsDAO.vb" />
-    <Compile Include="Class Modules\ventas\Class6.vb" />
     <Compile Include="Forms Modules\frmsAnaliticas\dashboard\frmDashboard.Designer.vb">
       <DependentUpon>frmDashboard.vb</DependentUpon>
     </Compile>
@@ -463,14 +462,14 @@
     <Content Include="Database Scripts\dataset\ScriptDataSet.sql" />
     <Content Include="Resources\dataConfig.xml" />
     <Content Include="Store Procedures\Analitica-Reportes\StoredProceduresReportes.sql" />
-    <Content Include="Store Procedures\tickets\SP_InsertarTicket.sql" />
-    <Content Include="Store Procedures\tickets\SP_ObtenerCategoria.sql" />
     <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Class Modules\inventario\" />
+    <Folder Include="Class Modules\ventas\" />
     <Folder Include="Store Procedures\ayuda\" />
     <Folder Include="Store Procedures\clientes\" />
+    <Folder Include="Store Procedures\tickets\" />
     <Folder Include="Store Procedures\ventas\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
